@@ -41,14 +41,14 @@ h2{
     position: relative;
     left: 15%;
     width: 70%;
-    border: 1px black solid;
-    margin: 10% 0% 2% 0%;
+    border: 0.5px rgb(207, 207, 207) solid;
+    margin: 1% 0% 2% 0%;
 }
 .line2{
     position: relative;
     left: 15%;
     width: 70%;
-    border: 1px black solid;
+    border: 0.5px rgb(207, 207, 207) solid;
     margin: 3% 0% 2% 0%;
 }
 /* style display */
