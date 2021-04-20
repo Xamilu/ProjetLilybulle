@@ -1,0 +1,74 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0%;
+}
+
+* {
+    font-family: 'Zilla Slab', serif;
+}
+
+header {
+    width: 100%;
+    height: 10em;
+}
+
+.supBoxHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1em;
+}
+
+.socialIcons {
+    width: 15%;
+    align-self: center;
+}
+
+#newsLetterEmail {
+    border: 2px solid black;
+    border-radius: 3px;
+    height: 1.5em;
+    outline: none;
+    text-indent: 0.2em;
+}
+
+#newsLetterEmail::placeholder {
+    color: black;
+}
+
+#newsLetterSubmit {
+    height: 1.8em;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
+
+.infBoxHeader {
+    margin-top: 5em;
+}
+
+nav {
+    margin-left: -2.5em;
+}
+
+#navBar {
+    display: flex;
+    gap: 1.5em;
+    font-size: 1.3em;
+    font-weight: 600;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.libelluleNavBar {
+    width: 2%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
