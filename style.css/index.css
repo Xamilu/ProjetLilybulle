@@ -47,6 +47,32 @@ header {
     color: white;
 }
 
+.infBoxHeader {
+    margin-top: 5em;
+}
+
+nav {
+    margin-left: -2.5em;
+}
+
+#navBar {
+    display: flex;
+    gap: 1.5em;
+    font-size: 1.3em;
+    font-weight: 600;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.libelluleNavBar {
+    width: 2%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
 
 /* Footer Style */
 footer{
