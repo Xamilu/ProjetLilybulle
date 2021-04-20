@@ -46,3 +46,12 @@ header {
     background-color: black;
     color: white;
 }
+.hautFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contactEtHoraires{
+    text-align: center;
+}
