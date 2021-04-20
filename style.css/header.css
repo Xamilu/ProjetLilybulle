@@ -30,21 +30,36 @@ header {
 #newsLetterEmail {
     border: 2px solid black;
     border-radius: 3px;
-    height: 1.5em;
+    height: 2em;
     outline: none;
     text-indent: 0.2em;
+    font-size: 0.9em;
+    font-weight: 600;
 }
 
 #newsLetterEmail::placeholder {
     color: black;
+    font-weight: 600;
+    font-size: 0.9em;
 }
 
 #newsLetterSubmit {
-    height: 1.8em;
+    height: 2.3em;
     border: 2px solid black;
     border-radius: 3px;
     background-color: black;
     color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: 0.8s;
+}
+
+#newsLetterSubmit:hover {
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    transition-duration: 0.8s;
 }
 
 .infBoxHeader {
@@ -71,4 +86,197 @@ nav {
 a {
     color: black;
     text-decoration: none;
+}
+
+li {
+    transition-duration: 0.5s;
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+li:hover {
+    transition-duration: 0.5s;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menuDeroulantBoutique {
+    display: flex;
+    position: fixed;
+    display: none;
+    z-index: 3;
+    transition-duration: 1.5s;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 0.9em;
+    line-height: 2em;
+    width: 22%;
+    height: 11.5em;
+    padding-left: 1%;
+    margin-top: 0.3%;
+}
+
+.menu:hover .menuDeroulantBoutique {
+    display: flex;
+}
+
+.menuDeroulantAtelier {
+    display: flex;
+    position: fixed;
+    display: none;
+    z-index: 3;
+    transition-duration: 1.5s;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 0.9em;
+    line-height: 2em;
+    width: 10%;
+    height: 12.5em;
+    padding-left: 0.5%;
+    margin-top: 0.3%;
+}
+
+.menu:hover .menuDeroulantAtelier {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuDeroulantAgence {
+    display: flex;
+    position: fixed;
+    display: none;
+    z-index: 3;
+    transition-duration: 1.5s;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 0.9em;
+    line-height: 2em;
+    width: 24.5%;
+    height: 10em;
+    padding-left: 1%;
+    margin-top: 0.3%;
+}
+
+.menu:hover .menuDeroulantAgence {
+    display: flex;
+}
+
+.menuDeroulantCaravane {
+    display: flex;
+    position: fixed;
+    display: none;
+    z-index: 3;
+    transition-duration: 1.5s;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 0.9em;
+    line-height: 2em;
+    width: 24.5%;
+    height: 10em;
+    padding-left: 1%;
+    margin-top: 0.3%;
+}
+
+.menu:hover .menuDeroulantCaravane {
+    display: flex;
+}
+
+
+.premierePartie, .secondePartie {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.verticalSeparator {
+    height: 8.5em;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 4% 7% 0 4%;
+}
+
+.verticalSeparator2 {
+    height: 7.5em;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 4% 7% 0 4%;
+}
+
+.sousCategories {
+    transition: 1.5s;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 3%;
+    width: 90%;
+}
+
+.sousCategories:hover {
+    color: white;
+    border: 1px solid none;
+    border-radius: 5px;
+    background-color: black;
+    transition-duration: 0.5s;
+}
+
+.sousCategoriesAtelier {
+    transition: 1.5s;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 6%;
+    width: 90%;
+    padding: 2% 5% 2% 2%;
+}
+
+.sousCategoriesAtelier:hover {
+    color: white;
+    border: 1px solid none;
+    border-radius: 5px;
+    background-color: black;
+    transition-duration: 0.5s;
+}
+
+.sousCategoriesAgence {
+    transition: 1.5s;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 6%;
+    width: 90%;
+    padding: 2% 5% 2% 2%;
+}
+
+.sousCategoriesAgence:hover {
+    color: white;
+    border: 1px solid none;
+    border-radius: 5px;
+    background-color: black;
+    transition-duration: 0.5s;
+}
+
+.sousCategoriesCaravane {
+    transition: 1.5s;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 6%;
+    width: 90%;
+    padding: 2% 5% 2% 2%;
+}
+
+.sousCategoriesCaravane:hover {
+    color: white;
+    border: 1px solid none;
+    border-radius: 5px;
+    background-color: black;
+    transition-duration: 0.5s;
 }
