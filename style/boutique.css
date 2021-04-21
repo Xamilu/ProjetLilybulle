@@ -5,7 +5,7 @@
     background-image: url(../Assets/boutiqueCategorie/boutique.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 55%;
+    background-position: center 43%;
     display: flex;
     align-items: center;
 }
@@ -83,7 +83,7 @@
 }
 #papeterie{
     background-image: url(../Assets/boutiqueCategorie/papeterie.jpg);
-    background-position: 65% center;
+    background-position: right;
 }
 #outdoor{
     background-image: url(../Assets/boutiqueCategorie/outdoor.jpg);
