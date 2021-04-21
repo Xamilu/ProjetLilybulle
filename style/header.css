@@ -130,7 +130,7 @@ li:hover {
     font-size: 0.9em;
     line-height: 2em;
     width: 22%;
-    height: 11.5em;
+    height: 12em;
     padding-left: 1%;
 }
 
@@ -150,7 +150,7 @@ li:hover {
     font-size: 0.9em;
     line-height: 2em;
     width: 10%;
-    height: 12.5em;
+    height: 13em;
     padding-left: 0.5%;
 }
 
@@ -285,4 +285,39 @@ li:hover {
     border-radius: 5px;
     background-color: black;
     transition-duration: 0.5s;
+}
+
+@media screen and (min-width: 500px) and (max-width:1100px) {
+
+    .socialIcons {
+        margin-left: 10%;
+    }
+
+    #newsLetterTitle {
+        font-size: 0.95em;
+    }
+
+    #newsLetterEmail {
+        height: 1.5em;
+        text-indent: 0.2em;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+
+    #newsLetterSubmit {
+        height: 2em;
+        font-size: 0.9em;
+        font-weight: 600;
+        margin-top: 0.5em;
+    }
+
+    .libelluleNavBar {
+        width: 3%;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .libelluleNavBar {
+        width: 3%;
+    }
 }
