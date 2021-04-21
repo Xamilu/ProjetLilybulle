@@ -67,7 +67,7 @@ h2{
 
 /* presentation site */
 article{
-    margin: 0% 20% 0% 20% ;
+    margin: 7% 20% 0% 20% ;
     height: 300px;
 }
 #titre{
@@ -82,3 +82,20 @@ article{
     margin: 5% 0% 10% 0%;
 }
 /* presentation site */
+
+
+/* style feed */
+.feed{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6% 8% 7% 8%;
+    padding: 2%;
+    background-color: antiquewhite;
+}
+.feedBox{
+    width: 18%;
+    height: 200px;
+    background-color: aliceblue;
+}
+/* style feed */
