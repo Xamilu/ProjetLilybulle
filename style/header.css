@@ -18,15 +18,24 @@ header {
 .supBoxHeader {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding-top: 1em;
 }
-
+#banderole{
+    width: 80%;
+    margin: 0% 5% 0% 17%;
+}
 .socialIcons {
     width: 15%;
     align-self: center;
 }
-
+.newsLetter{
+    margin: 2% 0% 0% 0%;
+}
+#newsLetterTitle{
+    font-size: 1em;
+    margin: 0% 0% 2% 0%;
+}
 #newsLetterEmail {
     border: 2px solid black;
     border-radius: 3px;
@@ -63,7 +72,7 @@ header {
 }
 
 .infBoxHeader {
-    margin-top: 5em;
+    margin-top: 3em;
     padding-bottom: 1em;
 }
 
@@ -74,7 +83,7 @@ nav {
 #navBar {
     display: flex;
     gap: 1.5em;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 600;
     list-style-type: none;
     justify-content: center;
