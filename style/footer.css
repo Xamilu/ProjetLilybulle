@@ -14,14 +14,14 @@ footer{
     padding-top: 25px;
 }
 .socialIconsFooter {
-    width: 10%;
+    width: 15%;
     display: flex;
     justify-content: center;
     align-self: center;
 }
 .socialIconsFooter a{
-    width: 25%;
-    margin-left: 8%;
+    width: 14%;
+    margin-left: 12%;
 }
 .socialIconsFooter svg{
     width: 100%;
