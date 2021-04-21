@@ -62,7 +62,6 @@ header {
     font-weight: 600;
     transition: 0.8s;
 }
-
 #newsLetterSubmit:hover {
     border: 2px solid black;
     border-radius: 3px;
@@ -70,12 +69,24 @@ header {
     color: black;
     transition-duration: 0.8s;
 }
-
 .infBoxHeader {
     margin-top: 3em;
     padding-bottom: 1em;
 }
-
+.line1{
+    position: relative;
+    left: 15%;
+    width: 70%;
+    border: 0.5px rgb(207, 207, 207) solid;
+    margin: 1% 0% 1% 0%;
+}
+.line2{
+    position: relative;
+    left: 15%;
+    width: 70%;
+    border: 0.5px rgb(207, 207, 207) solid;
+    margin: 2.5% 0% 2% 0%;
+}
 nav {
     margin-left: -2.5em;
 }
@@ -120,7 +131,7 @@ li:hover {
 
 .menuDeroulantBoutique {
     display: flex;
-    position: fixed;
+    position: absolute;
     display: none;
     z-index: 3;
     transition-duration: 1.5s;
@@ -129,8 +140,8 @@ li:hover {
     border-radius: 10px;
     font-size: 0.9em;
     line-height: 2em;
-    width: 22%;
-    height: 12em;
+    width: 350%;
+    height: 11.5em;
     padding-left: 1%;
 }
 
@@ -140,7 +151,7 @@ li:hover {
 
 .menuDeroulantAtelier {
     display: flex;
-    position: fixed;
+    position: absolute;
     display: none;
     z-index: 3;
     transition-duration: 1.5s;
@@ -149,9 +160,10 @@ li:hover {
     border-radius: 10px;
     font-size: 0.9em;
     line-height: 2em;
-    width: 10%;
-    height: 13em;
-    padding-left: 0.5%;
+    width: 250%;
+    height: 10.75em;
+    padding: 0% 0% 0% 0.5%;
+
 }
 
 .menu:hover .menuDeroulantAtelier {
@@ -161,7 +173,7 @@ li:hover {
 
 .menuDeroulantAgence {
     display: flex;
-    position: fixed;
+    position: absolute;
     display: none;
     z-index: 3;
     transition-duration: 1.5s;
@@ -170,8 +182,8 @@ li:hover {
     border-radius: 10px;
     font-size: 0.9em;
     line-height: 2em;
-    width: 24.5%;
-    height: 10em;
+    width: 550%;
+    height: 8.45em;
     padding-left: 1%;
 }
 
@@ -181,7 +193,7 @@ li:hover {
 
 .menuDeroulantCaravane {
     display: flex;
-    position: fixed;
+    position: absolute;
     display: none;
     z-index: 3;
     transition-duration: 1.5s;
@@ -190,8 +202,8 @@ li:hover {
     border-radius: 10px;
     font-size: 0.9em;
     line-height: 2em;
-    width: 24.5%;
-    height: 10em;
+    width: 300%;
+    height: 8.30em;
     padding-left: 1%;
 }
 
@@ -205,19 +217,22 @@ li:hover {
     flex-direction: column;
     width: 50%;
 }
+.premierePartie{
+    margin: 0% 0% 0% 1%;
+}
 
 .verticalSeparator {
-    height: 8.5em;
+    height: auto;
     border: 1px solid black;
     border-radius: 2px;
-    margin: 4% 7% 0 4%;
+    margin: 4% 7% 4% 4%;
 }
 
 .verticalSeparator2 {
-    height: 7.5em;
+    height: auto;
     border: 1px solid black;
     border-radius: 2px;
-    margin: 4% 7% 0 4%;
+    margin: 4% 7% 4% 4%;
 }
 
 .sousCategories {
@@ -240,8 +255,8 @@ li:hover {
     transition: 0.5s;
     padding-left: 5px;
     padding-right: 5px;
-    margin-top: 6%;
-    width: 90%;
+    margin: 2% 2% 0% 2%;
+    width: auto;
     padding: 2% 5% 2% 2%;
 }
 
@@ -255,9 +270,7 @@ li:hover {
 
 .sousCategoriesAgence {
     transition: 0.5s;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-top: 6%;
+    margin-top: 2.5%;
     width: 90%;
     padding: 2% 5% 2% 2%;
 }
@@ -272,9 +285,7 @@ li:hover {
 
 .sousCategoriesCaravane {
     transition: 0.5s;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-top: 6%;
+    margin-top: 2.5%;
     width: 90%;
     padding: 2% 5% 2% 2%;
 }
@@ -286,7 +297,6 @@ li:hover {
     background-color: black;
     transition-duration: 0.5s;
 }
-
 @media screen and (min-width: 500px) and (max-width:1100px) {
 
     .socialIcons {
