@@ -19,9 +19,13 @@ footer{
     justify-content: center;
     align-self: center;
 }
-.socialIconsFooter svg{
+.socialIconsFooter a{
     width: 25%;
     margin-left: 8%;
+}
+.socialIconsFooter svg{
+    width: 100%;
+    height: 100%;
 }
 #banderoleFooter{
     height: 100px;
