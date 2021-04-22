@@ -37,6 +37,7 @@ h2{
     height: 300px;
 }
 .img-home{
+    background-size: cover;
     margin: 2% 0% 2% 0%;
     transition: all ease-in-out 0.4s;
 }
@@ -53,15 +54,18 @@ h2{
 }
 #atelier{
     background-image: url(../Assets/atelier.png);
+    background-position: left 23%;
 }
 #agence{
     background-image: url(../Assets/agence.png);
+    background-position: 70% 65%;
 }
 #caravane{
     background-image: url(../Assets/caravane.png);
 }
 #e-shop{
     background-image: url(../Assets/E-shop.jpg);
+    background-position: center 48%;
 }
 
 /* background image */
