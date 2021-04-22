@@ -1,0 +1,150 @@
+.banderoleAtelier {
+    color: white;
+    width: 100%;
+    height: 14em;
+    background-image: url(../Assets/atelier2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 43%;
+    display: flex;
+    align-items: center;
+    margin: 2.5% 0% 0% 0%;
+}
+
+.banderoleAtelier h1{
+    font-size: 4em;
+    margin: 8%;
+}
+
+.categorieContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+.categorieCarteDuo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.categorieCarteSolo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.categorieCarteDuo a {
+    width: 30%;
+    margin-top: 4em;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.categorieCarteSolo a {
+    width: 30%;
+    margin-top: 4em;
+}
+
+.categorieCarte {
+    width: 100%;
+    height: 37em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.categorieCarte h2 {
+    font-size: 3em;
+    color: white;
+}
+
+.categorieCarte img {
+    height: 100%;
+    width: 100%;
+}
+
+#fenetre {
+    background-image: url(../Assets/fenetre.jpg);
+}
+
+#siege {
+    background-image: url(../Assets/siege2.jpg);
+}
+
+#murs {
+    background-image: url(../Assets/teinture_murs.jpg);
+}
+
+#matelas {
+    background-image: url(../Assets/matelas.jpg);
+}
+
+footer{
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding-bottom: 1%;
+    margin-bottom: -10%;
+    margin-top: 5%;
+}
+.hautFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+.socialIconsFooter {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.socialIconsFooter a{
+    width: 14%;
+    margin-left: 12%;
+}
+.socialIconsFooter svg{
+    width: 100%;
+    height: 100%;
+}
+#banderoleFooter{
+    height: 100px;
+}
+.contactEtHoraires{
+    margin-top: 25px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactEtHoraires p{
+    margin: 0;
+    margin-top: 4px;
+}
+
+#boutonHautDePage { 
+    text-align: right;
+    margin: -2% 2% 0 0;
+}   
+
+@media screen and (min-width: 500px) and (max-width:900px) {
+
+    .banderoleBoutique h1 {
+        font-size: 2em;
+    }
+    
+    .categorieCarte h2 {
+        font-size: 1.5em;
+    }
+}
