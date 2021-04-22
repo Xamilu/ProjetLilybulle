@@ -1,5 +1,6 @@
 body {
-    margin: 0
+    margin: 0;
+    overflow-x: hidden
 }
 
 
@@ -56,21 +57,67 @@ h2{
 /* background image */
 #boutique{
     background-image: url(../Assets/boutique.jpg);
+    animation: slideFromLeft 0.5s;
 }
 #atelier{
     background-image: url(../Assets/atelier.png);
     background-position: left 23%;
+    animation: slideFromLeftWithDelay 2s;
 }
 #agence{
     background-image: url(../Assets/agence.png);
     background-position: 70% 65%;
+    animation: slideFromRight 1s;
 }
 #caravane{
     background-image: url(../Assets/caravane.png);
+    animation: slideFromRightWithDelay 1.5s;
 }
 #e-shop{
     background-image: url(../Assets/E-shop.jpg);
     background-position: center 48%;
+    animation: slideFromRightWithDelay 2.5s;
+}
+@keyframes slideFromLeft {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromLeftWithDelay {
+    0%{
+        transform: translateX(-100%);
+    }
+    77%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromRight {
+    0%{
+        transform: translateX(100%);
+    }
+    50%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromRightWithDelay {
+    0%{
+        transform: translateX(100%);
+    }
+    73%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 /* background image */
@@ -85,6 +132,9 @@ article{
     margin: 0% 0% 8% 0%;
 }
 #paragraphe{
+    position: relative;
+    top: 100px;
+    opacity: 0;
     text-align: center;
     font-size: 1.2em;
 }
