@@ -1,3 +1,8 @@
+body {
+    margin: 0
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
 
 /* style display */
@@ -160,3 +165,13 @@ article{
     margin: 2%;
 }
 /* display blog */
+
+/*Display Map */
+#lieu {
+    text-align: center;
+}
+
+.map {
+    width: 100%;
+    margin-bottom: 5%;
+}

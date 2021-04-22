@@ -48,3 +48,12 @@ footer{
     text-align: right;
     margin: -2% 2% 0 0;
 }   
+
+.map {
+    margin-top: 1%;
+}
+
+#boutonHautDePage { 
+    text-align: right;
+    margin: -2% 2% 0 0;
+}   
