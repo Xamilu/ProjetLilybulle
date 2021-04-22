@@ -1,16 +1,16 @@
-.banderoleBoutique {
+.banderoleCaravane {
     color: white;
     width: 100%;
     height: 14em;
-    background-image: url(../Assets/boutiqueCategorie/boutique.jpg);
+    background-image: url(../Assets/caravaneFoodCategorie/caravane.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 43%;
+    background-position: center 75%;
     display: flex;
     align-items: center;
     margin: 2.5% 0% 0% 0%;
 }
-.banderoleBoutique h1{
+.banderoleCaravane h1{
     font-size: 4em;
     margin: 8%;
 }
@@ -56,7 +56,6 @@
     -moz-transition: all 0.8s ease;
 }
 .categorieCarte:hover{
-    opacity: 90%;
     -webkit-transform: scale(1.07);
     -moz-transform: scale(1.07);
 }
@@ -68,40 +67,32 @@
     height: 100%;
     width: 100%;
 }
-#meuble{
-    background-image: url(../Assets/boutiqueCategorie/meubles.jpg);
+#epicerie{
+    background-image: url(../Assets/caravaneFoodCategorie/epicerie\ fine.jpg);
+    background-position: left bottom;
 }
-#deco{
-    background-image: url(../Assets/boutiqueCategorie/deco.jpg);
+#terasse{
+    background-image: url(../Assets/caravaneFoodCategorie/terasse.jpg);
+    background-position: left center;
 }
-#linge{
-    background-image: url(../Assets/boutiqueCategorie/linge.png);
+#the{
+    background-image: url(../Assets/caravaneFoodCategorie/the.jpg);
+    background-position: right center;
 }
-#mode{
-    background-image: url(../Assets/boutiqueCategorie/mode.jpg);
+#chocolat{
+    background-image: url(../Assets/caravaneFoodCategorie/chocolats.jpg);
 }
-#enfant{
-    background-image: url(../Assets/boutiqueCategorie/enfant.jpg);
+#spiritueux{
+    background-image: url(../Assets/caravaneFoodCategorie/spiritueux.jpg);
+    background-position: left top;
 }
-#papeterie{
-    background-image: url(../Assets/boutiqueCategorie/papeterie.jpg);
-    background-position: right;
-}
-#outdoor{
-    background-image: url(../Assets/boutiqueCategorie/outdoor.jpg);
-}
-#presse{
-    background-image: url(../Assets/boutiqueCategorie/presse.png);
-    background-position: 4% center;
-}
-#tapis{
-    background-image: url(../Assets/boutiqueCategorie/tapis.jpg);
-    background-position: 55% bottom;
+#caravane{
+    background-image: url(../Assets/caravane.png);
 }
 
 @media screen and (min-width: 500px) and (max-width:900px) {
 
-    .banderoleBoutique h1 {
+    .banderoleCaravane h1 {
         font-size: 2em;
     }
     

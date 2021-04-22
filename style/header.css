@@ -78,14 +78,14 @@ header {
     left: 15%;
     width: 70%;
     border: 0.5px rgb(207, 207, 207) solid;
-    margin: 1% 0% 1% 0%;
+    margin: 1% 0% 2% 0%;
 }
 .line2{
     position: relative;
     left: 15%;
     width: 70%;
     border: 0.5px rgb(207, 207, 207) solid;
-    margin: 2.5% 0% 2% 0%;
+    margin: 1.5% 0% 2% 0%;
 }
 nav {
     margin-left: -2.5em;
