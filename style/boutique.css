@@ -98,6 +98,34 @@
     background-image: url(../Assets/boutiqueCategorie/tapis.jpg);
     background-position: 55% bottom;
 }
+/* Animation */
+.categorieCarteDuo a{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.categorieCarteDuo a:nth-of-type(odd)  {
+    transform: translateX(-100px);
+}
+.categorieCarteDuo a:nth-of-type(even) {
+    transform: translateX(100px);
+}
+.categorieCarteDuo a.in-view {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+.categorieCarteSolo a{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(100px)
+}
+.categorieCarteSolo a.in-view {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
 
 @media screen and (min-width: 500px) and (max-width:900px) {
 
