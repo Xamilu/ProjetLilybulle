@@ -29,6 +29,11 @@ header {
     width: 15%;
     align-self: center;
 }
+.socialIcons a svg{
+    width: 13%;
+    height: 13%;
+}
+
 .newsLetter{
     margin: 2% 0% 0% 0%;
 }
@@ -301,6 +306,11 @@ li:hover {
 
     .socialIcons {
         margin-left: 10%;
+    }
+
+    .socialIcons a svg{
+        width: 27%;
+        height: 27%;
     }
 
     #newsLetterTitle {
