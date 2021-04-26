@@ -5,7 +5,7 @@ let item = document.querySelector(".categorieCarteSolo a");
 function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
   return (
-    rect.top >= -450 &&
+    rect.top >= -500 &&
     rect.left >=0 &&
     rect.bottom <= (window.innerHeight + 550) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)

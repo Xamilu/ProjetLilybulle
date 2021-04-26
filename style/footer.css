@@ -42,3 +42,6 @@ footer{
     text-align: right;
     margin: -2% 2% 0 0;
 }   
+footer .socialIcons{
+    margin: 0 -3% 0 10%;
+}
