@@ -20,17 +20,6 @@
     margin: 0% 10% 0% 10%;
     width: 90%;
 }
-.left{
-    width: 40%;
-    height: 400px;
-    overflow: hidden;
-}
-.right{
-    width: 40%;
-    height: 400px;
-    overflow: hidden;
-}
-
 /* image background */
 .img{
     width: 100%;
@@ -49,6 +38,11 @@
     display: flex;
     flex-direction: row;
     margin: 5% 0% 5% 0%;
+}
+.row div{
+    width: 40%;
+    height: 400px;
+    overflow: hidden;
 }
 .divImgDesc{
     margin: 0% 2% 0% 2%;
