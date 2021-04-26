@@ -98,6 +98,10 @@
     background-image: url(../Assets/boutiqueCategorie/tapis.jpg);
     background-position: 55% bottom;
 }
+#partenaire{
+    background-image: url(../Assets/boutiqueCategorie/partenaire.jpg);
+}
+
 /* Animation */
 .categorieCarteDuo a{
     visibility: hidden;

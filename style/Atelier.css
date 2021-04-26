@@ -81,19 +81,19 @@
 }
 
 #fenetre {
-    background-image: url(../Assets/fenetre.jpg);
+    background-image: url(../Assets/AtelierCategorie/fenetre.jpg);
 }
 
 #siege {
-    background-image: url(../Assets/siege2.jpg);
+    background-image: url(../Assets/AtelierCategorie/siege2.jpg);
 }
 
 #murs {
-    background-image: url(../Assets/teinture_murs.jpg);
+    background-image: url(../Assets/AtelierCategorie/teinture_murs.jpg);
 }
 
 #matelas {
-    background-image: url(../Assets/matelas.jpg);
+    background-image: url(../Assets/AtelierCategorie/matelas.jpg);
 }
 /* Animation */
 .categorieCarteDuo a{

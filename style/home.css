@@ -33,6 +33,7 @@ h2{
     top: 40%;
     text-align: center;
     z-index: 3;
+    font-size: 2em;
 }
 .img-col1{
     width: 100%;
@@ -202,7 +203,7 @@ article{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin: 6% 4% 7% 4%;
+    margin: 6% 4% 6% 4%;
     padding: 4%;
     background-color: rgb(241, 240, 240);
 }
@@ -227,6 +228,7 @@ article{
 /*Display Map */
 #lieu {
     text-align: center;
+    margin-bottom: 3%;
 }
 
 .map {
