@@ -10,6 +10,11 @@ body {
     font-family: 'Zilla Slab', serif;
 }
 
+#contact {
+    text-align: right;
+    margin: 0%;
+}
+
 header {
     width: 100%;
     height: 100%;
@@ -19,7 +24,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-top: 1em;
+    padding-top: 1.1em;
 }
 #banderole{
     width: 80%;
@@ -333,6 +338,10 @@ li:hover {
 
     .libelluleNavBar {
         width: 3%;
+    }
+
+    .iconify {
+        min-width: 7%;
     }
 }
 
