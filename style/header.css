@@ -11,8 +11,9 @@ body {
 }
 
 #contact {
-    text-align: right;
+    text-align: center;
     margin: 0%;
+    padding-right: 0.5%;
 }
 
 header {
