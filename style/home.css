@@ -154,6 +154,7 @@ article{
 
 
 /* style feed */
+/*
 .feed{
     display: flex;
     flex-wrap: wrap;
@@ -194,6 +195,11 @@ article{
     background-image: url(../Assets/feed/feed5.png);
     background-size: 100%;
 }
+*/
+#feedPlugin{
+    margin: 6.5% 8% 7% 8%;
+}
+
 /* style feed */
 
 
