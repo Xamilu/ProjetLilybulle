@@ -38,6 +38,14 @@ header {
     width: 13%;
     height: 13%;
 }
+.iconify{
+    transition: all ease-in-out 0.4s;
+}
+.iconify:hover{
+    opacity: 90%;
+    transform: scale(1.05);
+
+}
 
 .newsLetter{
     margin: 2% 0% 0% 0%;
