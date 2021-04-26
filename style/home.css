@@ -33,6 +33,7 @@ h2{
     top: 40%;
     text-align: center;
     z-index: 3;
+    font-size: 2em;
 }
 .img-col1{
     width: 100%;
@@ -153,6 +154,7 @@ article{
 
 
 /* style feed */
+/*
 .feed{
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +195,11 @@ article{
     background-image: url(../Assets/feed/feed5.png);
     background-size: 100%;
 }
+*/
+#feedPlugin{
+    margin: 6.5% 8% 7% 8%;
+}
+
 /* style feed */
 
 
@@ -202,13 +209,13 @@ article{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin: 6% 4% 7% 4%;
+    margin: 6% 4% 6% 4%;
     padding: 4%;
     background-color: rgb(241, 240, 240);
 }
 .artc{
     width: 30%;
-    height: 32em;
+    height: auto;
     background-color: white;
     padding: 1%;
     transition: all ease-in-out 0.3s;
@@ -227,6 +234,7 @@ article{
 /*Display Map */
 #lieu {
     text-align: center;
+    margin-bottom: 3%;
 }
 
 .map {

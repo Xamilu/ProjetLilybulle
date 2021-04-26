@@ -122,11 +122,11 @@
     background-image: url(../Assets/agenceCategorie/cuisine.jpg);
     background-position: center center;
 }
-#peinture{
-    background-image: url(../Assets/agenceCategorie/peinture.png);
+#canapé{
+    background-image: url(../Assets/agenceCategorie/canape.jpg);
 }
-#peinture{
-    background-image: url(../Assets/agenceCategorie/peinture.png);
+#panorama{
+    background-image: url(../Assets/agenceCategorie/panorama.jpg);
 }
 /* Animation */
 .categorieCarteDuo a{
