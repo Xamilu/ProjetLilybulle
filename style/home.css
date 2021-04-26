@@ -92,6 +92,7 @@ h2{
         transform: translateX(-100%);
     }
     77%{
+        visibility: hidden;
         transform: translateX(-100%);
     }
     100%{
@@ -104,6 +105,7 @@ h2{
     }
     50%{
         transform: translateX(100%);
+        visibility: hidden;
     }
     100%{
         transform: translateX(0);
@@ -115,6 +117,7 @@ h2{
     }
     73%{
         transform: translateX(100%);
+        visibility: hidden;
     }
     100%{
         transform: translateX(0);
