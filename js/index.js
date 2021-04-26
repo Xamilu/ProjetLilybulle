@@ -22,6 +22,7 @@ function callbackFunc() {
         item.classList.remove("in-view");
     }
 }
- 
+
+
 window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
