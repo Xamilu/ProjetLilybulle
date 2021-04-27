@@ -36,9 +36,24 @@ header {
     width: 15%;
     align-self: center;
 }
+.socialIcons a:nth-child(1){
+    animation: iconeHeader 0.5s ease-in-out forwards;
+}
+.socialIcons a:nth-child(2){
+    animation: iconeHeader 0.5s 0.3s ease-in-out forwards;
+}
+.socialIcons a:nth-child(3){
+    animation: iconeHeader 0.5s 0.6s ease-in-out forwards;
+}
+.socialIcons a:nth-child(4){
+    animation: iconeHeader 0.5s 0.9s ease-in-out forwards;
+}
 .socialIcons a svg{
     width: 13%;
     height: 13%;
+}
+.socialIcons a{
+    opacity: 0;
 }
 .iconify{
     transition: all ease-in-out 0.4s;
@@ -46,9 +61,15 @@ header {
 .iconify:hover{
     opacity: 90%;
     transform: scale(1.05);
-
 }
-
+@keyframes iconeHeader {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .newsLetter{
     margin: 2% 0% 0% 0%;
 }
