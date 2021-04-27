@@ -144,6 +144,17 @@ li:hover {
     color: white;
 }
 
+@keyframes menu1 {
+    0%{
+        opacity: 0;
+        transform: translateY(3em);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0em);
+    }
+}
+
 .menu {
     position: relative;
     display: inline-block;
@@ -167,6 +178,7 @@ li:hover {
 
 .menu:hover .menuDeroulantBoutique {
     display: flex;
+    animation: menu1 0.3s ease-in-out forwards;
 }
 
 .menuDeroulantAtelier {
@@ -189,6 +201,7 @@ li:hover {
 .menu:hover .menuDeroulantAtelier {
     display: flex;
     flex-direction: column;
+    animation: menu1 0.3s ease-in-out forwards;
 }
 
 .menuDeroulantAgence {
@@ -209,6 +222,7 @@ li:hover {
 
 .menu:hover .menuDeroulantAgence {
     display: flex;
+    animation: menu1 0.3s ease-in-out forwards;
 }
 
 .menuDeroulantCaravane {
@@ -229,6 +243,7 @@ li:hover {
 
 .menu:hover .menuDeroulantCaravane {
     display: flex;
+    animation: menu1 0.3s ease-in-out forwards;
 }
 
 
