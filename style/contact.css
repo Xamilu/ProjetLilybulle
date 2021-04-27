@@ -1,0 +1,15 @@
+section{
+    margin: 5% 10% 5% 10%;
+}
+#renseignement{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    height: 1em;
+}
+#ObjMsg{
+    display: flex;
+    flex-direction: column;
+}
