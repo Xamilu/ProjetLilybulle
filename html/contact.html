@@ -102,21 +102,32 @@
             </div>
         </header>
 
+        <div class="line1"></div>
+
 
         <section>
+            <div class="presContact">
+                <p>
+                    Une Demande de devis, un avis, un renseignment... Contactez-nous !
+                </p>
+            </div>
             <form id="formulaire" action="#" method="get">
                 <div id="renseignement">
-                    <label for="nom">Nom:</label>
-                    <input type="text" name="nom" id="nom"><br><br>
-                    <label for="prenom">Prenom:</label>
-                    <input type="text" name="prenom" id="prenom"><br><br>
-                    <label for="mail">Mail:</label>
-                    <input type="text" name="mail" id="mail">
-                    <label for="tel">Tel:</label>
-                    <input type="text" name="tel" id="tel">
+                    <div class="col col1">
+                        <label class="labelInput" for="nom">Nom:</label>
+                        <input class="rsgInput" type="text" name="nom" id="nom">
+                        <label class="labelInput" for="prenom">Prénom:</label>
+                        <input class="rsgInput" type="text" name="prenom" id="prenom">
+                    </div>
+                    <div class="col col2">
+                        <label class="labelInput" for="mail">Mail:</label>
+                        <input class="rsgInput" type="text" name="mail" id="mail">
+                        <label class="labelInput" for="tel">Téléphone:</label>
+                        <input class="rsgInput" type="text" name="tel" id="tel">
+                    </div>
                 </div>
                 <div id="ObjMsg">
-                    <label for="motif-select">Objet</label>
+                    <label class="labelObjMsg" for="motif-select">Objet:</label>
                     <select name="motif" id="motif-select">
                         <option valeur="default">--Choix de l'Objet--</option>
                         <option valeur="DevisCanape">Devis Canapé</option>
@@ -129,11 +140,10 @@
                     </select>
                     <label for="Message">Message:</label>
                     <textarea name="message" id="msg" cols="70" rows="10"></textarea>
-                    <input type="submit" value="submit">
+                    <input id="submit" type="submit" value="Envoyer">
                 </div>
             </form>
         </section>
-
         <footer>
             <div class="hautFooter">
                 <div class="socialIcons">
