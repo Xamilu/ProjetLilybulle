@@ -101,14 +101,14 @@ header {
     color: white;
     font-size: 0.9em;
     font-weight: 600;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 #newsLetterSubmit:hover {
     border: 2px solid black;
     border-radius: 3px;
     background-color: white;
     color: black;
-    transition-duration: 0.8s;
+    transition-duration: 0.5s;
 }
 .infBoxHeader {
     margin-top: 3em;

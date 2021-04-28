@@ -1,16 +1,28 @@
 section{
     margin: 1% 10% 5% 10%;
 }
+
+input {
+    outline: none;
+    text-indent: 0.8%;
+}
+
+.presContact {
+    text-align: center;
+}
+
 #renseignement{
     display: flex;
     flex-direction: row;
     margin: 0% 0% 0% 0%;
     height: auto;
 }
+
 #ObjMsg{
     display: flex;
     flex-direction: column;
 }
+
 .rsgInput{
     margin: 1% 0% 2% 0%;
     width: 100%;
@@ -18,42 +30,64 @@ section{
     border: none;
     background-color: rgb(241, 241, 241);
 }
+
 .labelInput{
     margin: 0% 0% 0% 1%;
+    font-size: 1.1em;
 }
+
 .col{
     display: flex;
     flex-direction: column;
     width: 49%;
 }
+
 .col1{
     margin-right: 0.75%;
 }
+
 .col2{
     margin-left: 0.75%;
 }
+
 .labelObjMsg{
     margin-left: 0.75%;
+    font-size: 1.1em;
 }
+
 #motif-select{
     margin: 0.5% 0% 1.5% 0%;
     border: none;
     background-color: rgb(241, 241, 241);
     height: 2.5em;
 }
+
 #msg{
     margin: 1% 0% 0% 0%;
     border: none;
-    background-color: rgb(241, 241, 241);  
+    background-color: rgb(241, 241, 241);
+    min-width: 50%;
+    max-width: 100%;
+    min-height: 20em;
+    max-height: 30em;
+    text-indent: 0.5%;
+    padding-top: 0.5%;
+    font-size: 1.1em; 
+    outline: none;
 }
+
 #submit{
     width: 10%;
     margin-top: 2%;
     padding: 1%;
     border: none;
+    border-radius: 3px;
     background-color: rgb(241, 241, 241);
+    font-size: 1em;
+    font-weight: 600;
     transition: all ease-in-out 0.5s;
 }
+
 #submit:hover{
     background-color: black;
     color: white;
