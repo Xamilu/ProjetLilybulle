@@ -1,12 +1,8 @@
-body {
-    height: 14em;
-}
-
 #introContact {
     text-align: center;
 }
 
-section{
+section {
     margin: 1% 10% 5% 10%;
 }
 
@@ -139,4 +135,9 @@ select option {
     .labelObjMsg {
         font-size: 1.3em;
     }
+    
+    section {
+        height: 72em;
+    }
+    
 }
