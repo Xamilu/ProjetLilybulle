@@ -1,3 +1,35 @@
+/* Animation */
+.container .row div{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.divImgDesc:nth-of-type(odd)  {
+    transform: translateX(-100px);
+}
+.divImgDesc:nth-of-type(even)  {
+    transform: translateX(100px);
+}
+.divTextDesc {
+    transform: translateY(150px);
+}
+.container .row div.in-view {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+.container .row div{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.container .row div.in-view {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+
 .banderoleMeuble {
     color: white;
     width: 100%;
