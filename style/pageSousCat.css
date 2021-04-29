@@ -148,9 +148,6 @@ h5{
     visibility: visible;
     opacity: 1;
 }
-.divTextDesc.in-view h5{
-    animation: titleAnimation 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) 1 forwards;
-}
 @keyframes titleAnimation {
 	from {
 		transform: translate3d(0, 100%, 0);
