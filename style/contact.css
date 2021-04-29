@@ -29,6 +29,8 @@ input {
     height: 2.5em;
     border: none;
     background-color: rgb(241, 241, 241);
+    font-size: 0.8em;
+    font-weight: 600;
 }
 
 .labelInput{
@@ -53,6 +55,11 @@ input {
 .labelObjMsg{
     margin-left: 0.75%;
     font-size: 1.1em;
+    outline: none;
+}
+
+select option {
+    font-size: 1.3em;
 }
 
 #motif-select{
@@ -70,10 +77,20 @@ input {
     max-width: 100%;
     min-height: 20em;
     max-height: 30em;
-    text-indent: 0.5%;
     padding-top: 0.5%;
+    padding-left: 0.5em;
     font-size: 1.1em; 
     outline: none;
+}
+
+#compteurMots {
+    display: flex;
+    font-size: 1.2em;
+    margin-top: 0.3%;
+}
+
+#compteur, #maxWord {
+    text-align: right;
 }
 
 #submit{
@@ -92,4 +109,26 @@ input {
     background-color: black;
     color: white;
     transform: scale(1.04);
+}
+
+@media screen and (min-width: 500px) and (max-width: 1100px) {
+
+    #msg {
+        min-height: 5em;
+        max-height: 15em;
+    }
+
+    #submit {
+        width: 15%;
+        height: 2.2em;
+        font-size: 1.2em;
+    }
+
+    .labelInput {
+        font-size: 1.3em;
+    }
+
+    .labelObjMsg {
+        font-size: 1.3em;
+    }
 }
