@@ -132,7 +132,7 @@
 
 h5{
     font-family: 'Timberline', sans-serif;
-    font-size: 40px;
+    font-size: 3em;
     margin: 7% 0% 10% 0%;
 }
 .lineContainer{
@@ -148,4 +148,23 @@ h5{
     width: 70%;
     border: 0.5px rgb(207, 207, 207) solid;
     margin: 1.5% 0% 2% 0%;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1100px) {
+
+    .divImgDesc {
+        align-items: center;
+    }
+    
+    .img {
+        height: 70%;
+    }
+
+    h5 {
+        font-size: 1.8em;
+    }
+
+    .row {
+        margin-bottom: 0.5%;
+    }
 }

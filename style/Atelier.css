@@ -303,4 +303,19 @@ footer{
     #fenetre, #siege {
         background-position: center;
     }
+    .divImgDesc {
+        align-items: center;
+    }
+    
+    .img {
+        height: 70%;
+    }
+
+    h5 {
+        font-size: 1.8em;
+    }
+
+    .row {
+        margin-bottom: 0.5%;
+    }
 }
