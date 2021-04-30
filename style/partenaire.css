@@ -1,0 +1,52 @@
+.banderoleMeuble {
+    color: white;
+    width: 100%;
+    height: 14em;
+    background-image: url(../Assets/boutiqueCategorie/boutique.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 43%;
+    display: flex;
+    align-items: center;
+    margin: 1% 0% 2.1% 0%;
+}
+.banderoleMeuble h1{
+    font-size: 4em;
+    margin: 8%;
+}
+.row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 3% 10% 3% 10%;
+}
+h5{
+    font-family:  'Timberline', sans-serif;
+    font-size: 2.6em;
+    margin: 0% 0% 0% 0%;
+}
+.partenaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logoPartenaire{
+    width: 100%;
+    height: auto;
+    transition: all ease-in-out 0.3s;
+}
+.logoPartenaire:hover{
+    transform: scale(1.10);
+}
+.divLogo{
+    display: flex;
+    width: 40%;
+    height: 15em;
+    align-items: center;
+    margin: 0% 25% 0% 25%;
+}
+.divText{
+    width: 80%;
+    text-align: center;
+}
