@@ -41,10 +41,10 @@ h5{
 }
 .divLogo{
     display: flex;
-    width: 40%;
+    width: 35%;
     height: 15em;
     align-items: center;
-    margin: 0% 25% 0% 25%;
+    margin: 0% 25% 4% 25%;
 }
 .divText{
     width: 80%;
