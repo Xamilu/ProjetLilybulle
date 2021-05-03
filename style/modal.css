@@ -1,116 +1,61 @@
-body {
-  background-color: rgb(255, 255, 255);
-  font-family: sans-serif;
-}
-
-h1, p {
-  text-align: center;
-}
-
-.lienModal {
-  background-color: white;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 6px;
-  color: rgb(0, 0, 0);
-  display: inline-block;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1em;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  transition: ease-in-out all 0.3s;
-}
-.lienModal:hover {
-  transform: scale(1.06);
-  text-decoration: none;
-}
-
-.modaloverlay {
-  background: rgba(65, 65, 65, 0.8);
-  bottom: 0;
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
   left: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
   top: 0;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
-  z-index: -1;
-  display: none;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-.modaloverlay:target {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
-  z-index: 99999;
-}
-.modaloverlay .modal {
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow-y: hidden;
-}
-@media (min-width: 60em) {
-  section{
-    display: none;
-  }
-  .modaloverlay .modal {
-    height: 100%;
-    max-height: 100%;
-    max-width: 100%;
-    width: 100%;
-  }
-
-}
-.modaloverlay .modal > iframe, .modaloverlay .modal > div {
-  border: none;
-  width: 100%;
-  height: 100%;
-}
-.modaloverlay .close {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 1em;
-  padding: 8px 12px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  z-index: 1;
-}
-.newsLetter{
+.modal-content {
   display: flex;
   flex-direction: column;
-  width: 10px;
-  margin-top: 10%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 2%;
+  border: 1px solid #888;
+  width: 80%;
 }
-#newsLetterTitle {
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.respNewsLetter{
+  width: auto;
+  margin: 2% 30% 2% 30%;
+}
+#respTitleNewsLetter{
   text-align: center;
-  font-size: 1em;
-  margin: 3% 10% 3% 10%;
 }
-
-#newsLetterEmail {
-  height: 1.5em;
-  text-indent: 0.2em;
-  font-size: 0.9em;
-  font-weight: 1em;
-  margin: 3% 20% 3% 20%;
-}
-
-#newsLetterSubmit {
-  font-size: 1em;
-  margin-top: 0.5em;
-  border: 2px solid black;
+#btnModal{
+  margin: 3% 3% 3% 3%;
+  padding: 1%;
+  font-size: 1.5em;
+  width: 6.5em;
+  background-color: white;
   border-radius: 3px;
-  background-color: black;
-  color: white;
-  margin: 3% 20% 3% 20%;
-
+  border: 1px solid black;
 }
-#newsLetterEmail::placeholder {
-  font-size: 1em;
+@media screen and (min-width: 100px) and (max-width: 1060px) {
+  #newsLetterClassic{
+    display: none;
+  }
+}
+@media screen and (min-width: 1060px) and (max-width: 2000px){
+  #btnModal{
+    display: none;
+  }
 }

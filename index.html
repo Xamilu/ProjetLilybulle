@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="./style/header.css">
         <link rel="stylesheet" href="./style/home.css">
         <link rel="stylesheet" href="./style/footer.css">
+        <link rel="stylesheet" href="./style/modal.css">
         <title>Lilybulle | Accueil</title>
         <link rel="icon" href="../ProjetLilybulle/Assets/iconeLilybulle.ico" type="image/png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,11 +21,29 @@
                     <a href="#lieu"><span class="iconify" data-icon="zmdi:google-maps" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
                     <a href="./html/contact.html"><span class="iconify" data-icon="entypo:phone" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
                 </div>
-                    <a href="./index.html"><img id="banderole" src="./Assets/banderoleLilybulle.png" alt="Lilybulle"></a>
-                <div class="newsLetter">
-                    <h3 id="newsLetterTitle">Abonnez-vous à notre Newsletter</h3>
-                    <input type="email" name="email" id="newsLetterEmail" size="25" minlength="10" maxlength="40" placeholder="Votre Email">
-                    <input type="submit" name="submit" id="newsLetterSubmit" value="S'abonner">
+                <a href="./index.html"><img id="banderole" src="./Assets/banderoleLilybulle.png" alt="Lilybulle"></a>
+
+                <!--Modal responsive newsletter-->
+                <button id="btnModal">Newsletter</button>
+                
+                <div id="myModal" class="modal">
+            
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3 class="respNewsLetter" id="respTitleNewsLetter">Abonnez-vous à notre Newsletter</h3>
+                    <input type="email" name="email" class="respNewsLetter" placeholder="votre mail">
+                    <input type="submit" name="submit" class="respNewsLetter" value="S'Abonner">
+                  </div>
+                
+                </div>
+
+
+                <div id="newsLetterClassic">
+                    <div class="newsLetter">
+                        <h3 id="newsLetterTitle">Abonnez-vous à notre Newsletter</h3>
+                        <input type="email" name="email" id="newsLetterEmail" size="25" minlength="10" maxlength="40" placeholder="Votre Email">
+                        <input type="submit" name="submit" id="newsLetterSubmit" value="S'abonner">
+                    </div>
                 </div>
             </div>
             <div class="infBoxHeader">
@@ -96,7 +115,7 @@
                             </div>
                         </div>
                         <span class="iconify" data-icon="grommet-icons:shop" data-inline="false" style="margin-right: -1.2%;" data-width="2%"></span>
-                        <a href="./html/modal.html"><li>E-shop</li></a>
+                        <a href="#"><li>E-shop</li></a>
 
                     </ul>
                 </nav>
@@ -240,3 +259,4 @@
 <script src="./js/index.js"></script>
 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 <script src="js/carousel.js"></script>
+<script src="js/modal.js"></script>
