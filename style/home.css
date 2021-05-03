@@ -162,17 +162,18 @@ article{
 #carousel-section {
     position: relative;
     height: 30em;
+    width: 100%;
 }
 .carousel {
     height: 100%;
-    width: auto;
-    display: flex;
-    overflow: hidden;
-    flex-wrap: nowrap;
-    scroll-behavior: smooth;
+    width: 100%;
+    position:relative;
 }
 .carousel-item {
+    position: absolute;
+    left: 0;
     width: 90%;
+    height: 100%;
     flex-grow: 1;
     flex-shrink: 0;
     background-color: #262C2B;
@@ -181,22 +182,30 @@ article{
     flex-direction: column;
     padding-left: 10%;
     background-size: cover;
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -moz-transition: opacity 0.7s ease-in-out;
+    -o-transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 .carousel-item:nth-child(1) {
     background-image:  url('../Assets/carouselBg/carousel1.png');
     background-size: cover;
+    opacity: 1;
 }
 .carousel-item:nth-child(2) {
     background-image: url('../Assets/carouselBg/carousel2.png');
     background-size: cover;
+    opacity: 0;
 }
 .carousel-item:nth-child(3) {
     background-image: url('../Assets/carouselBg/carousel3.png');
     background-size: cover;
+    opacity: 0;
 }
 .carousel-item:nth-child(4) {
     background-image: url('../Assets/carouselBg/carousel4.jpg');
     background-size: cover;
+    opacity: 0;
 }
 .carousel-item h3 {
     margin: 0;
@@ -204,18 +213,46 @@ article{
     font-weight: 700;
     color: white;
 }
+.nextContainer, .prevContainer{
+    position: absolute;
+    height: 100%;
+    width: 7%;
+    top: 0%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.nextContainer{
+    right: 0%;
+}
+.prevContainer{
+    left: 0%;
+}
 .next-slide, .prev-slide {
     position: absolute;
-    cursor: pointer;
-    top: 42%;
+    top: 45%;
     width: auto;
-    height: 16%;
+    height: 10%;
+    color: black;
+}
+.prevContainer:hover{
+    background-color: rgba(0, 0, 0, 0.39);
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.39) 0%, rgba(109, 109, 109, 0.2) 74%);
+}
+.nextContainer:hover {
+    background-color: rgba(0, 0, 0, 0.39);
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.39) 0%, rgba(109, 109, 109, 0.2) 74%);
+}
+.nextContainer:hover .next-slide{
+    color: grey;
+}
+.prevContainer:hover .prev-slide{
+    color: grey;
 }
 .next-slide {
-    right: 2%;
+    left: 25%;
 }
 .prev-slide {
-    left: 2%;
+    right: 25%;
 }
 .dots-container {
     position: absolute;
