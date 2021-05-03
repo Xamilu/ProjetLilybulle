@@ -17,9 +17,11 @@
   flex-direction: column;
   background-color: #fefefe;
   margin: auto;
-  padding: 2%;
+  padding: 2% 2% 4% 2% ;
   border: 1px solid #888;
   width: 80%;
+  height: auto;
+
 }
 .close {
   color: #aaaaaa;
@@ -34,10 +36,12 @@
   cursor: pointer;
 }
 .respNewsLetter{
+  font-size: 3em;
   width: auto;
   margin: 2% 30% 2% 30%;
 }
 #respTitleNewsLetter{
+  font-size: 3em;
   text-align: center;
 }
 #btnModal{
@@ -48,6 +52,15 @@
   background-color: white;
   border-radius: 3px;
   border: 1px solid black;
+}
+.respMail{
+  border: 2px solid black;
+  border-radius: 5px ;
+}
+.respSubmit{
+  background-color: black;
+  color: white;
+  border-radius: 5px ;
 }
 @media screen and (min-width: 100px) and (max-width: 1060px) {
   #newsLetterClassic{
