@@ -8,8 +8,9 @@
     background-position: center 43%;
     display: flex;
     align-items: center;
-    margin: 1% 0% 2.1% 0%;
+    margin: 1.5% 0% 1.5% 0%;
 }
+
 .banderoleBoutique h1{
     font-size: 4em;
     margin: 8%;
@@ -181,7 +182,3 @@
     opacity: 1;
 }
 
-@media screen and (min-width: 500px) and (max-width:1100px) {
-
-    
-}

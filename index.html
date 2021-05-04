@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="./style/header.css">
         <link rel="stylesheet" href="./style/home.css">
         <link rel="stylesheet" href="./style/footer.css">
+        <link rel="stylesheet" href="./style/modal.css">
         <title>Lilybulle | Accueil</title>
         <link rel="icon" href="../ProjetLilybulle/Assets/iconeLilybulle.ico" type="image/png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,11 +21,29 @@
                     <a href="#lieu"><span class="iconify" data-icon="zmdi:google-maps" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
                     <a href="./html/contact.html"><span class="iconify" data-icon="entypo:phone" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
                 </div>
-                    <a href="./index.html"><img id="banderole" src="./Assets/banderoleLilybulle.png" alt="Lilybulle"></a>
-                <div class="newsLetter">
-                    <h3 id="newsLetterTitle">Abonnez-vous à notre Newsletter</h3>
-                    <input type="email" name="email" id="newsLetterEmail" size="25" minlength="10" maxlength="40" placeholder="Votre Email">
-                    <input type="submit" name="submit" id="newsLetterSubmit" value="S'abonner">
+                <a href="./index.html"><img id="banderole" src="./Assets/banderoleLilybulle.png" alt="Lilybulle"></a>
+
+                <!--Modal responsive newsletter-->
+                <button id="btnModal">Newsletter</button>
+                
+                <div id="myModal" class="modal">
+            
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3  id="respTitleNewsLetter">Abonnez-vous à notre Newsletter</h3>
+                    <input type="email" name="email" class="respNewsLetter respMail" placeholder="votre mail">
+                    <input type="submit" name="submit" class="respNewsLetter respSubmit" value="S'Abonner">
+                  </div>
+                
+                </div>
+
+
+                <div id="newsLetterClassic">
+                    <div class="newsLetter">
+                        <h3 id="newsLetterTitle">Abonnez-vous à notre Newsletter</h3>
+                        <input type="email" name="email" id="newsLetterEmail" size="25" minlength="10" maxlength="40" placeholder="Votre Email">
+                        <input type="submit" name="submit" id="newsLetterSubmit" value="S'abonner">
+                    </div>
                 </div>
             </div>
             <div class="infBoxHeader">
@@ -96,7 +115,7 @@
                             </div>
                         </div>
                         <span class="iconify" data-icon="grommet-icons:shop" data-inline="false" style="margin-right: -1.2%;" data-width="2%"></span>
-                        <a href="./html/modal.html"><li>E-shop</li></a>
+                        <a href="#"><li>E-shop</li></a>
 
                     </ul>
                 </nav>
@@ -184,45 +203,9 @@
         </article>
         <div class="line2"></div>
         <section>
-            <!--
-            <div class="feed">
-                <div class="feedBox" id="feed1"></div>
-                <div class="feedBox" id="feed2"></div>
-                <div class="feedBox" id="feed3"></div>
-                <div class="feedBox" id="feed4"></div>
-                <div class="feedBox" id="feed5"></div>
-            </div>
-        -->
-        <div class="elfsight-app-88db3c41-8481-404f-86ed-6141e5d02cf0"></div>
+            <div class="elfsight-app-88db3c41-8481-404f-86ed-6141e5d02cf0"></div>
         </section>
-        
         <div class="line2"></div>
-        <section>
-            <div class="blog">
-                <div class="artc article1">
-                    <img class="imgArtc" src="./Assets/feed/feed3.png" alt="">
-                    <div class="nameArtc">
-                        <h4>article1</h4>
-                        <p>Anteponas me ut ipsum loquar sic loquar habetote iam enim facta Apollo huius anteponas facta ne enim quidem enim</p>
-                    </div>
-                </div>
-                <div class="artc article2">
-                    <img class="imgArtc" src="./Assets/feed/feed6.png" alt="">
-                    <div class="nameArtc">
-                        <h4>article2</h4>
-                        <p>Anteponas me ut ipsum loquar sic loquar habetote iam enim facta Apollo huius anteponas facta ne enim quidem enim </p>
-                    </div>
-                </div>
-                <div class="artc article3">
-                    <img class="imgArtc" src="./Assets/feed/feed2.png" alt="">
-                    <div class="nameArtc">
-                        <h4>article3</h4>
-                        <p>Anteponas me ut ipsum loquar sic loquar habetote iam enim facta Apollo huius anteponas facta ne enim quidem enim</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <h1 id="lieu" >Où sommes-nous?</h1>
         <div class="map">    
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.63602998971!2d2.2144561158633884!3d49.11255459073055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e65be54eba27bb%3A0xf8ff516959bf24b!2sLilybulle%20culture%20%26%20d%C3%A9coration!5e0!3m2!1sfr!2sfr!4v1619093696277!5m2!1sfr!2sfr" 
@@ -246,18 +229,6 @@
             <div id="boutonHautDePage">
                 <a href="#"><span class="iconify" data-icon="bi:arrow-up-circle" data-inline="false" style="color: white;" data-width="3%"></span></a>
             </div>
-
-            <div class="info">
-                <div class="buttons">
-                    <p>
-                        <a href="" data-modal="#modal" class="modal__trigger">Modal 1</a>
-                        <a href="" data-modal="#modal2" class="modal__trigger">Modal 2</a>
-                        <a href="" data-modal="#modal3" class="modal__trigger">Modal 3</a>
-                    </p>
-                </div>
-                <p>Click a button to activate a modal.</p>
-            </div>
-
         </footer>
     </body>
 </html>
@@ -267,3 +238,4 @@
 <script src="./js/index.js"></script>
 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 <script src="js/carousel.js"></script>
+<script src="js/modal.js"></script>
