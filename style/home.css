@@ -137,9 +137,6 @@ h2{
 /* background image */
 
 /* presentation site */
-article{
-    height: 30em;
-}
 .titreParag{
     width: 80%;
     margin: 0% 4% 0% 4%;
@@ -390,4 +387,30 @@ article{
 .map {
     width: 100%;
     margin-bottom: 5%;
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1410px) {
+    #presentation .img{
+        height: 20em;
+    }
+}
+
+@media screen and (min-width: 680px) and (max-width: 1020px) {
+    #presentation {
+        flex-direction: column;
+    }
+    #presentation .img{
+       width: 80%;
+       margin: 0;
+    }
+}
+@media screen and (max-width: 680px) {
+    #presentation {
+        flex-direction: column;
+    }
+    #presentation .img{
+       width: 100%;
+       height: 17em;
+       margin: 0;
+    }
 }
