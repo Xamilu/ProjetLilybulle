@@ -31,7 +31,7 @@ input {
     margin: 1% 0% 2% 0%;
     width: 100%;
     height: 2.5em;
-    border: none;
+    border: 1px solid white;
     background-color: rgb(241, 241, 241);
     font-size: 0.8em;
     font-weight: 600;
@@ -40,6 +40,7 @@ input {
 .labelInput{
     margin: 0% 0% 0% 1%;
     font-size: 1.1em;
+    border: 1px solid white;
 }
 
 .col{
@@ -68,14 +69,14 @@ select option {
 
 #motif-select{
     margin: 0.5% 0% 1.5% 0%;
-    border: none;
+    border: 1px solid white;
     background-color: rgb(241, 241, 241);
     height: 2.5em;
 }
 
 #msg{
     margin: 1% 0% 0% 0%;
-    border: none;
+    border: 1px solid white;
     background-color: rgb(241, 241, 241);
     min-width: 50%;
     max-width: 100%;
@@ -151,17 +152,27 @@ select option {
     flex-direction: row;
     margin-top: 2%;
     align-items: center;
+    height: 5em;
 }
 
+.errorMsg{
+    opacity: 0.8;
+    color: red;
+    justify-self: center;
+    margin-left: 10%;
+    visibility: hidden;
+}
 /* CHECKBOX ANIMATION */
+
 .checkbox {
+    visibility: hidden;
     --background: #fff;
     --border: #D1D6EE;
     --border-hover: #BBC1E1;
-    --border-active: #1E2235;
+    --border-active: #2c963e;
     --tick: #fff;
-    position: relative;
-    margin-left: em;
+    position: absolute;
+    left: 15%;
   }
   .checkbox input,
   .checkbox svg {
@@ -224,6 +235,86 @@ select option {
       transform: scale(1);
     }
   }
-  /* CHECKBOX ANIMATION */
 
-  
+  .checkmark__circle {
+    position: relative;
+    animation: strokeReverse 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  .checkmark__circle.checked{
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #a53737;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  .checkmark {
+    visibility: hidden;
+    position: absolute;
+    left: 15%;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: block;
+    animation: fillReverse .4s ease-in-out .4s forwards, scaleReverse .3s ease-in-out .9s both;
+  }
+  .checkmark.checked{
+    visibility: visible;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 0;
+    box-shadow: inset 0px 0px 0px #a53737;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  }
+  .checkmark__check{
+    transform-origin: 50% 50%;
+    stroke-dasharray: 29;
+    stroke-dashoffset: 0;
+    animation: strokeReverse 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+  .checkmark__check.checked{
+    transform-origin: 50% 50%;
+    stroke-dasharray: 29;
+    stroke-dashoffset: 29;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes strokeReverse {
+    100% {
+      stroke-dashoffset: 29;
+    }
+  }
+  @keyframes scale {
+    0%, 100% {
+      transform: none;
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+  @keyframes scaleReverse {
+    0%, 100% {
+      transform: none;
+    }
+    50% {
+      transform: scale3d(0.9, 0.9, 1);
+    }
+  }
+  @keyframes fill {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #a53737;
+    }
+  }
+@keyframes fillReverse {
+    100% {
+      box-shadow: none;
+    }
+  }
+
+  /* CHECKBOX ANIMATION */
