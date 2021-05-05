@@ -141,6 +141,7 @@ nav {
     font-weight: 600;
     list-style-type: none;
     justify-content: center;
+    align-items: center;
 }
 
 .libelluleNavBar {
