@@ -29,6 +29,12 @@ footer{
     margin: 0;
     margin-top: 4px;
 }
+
+.contactEtHoraires span {
+    text-decoration: underline;
+    color: white;
+}
+
 #boutonHautDePage {
     text-align: right;
     margin: -2% 2% 0 0;
