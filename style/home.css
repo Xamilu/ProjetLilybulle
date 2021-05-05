@@ -8,6 +8,8 @@ body {
 
 /* style display */
 
+
+
 .img-cat {
     margin: 2% 0 2% 0;
 }
@@ -136,8 +138,11 @@ h2{
 
 /* presentation site */
 article{
-    margin: 7% 20% 0% 20% ;
-    height: 300px;
+    height: 30em;
+}
+.titreParag{
+    width: 80%;
+    margin: 0% 4% 0% 4%;
 }
 #titre{
     text-align: center;
@@ -159,7 +164,18 @@ article{
 }
 
 #presentation{
-    margin: 5% 0% 10% 0%;
+    margin: 5% 0% 5% 0%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#presentation .img{
+    width: 60%;
+    height: 28em;
+    background-image: url(../Assets/quiSommesNous.jpg);
+    background-size: cover;
+    margin: 0% 0% 0% 4%;
 }
 /* presentation site */
 
