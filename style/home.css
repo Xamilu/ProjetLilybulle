@@ -37,7 +37,6 @@ h1 {
 h2{
     color: white;
     position: relative;
-    top: 40%;
     text-align: center;
     z-index: 3;
     font-size: 2em;
@@ -51,6 +50,9 @@ h2{
     height: 300px;
 }
 .img-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: cover;
     margin: 2% 0% 2% 0%;
     transition: all ease-in-out 0.4s;
