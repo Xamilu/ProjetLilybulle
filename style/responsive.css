@@ -36,61 +36,108 @@
 }
 .full-screen{
     display: none;
-    animation: checked-anim 1s ease both;
+    position: fixed;
+    width: 0%;
+    height: 0%;
+    background-color: rgb(63, 63, 63);
+    border-bottom-right-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    transition: .2s;
+    z-index: 999999!important;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    animation: bgBurgerOpen 0.7s ease-in-out forwards;
 }
-.full-screen ul a {
+.full-screen ul li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     list-style: none;
     color: white;
     border: none;
+    font-size: 2.5em;
 }
-.full-screenResp ul{
+.full-screen ul{
     height: 60%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     list-style-type: none;
     padding: 0;
+    position: absolute;
+    left: 27%;  
+    top: 12%;  
+    transition: all 0.6s ease-in-out;
 }
-.full-screenResp{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(63, 63, 63);
-    border-bottom-right-radius: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-    animation: not-checked-anim .2s both;
-    transition: .2s;
-    z-index: 999999!important;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.full-screen ul a{
+    visibility: hidden;
 }
-.full-screenResp ul li {
-    color: white;
-    border: none;
-    font-size: 2.5em;
+.full-screen ul a:nth-child(1){
+    animation: slideFromLeft 0.3s ease-in-out 0.6s forwards;
 }
-@keyframes checked-anim {
-    50% {
-        display: block;
-        width: 3000px;
-        height: 3000px;
+.full-screen ul a:nth-child(2){
+    animation: slideFromLeft 0.3s ease-in-out 0.8s forwards;
+}
+.full-screen ul a:nth-child(3){
+    animation: slideFromLeft 0.3s ease-in-out 1s forwards;
+}
+.full-screen ul a:nth-child(4){
+    animation: slideFromLeft 0.3s ease-in-out 1.2s forwards;
+}
+.full-screen ul a:nth-child(5){
+    animation: slideFromLeft 0.3s ease-in-out 1.4s forwards;
+}
+.full-screen .close{
+    position: absolute;
+    left: 40%;
+    top: 5%;
+    width: 5%;
+    transition: all 0.6s ease-in-out;
+}
+.full-screen .close:hover, .full-screen .close:focus{
+    opacity: 0;
+}
+
+@keyframes bgBurgerOpen{
+    0%{
+        width: 0%;
+        height: 0%;
     }
-    100% {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
+    100%{
+        width: 120%;
+        height: 120%;
+        border-bottom-right-radius: 50%;
     }
 }
-@keyframes not-checked-anim {
-    0% {
-        width: 3000px;
-        height: 3000px;
+@keyframes bgBurgerOpenReverse{
+    0%{
+        width: 120%;
+        height: 120%;
+    }
+    100%{
+        width: 0%;
+        height: 0%;
+        border-bottom-right-radius: 100%;
+    }
+}
+@keyframes slideFromLeft{
+    0%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+@keyframes slideFromLeftReverse{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+        visibility: hidden;
     }
 }
