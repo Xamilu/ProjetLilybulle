@@ -259,16 +259,9 @@ h2{
     width: auto;
     height: 10%;
     color: white;
-    transition: 0.5s ease;
+    
 }
-.nextContainer:hover .next-slide{
-    color: white;
-    transform: scale(1.05);
-}
-.prevContainer:hover .prev-slide{
-    color: white;
-    transform: scale(1.05);
-}
+
 .next-slide {
     left: 25%;
 }
@@ -420,8 +413,8 @@ section{
     position: relative;
 }
 #cacheBlank{
-    width: 25%;
-    height: 12%;
+    width: 20%;
+    height: 11%;
     background-color: rgb(255, 255, 255);
     z-index: 199999!important;
     position: absolute;
