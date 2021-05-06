@@ -15,7 +15,7 @@ span.onclick = function(){
             menu.style.animation = "bgBurgerOpen 0.6s ease-in-out forwards"
             setTimeout(() => {
                 links.style.opacity = "1"
-                links.style.left = "27%"
+                links.style.left = "20%"
                 span.style.opacity = "1"
             }, 300);
         }, 600);
