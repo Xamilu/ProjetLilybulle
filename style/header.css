@@ -71,8 +71,14 @@ header {
         opacity: 1;
     }
 }
+
+#newsLetterClassic {
+    align-items: center;
+    display: flex;
+}
+
 .newsLetter{
-    margin: 1% 0% 0% 0%;
+    align-self: center;
 }
 #newsLetterTitle{
     font-size: 1em;
