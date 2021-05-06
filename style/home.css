@@ -418,13 +418,15 @@ h2{
        margin: 0;
     }
 }
-
+section{
+    position: relative;
+}
 #cacheBlank{
-    width: 250px;
-    height: 60px;
+    width: 20%;
+    height: 11%;
     background-color: rgb(255, 255, 255);
-    z-index: 9999999999!important;
+    z-index: 199999!important;
     position: absolute;
-    top: 415%;
-    left: 41%;
+    left: 40%;
+    bottom: 0;
 }
