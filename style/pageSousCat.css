@@ -6,8 +6,9 @@
 }
 /* image background */
 .img{
-    width: 100%;
+    max-width: 100%;
     height: 100%;
+    width: 100%;
     transition: all ease-in-out 0.3s;
 }
 .img:hover{
