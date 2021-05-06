@@ -3,7 +3,7 @@ var menu = document.getElementsByClassName('full-screen');
 
 function DisplayMenu(){
     console.log('hello')
-    if(menu.classList.include("full-screen")) {
+    if(menu.classList.contains("full-screen")) {
         console.log('hello')
         menu.classList.remove("full-screen")
 }
