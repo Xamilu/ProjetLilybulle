@@ -56,7 +56,7 @@
     list-style: none;
     color: white;
     border: none;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 .full-screen ul{
     height: 60%;
@@ -68,7 +68,7 @@
     list-style-type: none;
     padding: 0;
     position: absolute;
-    left: 20%;  
+    left: 25%;  
     top: 12%;  
     transition: all 0.6s ease-in-out;
 }
@@ -93,7 +93,7 @@
 .full-screen .close{
     position: absolute;
     left: 40%;
-    top: 5%;
+    top: 4%;
     width: 5%;
     transition: all 0.6s ease-in-out;
 }
@@ -107,8 +107,8 @@
 }
 .full-screen ul svg{
     color: white;
-    width: 40%;
-    height: 40%;
+    width: 25%;
+    height: 25%;
 }
 
 @keyframes bgBurgerOpen{
