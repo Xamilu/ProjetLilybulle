@@ -258,21 +258,16 @@ h2{
     top: 45%;
     width: auto;
     height: 10%;
-    color: black;
-}
-.prevContainer:hover{
-    background-color: rgba(0, 0, 0, 0.39);
-    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.39) 0%, rgba(109, 109, 109, 0.2) 74%);
-}
-.nextContainer:hover {
-    background-color: rgba(0, 0, 0, 0.39);
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.39) 0%, rgba(109, 109, 109, 0.2) 74%);
+    color: white;
+    transition: 0.5s ease;
 }
 .nextContainer:hover .next-slide{
     color: white;
+    transform: scale(1.05);
 }
 .prevContainer:hover .prev-slide{
     color: white;
+    transform: scale(1.05);
 }
 .next-slide {
     left: 25%;
@@ -285,7 +280,7 @@ h2{
     bottom: 2em;
     left: 46%;
     display: flex;
-    width: 7%;
+    width: 6.5%;
     align-items: center;
     justify-content: space-around;
 }
@@ -297,9 +292,12 @@ h2{
     height: auto;
     padding-top: 10%;
     background-color: white;
+    border: 2px solid white;
 }
 .dots-container .active {
     background-color: black;
+    border: 2px solid white;
+    transition: 0.5s;
 }
 /* CAROUSEL SECTION */
 

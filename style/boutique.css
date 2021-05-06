@@ -4,7 +4,7 @@
     position: relative;
     height: 24em;
     width: 100%;
-    margin: 2% 0 2% 0;
+    margin: 3% 0 3% 0;
 }
 
 .carousel {
@@ -203,7 +203,7 @@
     background-position: 55% bottom;
 }
 #partenaire{
-    background-image: url(../Assets/boutiqueCategorie/partenaire.jpg);
+    background-image: url(../Assets/partenaires/carouselPartenaire1.jpg);
 }
 
 /* Animation */

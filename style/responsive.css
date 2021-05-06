@@ -27,7 +27,7 @@
     border: none;
     background-color: white;
     margin: 1.5em 0 0 3em;
-
+    outline: none;
 }
 #btn-burger{
     width: 6em;
