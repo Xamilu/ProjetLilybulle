@@ -422,8 +422,8 @@ section{
     position: relative;
 }
 #cacheBlank{
-    width: 20%;
-    height: 11%;
+    width: 25%;
+    height: 12%;
     background-color: rgb(255, 255, 255);
     z-index: 199999!important;
     position: absolute;
