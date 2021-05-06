@@ -23,43 +23,60 @@ body {
     width: 100%;
 }
 .column1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 49%;
-    margin: 0% 0.7% 0% 0%;
+    margin: 0 0.3% 0 0;
 }
 .column2{
-    width: 50%;
-    margin: 0% 0% 0% 0.7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 51%;
+    margin: 0 0 0 0.3%;
+}
+.img-home h2{
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
-h1 {
-    font-size: 2em;
-}
-h2{
+.img-home h2 a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     position: relative;
     text-align: center;
     z-index: 3;
     font-size: 2em;
 }
+.linkHome{
+    width: 100%;
+    height: 100%;
+}
 .img-col1{
     width: 100%;
-    height: 463.5px;
+    height: 400px;
 }
 .img-col2{
     width: 100%;
-    height: 300px;
+    height: 263.5px;
 }
 .img-home{
     display: flex;
     justify-content: center;
     align-items: center;
     background-size: cover;
-    margin: 2% 0% 2% 0%;
+    margin: 0% 0% 0% 0%;
     transition: all ease-in-out 0.4s;
 }
 .img-home:hover{
     opacity: 90%;
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 /* style display */
 
@@ -72,25 +89,32 @@ h2{
 #boutique{
     background-image: url(../Assets/boutique.jpg);
     animation: slideFromLeft 0.5s;
+    margin-bottom: 0.7%;
 }
 #atelier{
     background-image: url(../Assets/atelier.png);
     background-position: left 23%;
     animation: slideFromLeftWithDelay 2s;
+    margin-top: 0.7%;
 }
 #agence{
     background-image: url(../Assets/agence.png);
     background-position: 70% 65%;
     animation: slideFromRight 1s;
+    margin-bottom: 0.7%;
 }
 #caravane{
     background-image: url(../Assets/caravane.png);
     animation: slideFromRightWithDelay 1.5s;
+    margin-top: 0.7%;
+    margin-bottom: 0.7%;
 }
 #e-shop{
     background-image: url(../Assets/E-shop.jpg);
     background-position: center 48%;
     animation: slideFromRightWithDelay 2.5s;
+    margin-top: 0.7%;
+
 }
 @keyframes slideFromLeft {
     0%{
