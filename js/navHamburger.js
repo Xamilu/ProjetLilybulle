@@ -1,13 +1,19 @@
-var btn = document.getElementById('btn-resp');
-var menu = document.getElementsByClassName('full-screen');
+var btn = document.querySelector('#btn-resp');
+var menu = document.querySelector('.full-screen');
+var span = document.getElementsByClassName("close")[0]
+
+span.onclick = function(){
+    menu.classList.remove("full-screenResp"); 
+    menu.classList.add("full-screen")
+}
 
 function DisplayMenu(){
-    console.log('hello')
-    if(menu.classList.include("full-screen")) {
-        console.log('hello')
+    if(menu.classList.contains("full-screen")) {
         menu.classList.remove("full-screen")
+        menu.classList.add("full-screenResp") 
+    }
+    else{
+       menu.classList.remove("full-screenResp"); 
+       menu.classList.add("full-screen")
+    } 
 }
-    else menu.classList.add("full-screenResp");
-};
-
-btn.addEventListener("click",DisplayMenu())

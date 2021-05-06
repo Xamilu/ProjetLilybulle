@@ -63,6 +63,10 @@ h2{
 
 
 /* background image */
+.container{
+    width: 100%;
+    overflow-x: hidden;
+}
 #boutique{
     background-image: url(../Assets/boutique.jpg);
     animation: slideFromLeft 0.5s;
