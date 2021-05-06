@@ -60,7 +60,7 @@
 }
 .full-screen ul{
     height: 60%;
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,26 +68,26 @@
     list-style-type: none;
     padding: 0;
     position: absolute;
-    left: 27%;  
+    left: 20%;  
     top: 12%;  
     transition: all 0.6s ease-in-out;
 }
-.full-screen ul a{
+.full-screen ul div{
     visibility: hidden;
 }
-.full-screen ul a:nth-child(1){
+.full-screen ul div:nth-child(1){
     animation: slideFromLeft 0.3s ease-in-out 0.6s forwards;
 }
-.full-screen ul a:nth-child(2){
+.full-screen ul div:nth-child(2){
     animation: slideFromLeft 0.3s ease-in-out 0.8s forwards;
 }
-.full-screen ul a:nth-child(3){
+.full-screen ul div:nth-child(3){
     animation: slideFromLeft 0.3s ease-in-out 1s forwards;
 }
-.full-screen ul a:nth-child(4){
+.full-screen ul div:nth-child(4){
     animation: slideFromLeft 0.3s ease-in-out 1.2s forwards;
 }
-.full-screen ul a:nth-child(5){
+.full-screen ul div:nth-child(5){
     animation: slideFromLeft 0.3s ease-in-out 1.4s forwards;
 }
 .full-screen .close{
@@ -99,6 +99,16 @@
 }
 .full-screen .close:hover, .full-screen .close:focus{
     opacity: 0;
+}
+.full-screen ul div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.full-screen ul svg{
+    color: white;
+    width: 40%;
+    height: 40%;
 }
 
 @keyframes bgBurgerOpen{
