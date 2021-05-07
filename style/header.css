@@ -407,6 +407,9 @@ li:hover {
     .iconify {
         min-width:2%;
     }
+    footer .iconify{
+        min-width: 7%;
+    }
 
     #newsLetterSubmit {
         height: 2.3em;
