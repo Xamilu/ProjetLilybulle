@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin: 4% 0 4% 0;
 }
 .column1{
     display: flex;
@@ -174,6 +175,10 @@ body {
 #titre{
     text-align: center;
     margin: 0% 0% 8% 0%;
+}
+
+#titre h1 {
+    font-size: 2em;
 }
 #paragraphe{
     position: relative;

@@ -52,7 +52,7 @@ footer .socialIcons{
     margin: 0 -3% 0 10%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 950px) {
 
     footer {
         position: relative;
