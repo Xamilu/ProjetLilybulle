@@ -435,12 +435,18 @@ body {
        margin: 0;
     }
 }
+@media screen and (max-width: 400px){
+    #cacheBlank{
+        width: 50%;
+        left: 43%;
+    }
+}
 section{
     position: relative;
 }
 #cacheBlank{
     width: 20%;
-    height: 11%;
+    height: 12%;
     background-color: rgb(255, 255, 255);
     z-index: 199999!important;
     position: absolute;
