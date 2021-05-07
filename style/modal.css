@@ -18,12 +18,12 @@
   flex-direction: column;
   background-color: #fefefe;
   margin: auto;
-  padding: 2% 2% 4% 2% ;
-  border: 1px solid #888;
+  margin-top: 50%;
   width: 80%;
   height: auto;
   border: 2px solid white;
-  border-radius: 3px; 
+  border-radius: 3px;
+  
 }
 .close {
   text-align: center;
