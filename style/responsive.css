@@ -14,6 +14,9 @@
         width: 80%;
         height: 80%;
     }
+    .supBoxHeader{
+        margin-bottom: 2.5em;
+    }
 }
 @media screen and (min-width: 1060px) and (max-width: 2000px){
     #btnModal{
@@ -26,7 +29,7 @@
 #btn-resp{
     border: none;
     background-color: white;
-    margin: 1.5em 0 0 3em;
+    margin: 0 0 0 3em;
     outline: none;
 }
 #btn-burger{

@@ -5,6 +5,9 @@
         <link rel="stylesheet" href="../style/header.css">
         <link rel="stylesheet" href="../style/contact.css">
         <link rel="stylesheet" href="../style/footer.css">
+        <link rel="stylesheet" href="../style/modal.css">
+        <link rel="stylesheet" href="../style/responsive.css">
+
         <title>Lilybulle | Contact</title>
         <link rel="icon" href="../Assets/iconeLilybulle.ico" type="image/png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,16 +18,54 @@
         <header>
             <div class="supBoxHeader">
                 <div class="socialIcons">
-                    <a target="blank" href="https://www.facebook.com/Boutique-Lilybulle-564883753528910/?ref=page_internal"><span class="iconify" data-icon="ant-design:facebook-filled" data-inline="false" style="color: black; margin-right: 1em;" data-width="13%"></span></a>
-                    <a target="blank" href="https://www.instagram.com/lilybulle_/"><span class="iconify" data-icon="akar-icons:instagram-fill" data-inline="false" style="color: black;" data-width="13%"></span></a>
-                    <a href="../index.html#lieu"><span class="iconify" data-icon="zmdi:google-maps" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
-                    <a href="#"><span class="iconify" data-icon="entypo:phone" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
+                    <a target="blank" href="https://www.facebook.com/Boutique-Lilybulle-564883753528910/?ref=page_internal"><span class="iconify" data-icon="ant-design:facebook-filled" data-inline="false" style="color: black; margin-right: 1em;"></span></a>
+                    <a target="blank" href="https://www.instagram.com/lilybulle_/"><span class="iconify" data-icon="akar-icons:instagram-fill" data-inline="false" style="color: black;"></span></a>
+                    <a href="#lieu"><span class="iconify" data-icon="zmdi:google-maps" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
+                    <a href="../html/contact.html"><span class="iconify" data-icon="entypo:phone" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
                 </div>
-                    <a href="../index.html"><img id="banderole" src="../Assets/banderoleLilybulle.png" alt="Lilybulle"></a>
-                <div class="newsLetter">
-                    <h3 id="newsLetterTitle">Abonnez-vous à notre Newsletter</h3>
-                    <input type="email" name="email" id="newsLetterEmail" size="25" minlength="10" maxlength="40" placeholder="Votre Email">
-                    <input type="submit" name="submit" id="newsLetterSubmit" value="S'abonner">
+
+                <div class="menu1">
+                    <button type="button" onclick="DisplayMenu()" id="btn-resp"><span class="iconify" id="btn-burger" data-icon="system-uicons:menu-hamburger" data-inline="false"></span></button>
+
+                    <div class="full-screen">
+                        <span class="close">&times;</span>
+                        <ul>
+                            <a href="../html/boutique.html"><li>La Boutique</li></a>
+                            <a href="../html/Atelier.html"><li>L'Atelier</li></a>
+                            <a href="../html/agence.html"><li>L'Agence</li></a>
+                            <a href="../html/caravaneFood.html"><li>Caravane FOOD</li></a>
+                            <a href="#"><li>E-shop</li></a>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a id="linkBanderole" href="./index.html"><img id="banderole" src="../Assets/banderoleLilybulle.png" alt="Lilybulle"></a>
+
+                <!--Modal responsive newsletter-->
+                <button id="btnModal">Newsletter</button>
+                
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3  id="respTitleNewsLetter">Abonnez-vous à notre Newsletter</h3>
+                    <input type="email" name="email" class="respNewsLetter respMail" placeholder="Votre Email">
+                    <input type="submit" name="submit" class="respNewsLetter respSubmit" value="S'abonner">
+                    <div id="respSocialIcons">
+                        <a class="resplinkSN" target="blank" href="https://www.facebook.com/Boutique-Lilybulle-564883753528910/?ref=page_internal"><span class="iconify respIconSN" data-icon="ant-design:facebook-filled" data-inline="false" style="color: black;"></span></a>
+                        <a class="resplinkSN" target="blank" href="https://www.instagram.com/lilybulle_/"><span class="iconify respIconSN" data-icon="akar-icons:instagram-fill" data-inline="false" style="color: black;"></span></a>
+                        <a class="resplinkSN" href="#lieu"><span class="iconify respIconSN" data-icon="zmdi:google-maps" data-inline="false" style="color: black; "></span></a>
+                        <a class="resplinkSN" href="../html/contact.html"><span class="iconify respIconSN" data-icon="entypo:phone" data-inline="false" style="color: black; "></span></a>    
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="newsLetterClassic">
+                    <div class="newsLetter">
+                        <h3 id="newsLetterTitle">Abonnez-vous à notre Newsletter:</h3>
+                        <input type="email" name="email" id="newsLetterEmail" size="25" minlength="10" maxlength="40" placeholder="Votre Email">
+                        <input type="submit" name="submit" id="newsLetterSubmit" value="S'abonner">
+                    </div>
                 </div>
             </div>
             <div class="infBoxHeader">
@@ -186,3 +227,5 @@
 <script src="../js/animationCarte.js"></script>
 <script src="../js/contact.js"></script>
 <script src="../js/sendEmail.js"></script>
+<script src="../js/navHamburger.js"></script>
+<script src="../js/modal.js"></script>
