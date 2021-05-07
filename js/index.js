@@ -1,5 +1,6 @@
 // Appartition par le bas des textes sur la page 
 let item = document.querySelector("#paragraphe");
+let imgPres = document.querySelector("#presentation .img")
 
 
 function isElementInViewport(el) {
@@ -16,10 +17,12 @@ function callbackFunc() {
     if (isElementInViewport(item)) {
       if(!item.classList.contains("in-view")){
         item.classList.add("in-view");
+        imgPres.classList.add("in-view");
       }
     } 
     else if(item.classList.contains("in-view")) {
         item.classList.remove("in-view");
+        imgPres.classList.remove("in-view");
     }
 }
 
