@@ -73,7 +73,8 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
+    overflow: hidden;
 }
 .categorieCarteSolo{
     display: flex;
@@ -81,6 +82,7 @@
     align-items: center;
     width: 100%;
     justify-content: center;
+    overflow: hidden;
 }
 .categorieCarteDuo a{
     width: 30%;
@@ -221,5 +223,9 @@
 
     .row {
         margin-bottom: 0.5%;
+    }
+
+    .categorieCarteDuo a{
+        width: 40%;
     }
 }

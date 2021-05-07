@@ -16,11 +16,17 @@ setInterval(() => {
         for (let i = 1; i < slides.length; i++) {
             slides[i].style.opacity = "0"
         }
-        updateActiveDot(0)
+        try {
+            updateActiveDot(0)
+        }
+        catch{}
     } else {
         slides[index].style.opacity = "1"
         slides[index - 1].style.opacity = "0"
-        updateActiveDot(index)
+        try {
+            updateActiveDot(index)
+        }
+        catch{}
     }
 }, 5000)
 

@@ -1,14 +1,13 @@
 let items = document.querySelectorAll(".categorieCarteDuo a");
 let item = document.querySelector(".categorieCarteSolo a");
 
-
 function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
   return (
-    rect.top >= -500 &&
-    rect.left >=0 &&
-    rect.bottom <= (window.innerHeight + 550) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top >= -items[1].offsetHeight/1.5 &&
+    rect.left >= -(window.innerWidth || document.documentElement.clientWidth) &&
+    rect.bottom <= (window.innerHeight + items[1].offsetHeight/1.5) &&
+    rect.right <= (window.innerWidth+100 || document.documentElement.clientWidth+100)
   );
 }
 

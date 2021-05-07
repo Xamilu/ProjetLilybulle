@@ -69,22 +69,22 @@
     margin-bottom: 4em;
 }
 
-.categorieCarteDuo {
+.categorieCarteDuo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.categorieCarteSolo{
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
     justify-content: center;
+    overflow: hidden;
 }
-
-.categorieCarteSolo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-}
-
 .categorieCarteDuo a {
     width: 30%;
     margin-top: 4em;
@@ -207,9 +207,9 @@
 
 .container{
     display: flex;
-    flex-wrap: wrap;
-    margin: 0% 10% 0% 10%;
-    width: 90%;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 .left{
     width: 40%;
@@ -240,6 +240,8 @@
     display: flex;
     flex-direction: row;
     margin: 5% 0% 5% 0%;
+    justify-content: space-around;
+    width: 90%;
 }
 .divImgDesc{
     margin: 0% 2% 0% 2%;
@@ -281,7 +283,6 @@ h5{
 }
 .lineContainer{
     position: relative;
-    left: 5%;
     width: 77.5%;
     border: 0.5px rgb(207, 207, 207) solid;
     margin: 1.5% 0% 2% 0%;
@@ -394,5 +395,9 @@ footer{
 
     .row {
         margin-bottom: 0.5%;
+    }
+
+    .categorieCarteDuo a{
+        width: 40%;
     }
 }
