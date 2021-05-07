@@ -115,7 +115,6 @@ body {
     background-position: center 48%;
     animation: slideFromRightWithDelay 2.5s;
     margin-top: 0.7%;
-
 }
 @keyframes slideFromLeft {
     0%{
@@ -335,83 +334,12 @@ body {
 /* CAROUSEL SECTION */
 
 /* style feed */
-/*
-.feed{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 6.5% 8% 7% 8%;
-    padding: 2%;
-    background-color: rgb(241, 240, 240);
-}
-.feedBox{
-    width: 18%;
-    height: 200px;
-    background-color: aliceblue;
-    background-image: url();
-    transition: all ease-in-out 0.3s;
-}
-.feedBox:hover{
-    opacity: 90%;
-    transform: scale(1.01);
-}
-#feed1{
-    background-image: url(../Assets/feed/feed1.png);
-    background-size: 100%;
-}
-#feed2{
-    background-image: url(../Assets/feed/feed2.png);
-    background-size: 100%;
-}
-#feed3{
-    background-image: url(../Assets/feed/feed3.png);
-    background-size: 100%;
-}
-#feed4{
-    background-image: url(../Assets/feed/feed4.png);
-    background-size: 100%;
-}
-#feed5{
-    background-image: url(../Assets/feed/feed5.png);
-    background-size: 100%;
-}
-*/
 #feedPlugin{
     margin: 6.5% 8% 7% 8%;
     font-size: 2em;
 }
 
 /* style feed */
-
-
-/* display blog */
-.blog{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 6% 4% 6% 4%;
-    padding: 4%;
-    background-color: rgb(241, 240, 240);
-}
-.artc{
-    width: 30%;
-    height: auto;
-    background-color: white;
-    padding: 1%;
-    transition: all ease-in-out 0.3s;
-}
-.artc:hover{
-    transform: scale(1.01);
-}
-.imgArtc{
-    width: 100%;
-}
-.nameArtc{
-    margin: 2%;
-}
-/* display blog */
 
 /*Display Map */
 #lieu {
