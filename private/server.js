@@ -31,6 +31,5 @@ app.post('/db/createEmail', (req, res) => {
 app.get('/db/getEmails', (req,res) => {
     Email.find().then((data) => {
         res.send(data)
-        res.sendStatus(200)
     })
 })
