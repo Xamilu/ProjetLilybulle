@@ -1,0 +1,25 @@
+{
+  "name": "lilybulle",
+  "version": "1.0.0",
+  "description": "Création site pour lilybulle concept store",
+  "main": "private/server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
+    "node": "^16.1.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": " nodemon private/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xamilu/ProjetLilybulle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xamilu/ProjetLilybulle/issues"
+  },
+  "homepage": "https://github.com/Xamilu/ProjetLilybulle/r#readme"
+}
