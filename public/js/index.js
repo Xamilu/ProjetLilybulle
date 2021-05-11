@@ -1,6 +1,6 @@
 // Appartition par le bas des textes sur la page 
 let item = document.querySelector("#paragraphe");
-let imgPres = document.querySelector("#presentation .img")
+let imgPres = document.querySelector("#presentation .img");
 
 function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
