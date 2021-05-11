@@ -1,6 +1,6 @@
 const { static } = require('express');
 const express = require('express');
-const database = require('./baseDeDonnee/connection');
+const database = require('./baseDeDonnee/connexion');
 
 // Server initiation
 const app = express()
@@ -31,6 +31,5 @@ app.post('/db/createEmail', (req, res) => {
 app.get('/db/getEmails', (req,res) => {
     Email.find().then((data) => {
         res.send(data)
-        res.sendStatus(200)
     })
 })
