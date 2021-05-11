@@ -1,6 +1,6 @@
 const { static } = require('express');
 const express = require('express');
-const database = require('./baseDeDonnee/connection');
+const database = require('./baseDeDonnee/connexion');
 
 // Server initiation
 const app = express()

@@ -1,8 +1,6 @@
 // Appartition par le bas des textes sur la page 
 let item = document.querySelector("#paragraphe");
 let imgPres = document.querySelector("#presentation .img")
-let email = document.querySelector('#newsLetterEmail');
-
 
 function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
@@ -26,25 +24,6 @@ function callbackFunc() {
         imgPres.classList.remove("in-view");
     }
 }
-
-async function sendEmail(){
-  await fetch('/db/createEmail', {
-    method: 'POST',
-    body: email.value,
-  }).then()
-
-  getEmails()
-}
-
-async function getEmails(){
-  let emails1
-  await fetch('/db/getEmails')
-  .then(response=> response.json())
-  .then(emails => emails1 = emails)
-
-  console.log(emails1);
-}
-
 
 window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
