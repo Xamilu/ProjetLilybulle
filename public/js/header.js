@@ -49,8 +49,11 @@ body.insertAdjacentHTML("afterbegin" , `<p id="contact">35 Grande rue & 22 av de
           <div class="modal-content">
             <span class="close">&times;</span>
             <h3  id="respTitleNewsLetter">Abonnez-vous à notre Newsletter</h3>
+            <div class="erreurMsg">
+                <p></p>
+            </div>
             <input type="email" name="email" class="respNewsLetter respMail" placeholder="Votre Email">
-            <input type="submit" name="submit" class="respNewsLetter respSubmit" value="S'abonner">
+            <input onclick="checkIfEmailExistRes()" type="submit" name="submit" class="respNewsLetter respSubmit" value="S'abonner">
             <div id="respSocialIcons">
                 <a class="resplinkSN" target="blank" href="https://www.facebook.com/Boutique-Lilybulle-564883753528910/?ref=page_internal"><span class="iconify respIconSN" data-icon="ant-design:facebook-filled" data-inline="false" style="color: black;"></span></a>
                 <a class="resplinkSN" target="blank" href="https://www.instagram.com/lilybulle_/"><span class="iconify respIconSN" data-icon="akar-icons:instagram-fill" data-inline="false" style="color: black;"></span></a>

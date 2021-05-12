@@ -374,6 +374,10 @@ li:hover {
     background-color: black;
     transition-duration: 0.5s;
 }
+.modal-content .erreurMsg{
+    top: 50%;
+    left: 5%;
+}
 .erreurMsg {
     position: absolute;
     visibility: hidden;
