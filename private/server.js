@@ -33,3 +33,9 @@ app.get('/db/getEmails', (req,res) => {
         res.send(data)
     })
 })
+
+// Supprimer une adresse mail
+app.post('/db/deleteEmail', async (req, res) => {
+    const emailToDelete = await Email.findById(req.body)
+    await emailToDelete.remove().then(() => res.sendStatus(200))
+})

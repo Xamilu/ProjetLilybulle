@@ -12,7 +12,6 @@ async function sendEmail(email){
       body: email,
     }).then()
   
-    getEmails()
   }
   
   async function getEmails(){
@@ -37,8 +36,22 @@ async function sendEmail(email){
         }
       }
       if (existEmail == true) {
-        await sendEmail(email.value)
-        errorMsgNewsletter("Vous êtes désormais abonné à notre newsLetter.")
+        await sendEmail(email.value)  
+        setTimeout(async () => {
+        emailList = await getEmails()
+          for (let i = 0; i < emailList.length; i++) {
+            const emailElement = emailList[i].email;
+            if (emailElement == email.value){
+              let params = {
+                email: email.value,
+                reset: `http://localhost:3000/html/resetNews.html?id=${emailList[i]._id}`,
+            }
+            emailjs.send("service_4s4qmmf", "template_7dxsjge", params, "user_lmDYGxw2cx0QPO420I7IY")
+            break
+            }
+          }
+        }, 2000);
+        errorMsgNewsletter("Vous êtes désormais abonné à notre newsLetter. Et un mail vous à été envoyé")
         erreurMsgElementParent.style.color = 'green'
       }
     } else {
@@ -60,7 +73,19 @@ async function sendEmail(email){
       }
       if (existEmail == true) {
         await sendEmail(emailRes.value)
-        errorMsgNewsletterRes("Vous êtes désormais abonné à notre newsLetter.")
+        emailList = await getEmails()
+        for (let i = 0; i < emailList.length; i++) {
+          const emailElement = emailList[i];
+          if (emailElement == emailRes.value){
+            let params = {
+              email: emailRes.value,
+              reset: `http://localhost:3000/html/resetNews.html?id=${emailElement.id}`,
+           }
+           emailjs.send("service_4s4qmmf", "template_7dxsjge", params, "user_lmDYGxw2cx0QPO420I7IY")
+           break
+          }
+        }
+        errorMsgNewsletterRes("Vous êtes désormais abonné à notre newsLetter. Et un mail vous à été envoyé")
         erreurMsgElementParentRes.style.color = 'green'
       }
     } else {
