@@ -71,6 +71,7 @@
 /* fin section carousel header */
 .row1{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
