@@ -47,7 +47,7 @@ async function sendEmail(email){
                 email: email.value,
                 reset: `http://localhost:3000/html/resetNews.html?id=${emailList[i]._id}`,
             }
-            emailjs.send("service_4s4qmmf", "template_7dxsjge", params, "user_lmDYGxw2cx0QPO420I7IY")
+            await emailjs.send("service_4s4qmmf", "template_7dxsjge", params, "user_lmDYGxw2cx0QPO420I7IY")
             break
             }
           }
@@ -74,18 +74,21 @@ async function sendEmail(email){
       }
       if (existEmail == true) {
         await sendEmail(emailRes.value)
-        emailList = await getEmails()
-        for (let i = 0; i < emailList.length; i++) {
-          const emailElement = emailList[i];
-          if (emailElement == emailRes.value){
-            let params = {
-              email: emailRes.value,
-              reset: `http://localhost:3000/html/resetNews.html?id=${emailElement.id}`,
-           }
-           emailjs.send("service_4s4qmmf", "template_7dxsjge", params, "user_lmDYGxw2cx0QPO420I7IY")
-           break
+        setTimeout(async () => {
+          emailList = await getEmails()
+          for (let i = 0; i < emailList.length; i++) {
+            const emailElement = emailList[i].email;
+            if (emailElement == emailRes.value){
+              console.log("Ici");
+              let params = {
+                email: emailRes.value,
+                reset: `http://localhost:3000/html/resetNews.html?id=${emailElement.id}`,
+            }
+            await emailjs.send("service_4s4qmmf", "template_7dxsjge", params, "user_lmDYGxw2cx0QPO420I7IY")
+            break
+            }
           }
-        }
+        }, 2000);
         errorMsgNewsletterRes("Vous êtes désormais abonné à notre newsLetter. Et un mail vous à été envoyé")
         erreurMsgElementParentRes.style.color = 'green'
       }
