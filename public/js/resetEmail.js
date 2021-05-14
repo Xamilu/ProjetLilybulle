@@ -6,6 +6,6 @@ let options = {
     method: 'POST',
     body: emailId
 }
-// window.onload = async () => {
-//     await fetch('/db/deleteEmail', options).then()
-// }
+window.onload = async () => {
+    await fetch('/db/deleteEmail', options).then()
+}
