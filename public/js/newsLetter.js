@@ -2,6 +2,7 @@ let email = document.querySelector('#newsLetterEmail');
 let erreurMsgElement = document.querySelector('#newsLetterClassic .erreurMsg p')
 let erreurMsgElementParent = document.querySelector('#newsLetterClassic .erreurMsg')
 
+
 let emailRes = document.querySelector('.respMail');
 let erreurMsgElementRes = document.querySelector('.modal-content .erreurMsg p')
 let erreurMsgElementParentRes = document.querySelector('.modal-content .erreurMsg')

@@ -15,6 +15,7 @@ function connect(){
 module.exports = {
     connect: connect(),
     schemas: {
-        Email: schemas.Email
+        Email: schemas.Email,
+        Account: schemas.Account
     }
 }
