@@ -2,6 +2,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+body {
+  width: 100%;
+  margin: 0%;
+}
+
 #introContact {
     text-align: center;
 }
@@ -45,6 +50,10 @@ input {
     margin: 0% 0% 0% 1%;
     font-size: 1.1em;
     border: 1px solid white;
+}
+
+#divMsg {
+  height: 34.5em;
 }
 
 .col{
@@ -121,34 +130,37 @@ select option {
 
 @media screen and (min-width: 500px) and (max-width: 1100px) {
 
-    body {
-        position: fixed;
+    #introContact {
+      font-size: 2.5em;
     }
     
-    #msg {
-        min-height: 5em;
-        max-height: 15em;
-    }
+      #msg {
+      width: 99%;
+      height: 15em;
+      }
 
     #submit {
-        width: 15%;
-        height: 2.2em;
-        font-size: 1.2em;
+        width: 25%;
+        height: 3.2em;
+        font-size: 1.5em;
     }
 
     .labelInput {
-        font-size: 1.3em;
+        font-size: 1.7em;
     }
 
+    #divMsg {
+      height: 25em;
+    }
+    
     .labelObjMsg {
         font-size: 1.3em;
     }
     
     section {
-        height: 72em;
+        height: 71em;
     }
-    
-}
+  }
 
 .submitAndCheck{
     position: relative;
