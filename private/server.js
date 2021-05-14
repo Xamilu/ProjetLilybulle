@@ -35,8 +35,11 @@ app.get('/db/getEmails', (req,res) => {
     })
 })
 
-
-
+// Supprimer une adresse mail
+app.post('/db/deleteEmail', async (req, res) => {
+    const emailToDelete = await Email.findById(req.body)
+    await emailToDelete.remove().then(() => res.sendStatus(200))
+})
 
 //Creation d'un nouvel admin account
 app.post('/db/createAdminAccount', (req, res) => {   
