@@ -54,9 +54,9 @@
     opacity: 0;
 }
 .carousel-item:nth-child(4) {
-    background-image: url('../Assets/partenaires/carouselPartenaire4.jpg');
+    background-image: url('../Assets/partenaires/carouselPartenaire4.PNG');
     background-size: cover;
-    background-position-y: 30%;
+    background-position-y: 45%;
     opacity: 0;
 }
 
@@ -108,3 +108,5 @@ h5{
     text-align: center;
     font-size: 1.1em;
 }
+
+
