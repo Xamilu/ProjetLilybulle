@@ -63,6 +63,7 @@ header {
 }
 .iconify{
     transition: all ease-in-out 0.4s;
+    width: 3%;
 }
 .iconify:hover{
     opacity: 90%;
