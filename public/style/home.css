@@ -347,18 +347,25 @@ body {
     justify-content: space-around;
     margin-top: 2%;
     align-items: center;
+    perspective: 1000px;
 }
 
 .imgPresse {
+    opacity: 0;
     width: 20%;
     height: 10%;
     border-radius: 3px;
-    transition: 0.5s;
+    transition: all 0.7s;
+    transform: rotateY(-180deg);
 }
 
-.imgPresse:hover {
+.imgPresse.flip:hover {
     transform: scale(1.05);
     box-shadow: 6px 6px 6px grey;
+}
+.imgPresse.flip{
+    opacity: 1;
+    transform: rotateY(0);
 }
 
 /* Section Presse */
