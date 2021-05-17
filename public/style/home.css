@@ -92,81 +92,58 @@ body {
     overflow-x: hidden;
 }
 #boutique{
+    visibility: hidden;
     background-image: url(../Assets/boutique.jpg);
-    animation: slideFromLeft 0.5s;
     margin-bottom: 0.7%;
+    transform: translateX(-100%);
+}
+#boutique.in-view{
+    visibility: visible;
+    transform: translateX(0);
 }
 #atelier{
+    visibility: hidden;
     background-image: url(../Assets/atelier.png);
     background-position: left 23%;
-    animation: slideFromLeftWithDelay 2s;
     margin-top: 0.7%;
+    transform: translateX(-100%);
+}
+#atelier.in-view{
+    visibility: visible;
+    transform: translateX(0);
 }
 #agence{
+    visibility: hidden;
     background-image: url(../Assets/agence.png);
     background-position: 70% 65%;
-    animation: slideFromRight 1s;
     margin-bottom: 0.7%;
+    transform: translateX(100%);
+}
+#agence.in-view{
+    visibility: visible;
+    transform: translateX(0);
 }
 #caravane{
+    visibility: hidden;
     background-image: url(../Assets/caravane.png);
-    animation: slideFromRightWithDelay 1.5s;
     margin-top: 0.7%;
     margin-bottom: 0.7%;
+    transform: translateX(100%);
+}
+#caravane.in-view{
+    visibility: visible;
+    transform: translateX(0);
 }
 #e-shop{
+    visibility: hidden;
     background-image: url(../Assets/E-shop.jpg);
     background-position: center 48%;
-    animation: slideFromRightWithDelay 2.5s;
     margin-top: 0.7%;
+    transform: translateX(100%);
 }
-@keyframes slideFromLeft {
-    0%{
-        visibility: hidden;
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-@keyframes slideFromLeftWithDelay {
-    0%{
-        visibility: hidden;
-        transform: translateX(-100%);
-    }
-    77%{
-        visibility: hidden;
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-@keyframes slideFromRight {
-    0%{
-        visibility: hidden;
-        transform: translateX(100%);
-    }
-    50%{
-        transform: translateX(100%);
-        visibility: hidden;
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-@keyframes slideFromRightWithDelay {
-    0%{
-        visibility: hidden;
-        transform: translateX(100%);
-    }
-    73%{
-        transform: translateX(100%);
-        visibility: hidden;
-    }
-    100%{
-        transform: translateX(0);
-    }
+#e-shop.in-view{
+    visibility: visible;
+    transform: translateX(0);
 }
 /* background image */
 
