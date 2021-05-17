@@ -79,10 +79,7 @@ body {
     margin: 0% 0% 0% 0%;
     transition: all ease-in-out 0.4s;
 }
-.img-home:hover{
-    opacity: 90%;
-    transform: scale(1.01);
-}
+
 /* style display */
 
 
@@ -101,6 +98,10 @@ body {
     visibility: visible;
     transform: translateX(0);
 }
+#boutique.in-view:hover{
+    opacity: 0.9;
+    transform: scale(1.01);
+}
 #atelier{
     visibility: hidden;
     background-image: url(../Assets/atelier.png);
@@ -111,6 +112,10 @@ body {
 #atelier.in-view{
     visibility: visible;
     transform: translateX(0);
+}
+#atelier.in-view:hover{
+    opacity: 0.9;
+    transform: scale(1.01);
 }
 #agence{
     visibility: hidden;
@@ -123,6 +128,10 @@ body {
     visibility: visible;
     transform: translateX(0);
 }
+#agence.in-view:hover{
+    opacity: 0.9;
+    transform: scale(1.01);
+}
 #caravane{
     visibility: hidden;
     background-image: url(../Assets/caravane.png);
@@ -134,6 +143,10 @@ body {
     visibility: visible;
     transform: translateX(0);
 }
+#caravane.in-view:hover{
+    opacity: 0.9;
+    transform: scale(1.01);
+}
 #e-shop{
     visibility: hidden;
     background-image: url(../Assets/E-shop.jpg);
@@ -144,6 +157,10 @@ body {
 #e-shop.in-view{
     visibility: visible;
     transform: translateX(0);
+}
+#e-shop.in-view:hover{
+    opacity: 0.9;
+    transform: scale(1.01);
 }
 /* background image */
 
