@@ -3,9 +3,9 @@ let cartesMenu = document.querySelectorAll(".img-home");
 function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
   return (
-    rect.top >= 0 &&
+    rect.top >= -el.offsetHeight/1.25 &&
     rect.left >= -window.innerWidth &&
-    rect.bottom <= window.innerHeight + el.offsetHeight/1.75 &&
+    rect.bottom <= window.innerHeight + el.offsetHeight/1.25 &&
     rect.right <= window.innerWidth*2 
   );
 }
