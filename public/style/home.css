@@ -337,6 +337,33 @@ body {
 }
 /* CAROUSEL SECTION */
 
+/* Section Presse */
+#titlePresse {
+    text-align: center;
+}
+
+#articlePresse {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    align-items: center;
+}
+
+.imgPresse {
+    width: 20%;
+    height: 10%;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.imgPresse:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 6px grey;
+}
+
+/* Section Presse */
+
+
 /* style feed */
 #feedPlugin{
     margin: 6.5% 8% 7% 8%;
