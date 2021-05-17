@@ -22,6 +22,11 @@ footer{
     text-align: center;
     font-size: 3.5em;
 }
+.messageRetourSite{
+    text-align: center;
+    font-size: 2.5em;
+    text-decoration: underline;
+}
 .line1{left: 0;}
 
 /* Wave Animation */
@@ -45,7 +50,7 @@ section .wave{
     width: 100%;
     height: 300px;
     background: url(../Assets/wave.png);
-    background-size: 1500px 300px;
+    background-size: 75% 300px;
 }
 section .wave.wave1{
     animation: animate 600s linear infinite;
