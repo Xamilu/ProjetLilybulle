@@ -17,6 +17,9 @@ function callbackFunc() {
         cartesMenu[i].classList.add("in-view");
       }
     }
+    else if(cartesMenu[i].classList.contains("in-view")) {
+      cartesMenu[i].classList.remove("in-view");
+  }
   }
 }
  
