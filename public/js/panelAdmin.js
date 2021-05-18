@@ -1,3 +1,4 @@
+let listMailContainer = document.querySelector('#list-mail')
 var inputs = document.querySelectorAll( '.inputfile' );
 Array.prototype.forEach.call( inputs, function( input )
 {
@@ -18,3 +19,23 @@ Array.prototype.forEach.call( inputs, function( input )
 			label.innerHTML = labelVal;
 	});
 });
+
+displayAllMails()
+
+async function displayAllMails() {
+	let mailsList = await getAllMails();
+	for (let i = 0; i < mailsList.length; i++) {
+		const mail = mailsList[i].email;
+		listMailContainer.insertAdjacentHTML('afterbegin', `
+		<p class="email">${mail}</p>
+		`)
+	}
+}
+
+async function getAllMails(){
+	let mails
+	await fetch('/db/getEmails')
+		.then((response) => response.json())
+		.then((data) => mails = data)
+	return mails
+}

@@ -50,7 +50,6 @@ console.log(Keyword)
     const createAdminAccount = new AdminAccount({
         nameUser : NameUser,
         keyword : Keyword
-
     })
     createAdminAccount.save()
     res.sendStatus(200)
