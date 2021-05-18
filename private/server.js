@@ -45,7 +45,7 @@ app.post('/db/deleteEmail', async (req, res) => {
 app.post('/db/createAdminAccount', (req, res) => {   
     const NameUser = req.body.nameUser;
     const Keyword = req.body.keyword;
-console.log(NameUser)
+console.log(req.body)
 console.log(Keyword)
     const createAdminAccount = new AdminAccount({
         nameUser : NameUser,

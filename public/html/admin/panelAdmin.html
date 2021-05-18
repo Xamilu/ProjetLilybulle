@@ -134,7 +134,9 @@
                         <input type="text" name="titreActu" id="titreActu">
                         <input type="file" name="file" id="file" class ="inputfile"/>
                         <label for="file"> Choisir une image </label> 
-                        <textarea name="textActu" id="textActu" cols="60" rows="15" minlength="50" maxlength="1000" required></textarea>
+                        <div id="containerTextArea">
+                            <textarea name="textActu" id="textActu" cols="60" rows="15" maxlength="1000" required></textarea>
+                        </div>
                         <input type="submit" value="Envoyer" id="submitActu">
                     </form>
                 </div>

@@ -73,11 +73,8 @@ p{
     flex-direction: row;
     justify-content: space-between;
 }
-#textActu{
-    margin: 2% 0 2% 0;
-}
 #submitActu{
-    margin: 0;
+    margin: 2% 0 0 0 ;
 }
 .submitImage{
     background-color: rgb(24, 156, 243);
@@ -112,4 +109,15 @@ p{
 }
 .inputfile + label {
 	cursor: pointer; /* "hand" cursor */
+}
+
+#containerTextArea{
+    width: 100%;
+    height: 25em; 
+}
+#textActu{
+    max-width: 100%;
+    min-width: 50%;
+    max-height: 100%;
+    min-height: 80%;
 }

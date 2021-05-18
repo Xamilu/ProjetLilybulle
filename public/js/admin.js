@@ -3,12 +3,15 @@ let keyword = document.querySelector('#password');
 
 async function checkAccountAdmin (){
     console.log(nameUser.value);
-    console.log(keyword.value)
+    console.log(keyword.value);
     await fetch('/db/createAdminAccount', {
         method: 'POST',
-        body: {
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
             nameUser: nameUser.value,
             keyword: keyword.value,
-        }
+        })
         }).then()
     }
