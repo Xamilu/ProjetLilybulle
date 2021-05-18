@@ -15,3 +15,13 @@ async function checkAccountAdmin (){
         })
         }).then()
     }
+
+    async function getAccounts(){
+        let accountsList
+        await fetch('/db/getAdminAccount')
+        
+        .then(response=> response.json())
+        .then(accounts => accountsList = accounts);
+        console.log(accountsList);
+        return accountsList
+      }

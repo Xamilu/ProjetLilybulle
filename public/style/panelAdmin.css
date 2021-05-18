@@ -1,26 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
-
+html, body{
+    height: 100%;
+}
 body{
     font-family: 'Zilla Slab', serif;
+    overflow: hidden;
 }
 .container-fluid{
     max-height: 100%;
 }
+#flexScreen{
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+}
 h1{
     text-align: center;
     font-weight: bold;
-    padding: 2.5vw 0 2.5vw 0;
-    font-size: 3vw;
+    padding: 1.5vw 0 1.5vw 0;
+    font-size: 2.5vw;
     margin: 0 0 0 0;
 }
 h2{
     text-align: center;
     font-size: 1.5em;
 }
+#title-page{
+    height: 12%;
+}
 #panel{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 85%;
 }
 .panel{
     display: flex;
@@ -28,7 +40,7 @@ h2{
     border-radius: 5px;
     background-color: rgb(207, 207, 207);
     padding: 1%;
-    height: 85vh;
+    height: 100%;
 }
 
 .mailNewsletter{
@@ -36,6 +48,10 @@ h2{
 }
 .uploadImage{
     width: 40.5%;
+}
+#upload-image{
+    height: 100%;
+    overflow-y: auto;
 }
 .editActualite{
     width: 40.5%;
@@ -98,15 +114,27 @@ li{
     margin:2% 0 2% 0 ;
     border-radius: 5px;
 }
-p{
+.emplacementImage p{
     font-size: 1.2em;
     margin: 0 0 2% 0;
     padding: 0;
+}
+#list-mail p{
+    font-size: 0.9em;
+    text-align: start;
+    overflow-x: hidden;
 }
 .formUpload{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+#title-file{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap-reverse;
 }
 #submitActu{
     margin: 2% 0 0 0 ;
@@ -148,7 +176,7 @@ p{
 
 #containerTextArea{
     width: 100%;
-    height: 25em; 
+    height: 100%; 
 }
 #textActu{
     max-width: 100%;

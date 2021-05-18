@@ -14,8 +14,10 @@
     <title>Admin</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <h1>Panel Administrateur Lilybulle</h1>
+    <div class="container-fluid" id="flexScreen">
+        <div id=title-page>
+            <h1>Panel Administrateur Lilybulle</h1>
+        </div>
         <div id="panel">
             <div class="panel mailNewsletter">
                 <h2>Mails Newsletter</h2>
@@ -105,6 +107,54 @@
                             <input type="submit" value="Envoyer" class="submitImage">
                         </form>
                     </div>
+                    <div class="emplacementImage">
+                        <p>Page les Enfants:</p>
+                        <form class="formUpload" action="upload" method="post">
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 1 </label> 
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 2 </label> 
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 3 </label> 
+                            <input type="file" name= "file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 4</label> 
+                            <input type="file" name= "file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 5 </label> 
+                            <input type="submit" value="Envoyer" class="submitImage">
+                        </form>
+                    </div>
+                    <div class="emplacementImage">
+                        <p>Page les Enfants:</p>
+                        <form class="formUpload" action="upload" method="post">
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 1 </label> 
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 2 </label> 
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 3 </label> 
+                            <input type="file" name= "file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 4</label> 
+                            <input type="file" name= "file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 5 </label> 
+                            <input type="submit" value="Envoyer" class="submitImage">
+                        </form>
+                    </div>
+                    <div class="emplacementImage">
+                        <p>Page les Enfants:</p>
+                        <form class="formUpload" action="upload" method="post">
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 1 </label> 
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 2 </label> 
+                            <input type="file" name="file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 3 </label> 
+                            <input type="file" name= "file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 4</label> 
+                            <input type="file" name= "file" id="file" class ="inputfile"/>
+                            <label for="file"> Image 5 </label> 
+                            <input type="submit" value="Envoyer" class="submitImage">
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -112,6 +162,7 @@
                 <h2>Actualité</h2>
                 <div id="editActualite">
                     <form action="articleActu" method="post">
+                        <label for="text">Titre:</label>
                         <input type="text" name="titreActu" id="titreActu">
                         <input type="file" name="file" id="file" class ="inputfile"/>
                         <label for="file"> Choisir une image </label> 
