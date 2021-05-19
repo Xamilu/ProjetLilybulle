@@ -56,7 +56,7 @@ console.log(Keyword)
 })
 
 // Récupérer toutes les admins account
-app.get('/db/getAdminAcount', (req,res) => {
+app.get('/db/getAdminAccount', (req,res) => {
     AdminAccount.find().then((data) => {
         res.send(data)
     })
