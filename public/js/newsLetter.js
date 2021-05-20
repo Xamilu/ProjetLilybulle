@@ -79,7 +79,6 @@ async function sendEmail(email){
           for (let i = 0; i < emailList.length; i++) {
             const emailElement = emailList[i].email;
             if (emailElement == emailRes.value){
-              console.log("Ici");
               let params = {
                 email: emailRes.value,
                 reset: `http://localhost:3000/html/resetNews.html?id=${emailElement.id}`,

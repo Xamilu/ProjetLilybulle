@@ -15,7 +15,6 @@ try{
 	window.location.href = './connexionAdmin.html'
 }
 
-
 let listMailContainer = document.querySelector('#list-mail')
 var inputs = document.querySelectorAll( '.inputfile' );
 Array.prototype.forEach.call( inputs, function( input )
@@ -39,6 +38,11 @@ Array.prototype.forEach.call( inputs, function( input )
 });
 
 displayAllMails()
+
+function deconnexionAdmin(){
+	sessionStorage.setItem('LilybulleData', '{"connected" : false}')
+	window.location.href = './connexionAdmin.html'
+}
 
 async function displayAllMails() {
 	let mailsList = await getAllMails();

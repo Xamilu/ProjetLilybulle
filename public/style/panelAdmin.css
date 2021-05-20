@@ -16,7 +16,7 @@ body{
     height: 4em;
 }
 
-.buttonAdmin {
+.buttonAdmin, .buttonAdminDeco {
     width: 8%;
     height: 3em;
     background-color: rgb(24, 156, 243);
@@ -27,7 +27,7 @@ body{
     transition: 0.4s;
 }
 
-.buttonAdmin:hover {
+.buttonAdmin:hover, .buttonAdminDeco:hover{
     background-color: #fff;
     color: rgb(24, 156, 243);
     border: 2px solid rgb(24, 156, 243);
@@ -193,7 +193,6 @@ li{
 #list-mail p{
     font-size: 0.9em;
     text-align: start;
-    overflow-x: hidden;
 }
 .formUpload{
     display: flex;
