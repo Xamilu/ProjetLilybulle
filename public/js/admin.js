@@ -10,6 +10,9 @@ if (JSON.parse(sessionStorage.getItem('LilybulleData')).connected) {
     window.location.href = './panelAdmin.html'
 }
   
+async function addImageToBd(){
+    await fetch()
+}
 
 async function checkAccountAdmin (){
     let isUsernameCorrect = await checkUsername() 

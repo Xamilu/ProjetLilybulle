@@ -16,28 +16,45 @@ try{
 }
 
 let listMailContainer = document.querySelector('#list-mail')
-var inputs = document.querySelectorAll( '.inputfile' );
-Array.prototype.forEach.call( inputs, function( input )
-{
-	var label	 = input.nextElementSibling,
-		labelVal = label.innerHTML;
+// var inputs = document.querySelectorAll( '.inputfile' );
+// Array.prototype.forEach.call( inputs, function( input )
+// {
+// 	var label	 = input.nextElementSibling,
+// 		labelVal = label.innerHTML;
 
-	input.addEventListener( 'change', function( e )
-	{
-		var fileName = '';
-		if( this.files && this.files.length > 1 )
-			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-		else
-			fileName = e.target.value.split('/').pop();
+// 	input.addEventListener( 'change', function( e )
+// 	{
+// 		var fileName = '';
+// 		if( this.files && this.files.length > 1 )
+// 			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+// 		else
+// 			fileName = e.target.value.split('/').pop();
 
-		if( fileName )
-			label.querySelector( 'span' ).innerHTML = fileName;
-		else
-			label.innerHTML = labelVal;
-	});
-});
+// 		if( fileName )
+// 			label.querySelector( 'span' ).innerHTML = fileName;
+// 		else
+// 			label.innerHTML = labelVal;
+// 	});
+// });
 
 displayAllMails()
+
+async function sendImageToDB(){
+	// for (let i = 0; i < array.length; i++) {
+	// 	const element = array[i];
+		
+	// }
+	// let params = {
+	// 	nameFile: ,
+	// 	tags: {
+
+	// 	}
+	// }
+	await fetch('/db/addImage', {
+		method: 'POST',
+		body: params
+	})
+}
 
 function deconnexionAdmin(){
 	sessionStorage.setItem('LilybulleData', '{"connected" : false}')

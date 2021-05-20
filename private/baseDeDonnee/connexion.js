@@ -16,6 +16,7 @@ module.exports = {
     connect: connect(),
     schemas: {
         Email: schemas.Email,
-        Account: schemas.Account
+        Account: schemas.Account,
+        Image: schemas.Image
     }
 }

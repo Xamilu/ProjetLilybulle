@@ -10,7 +10,18 @@ const adminAccountSchema = new mongoose.Schema({
     keyword: String,
 }, { timestamps: true })
 
+var imageSchema = new mongoose.Schema({
+    name: String,
+    tags: {},
+    img:
+    {
+        data: Buffer,
+        contentType: String
+    }
+}, { timestamps: true });
+
 module.exports = {
     Email: mongoose.model('email', emailSchema),
-    Account: mongoose.model('adminAccount',adminAccountSchema),
+    Account: mongoose.model('adminAccount', adminAccountSchema),
+    Image: mongoose.model('image', imageSchema)
 }
