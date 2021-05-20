@@ -10,6 +10,29 @@ body{
 .container-fluid{
     max-height: 100%;
 }
+
+.logOut {
+    padding-top: 1%;
+    height: 4em;
+}
+
+.buttonAdmin {
+    width: 8%;
+    height: 3em;
+    background-color: rgb(24, 156, 243);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: 0.4s;
+}
+
+.buttonAdmin:hover {
+    background-color: #fff;
+    color: rgb(24, 156, 243);
+    border: 2px solid rgb(24, 156, 243);
+}
+
 #flexScreen{
     display: flex;
     flex-direction: column; 
@@ -24,7 +47,7 @@ h1{
 }
 h2{
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 #title-page{
     height: 12%;
@@ -41,7 +64,7 @@ h2{
     border-radius: 5px;
     background-color: rgb(207, 207, 207);
     padding: 1%;
-    height: 100%;
+    height: 95%;
 }
 
 .mailNewsletter{
@@ -58,6 +81,51 @@ h2{
 .editActualite{
     width: 40.5%;
 }
+
+#choixActu {
+    margin: 2% 0 2% 0;
+}
+
+#choixActu label {
+    font-size: 1.2em;
+}
+
+.articleActu label {
+    font-size: 1.2em;
+}
+
+#editArticle {
+    display: flex;
+    flex-direction: column;
+}
+
+#chooseImage {
+    display: flex;
+    gap: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+}
+
+#chooseImage input {
+    height: 2.5em;
+    border: 2px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    outline: none;
+}
+
+#nameArticle {
+    gap: 2%;
+}
+
+#nameArticle input {
+    border: 2px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    outline: none;
+    text-indent: 2%;
+    width: 50%;
+    height: 2.5em;
+}
+
 ul{
     margin: 0;
     padding: 0;
@@ -81,6 +149,7 @@ li{
     overflow-y: scroll;
     overflow-x: hidden;
     height: 90%;
+    font-size: 1.1em;
 }
 .email{
     width: 100%;

@@ -15,6 +15,10 @@
 </head>
 <body>
     <div class="container-fluid" id="flexScreen">
+        <div class="logOut">
+            <button class="buttonAdmin">Retour à l'accueil</button>
+            <button class="buttonAdmin">Déconnexion</button>
+        </div>
         <div id=title-page>
             <h1>Panel Administrateur Lilybulle</h1>
         </div>
@@ -162,11 +166,29 @@
             <div class="panel editActualite">
                 <h2>Actualité</h2>
                 <div id="editActualite">
-                    <form action="articleActu" method="post">
-                        <label for="text">Titre:</label>
-                        <input type="text" name="titreActu" id="titreActu">
-                        <input type="file" name="file" id="file" class ="inputfile"/>
-                        <label for="file"> Choisir une image </label> 
+                    <div id="choixActu">
+                        <label for="actualité">Choix de l'actualité à éditer :</label>
+                        <select name="actu" id="actu-select">
+                            <option value="">Choisissez le numéro</option>
+                            <option value="actu1">Actualité N°1</option>
+                            <option value="actu2">Actualité N°2</option>
+                            <option value="actu3">Actualité N°3</option>
+                            <option value="actu4">Actualité N°4</option>
+                        </select>
+                    </div>
+                    <form action="" class="articleActu" method="post">
+                        <div id="editArticle">
+                            <div id="chooseImage">
+                                <label for="text">Titre:</label>
+                                <input type="text" name="titreActu" id="titreActu">
+                                <input type="file" name="file" id="file" class ="inputfile"/>
+                                <label for="file"> Choisir une image </label> 
+                            </div>
+                            <div id="nameArticle">
+                                <label for="titreActu">Choisir le titre de l'article :</label>
+                                <input type="text">
+                            </div>
+                        </div>
                         <div id="containerTextArea">
                             <div id="textStyle">
                                 <input type="button" value="G" id="bold" onclick="commande('bold');">

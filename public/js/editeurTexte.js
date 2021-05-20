@@ -4,3 +4,4 @@ function commande(nom, argument) {
     }
     document.execCommand(nom, false, argument);
 }
+
