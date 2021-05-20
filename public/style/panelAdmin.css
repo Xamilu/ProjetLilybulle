@@ -12,12 +12,19 @@ body{
 }
 
 .logOut {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 33%;
     padding-top: 1%;
     height: 4em;
 }
+#space-title{
+    width:33%;
+}
 
 .buttonAdmin, .buttonAdminDeco {
-    width: 8%;
+    width: 40%;
     height: 3em;
     background-color: rgb(24, 156, 243);
     color: #fff;
@@ -50,13 +57,16 @@ h2{
     font-size: 1.8em;
 }
 #title-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     height: 12%;
 }
 #panel{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 85%;
+    height: 92%;
 }
 .panel{
     display: flex;

@@ -15,12 +15,15 @@
 </head>
 <body>
     <div class="container-fluid" id="flexScreen">
-        <div class="logOut">
-            <button class="buttonAdmin" onclick="window.location.href = '../../index.html'">Retour à l'accueil</button>
-            <button class="buttonAdminDeco" onclick="deconnexionAdmin()">Déconnexion</button>
-        </div>
         <div id=title-page>
+            <div class="logOut">
+                <button class="buttonAdmin" onclick="window.location.href = '../../index.html'">Retour à l'accueil</button>
+                <button class="buttonAdminDeco" onclick="deconnexionAdmin()">Déconnexion</button>    
+            </div>
             <h1>Panel Administrateur Lilybulle</h1>
+            <div id="space-title">
+
+            </div>
         </div>
         <div id="panel">
             <div class="panel mailNewsletter">
@@ -210,24 +213,3 @@
 <script src="../../js/editeurTexte.js"></script>
 </body>
 </html>
-
-<!--
-<textarea name="textActu" id="textActu" cols="60" rows="15" maxlength="1000" required></textarea>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 m-auto">
-            <h1 class="text-center display-4 my-4">téléchargement des images</h1>
-            
-            <form action="/download" method="GET" enctype="multipart/form-data">
-                <input type="submit" value="download File" class="btn btn-primary btn-block">
-            </form>
-        </div>
-    </div>
-    <hr />
-    <div class="row">
-        <div class="col-sm-12">
-        <div class="preview-images"></div>
-        </div>
-    </div>
-</div>
--->
