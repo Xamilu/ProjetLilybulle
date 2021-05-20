@@ -15,6 +15,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: start;
+    align-items: center;
     width: 33%;
     padding-top: 1%;
     height: 4em;
@@ -340,7 +341,7 @@ li{
 @media screen and (min-width: 1025px) and (max-width: 1390px) {
 
     .buttonAdmin, .buttonAdminDeco {
-        width: 11%;
+        width: 40%;
     }
     
     .inputfile + label {
@@ -349,6 +350,9 @@ li{
 
     #chooseImage input, #nameArticle input {
         height: 2em;
+    }
+    #editeur{
+        height: 15.5em;
     }
 
     #nameArticle input {
