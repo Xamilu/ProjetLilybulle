@@ -1,6 +1,16 @@
 let nameUser = document.querySelector('#login');
 let keyword = document.querySelector('#password');
 
+if (sessionStorage.getItem('LilybulleData') == null) {
+    sessionStorage.setItem('LilybulleData', '{}')
+}
+
+// Si l'admin s''est déjà connecter sur la session il est rediriger vers le panel
+if (JSON.parse(sessionStorage.getItem('LilybulleData')).connected) {
+    window.location.href = './panelAdmin.html'
+}
+  
+
 async function checkAccountAdmin (){
     let isUsernameCorrect = await checkUsername() 
     let isPasswordCorrect = await checkPassword()
@@ -12,7 +22,10 @@ async function checkAccountAdmin (){
         errorMsg(keyword)
     }
     if (isUsernameCorrect && isPasswordCorrect) {
-         window.location.href = './panelAdmin.html'
+        let data = JSON.parse(sessionStorage.getItem('LilybulleData'))
+        data.connected = true
+        sessionStorage.setItem('LilybulleData', JSON.stringify(data))
+        window.location.href = './panelAdmin.html'
     }
 }
 

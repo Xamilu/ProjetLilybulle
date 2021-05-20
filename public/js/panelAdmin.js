@@ -1,3 +1,21 @@
+let LilybulleData = JSON.parse(sessionStorage.getItem('LilybulleData'))
+
+if (sessionStorage.getItem('LilybulleData') == null) {
+    sessionStorage.setItem('LilybulleData', "{}")
+	window.location.href = './connexionAdmin.html'
+}
+if (sessionStorage.getItem('LilybulleData') == "{}") {
+	window.location.href = './connexionAdmin.html'
+}
+try{
+	if(LilybulleData.connected == false){
+    window.location.href = './connexionAdmin.html'
+	}
+} catch {
+	window.location.href = './connexionAdmin.html'
+}
+
+
 let listMailContainer = document.querySelector('#list-mail')
 var inputs = document.querySelectorAll( '.inputfile' );
 Array.prototype.forEach.call( inputs, function( input )
