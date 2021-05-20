@@ -352,9 +352,11 @@ li{
         height: 2em;
     }
     #editeur{
-        height: 15.5em;
+        height: 14.7em;
     }
-
+    .panel{
+        height: 93%;
+    }
     #nameArticle input {
         width: 60%;
     }
