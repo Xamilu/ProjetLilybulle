@@ -12,7 +12,11 @@ const adminAccountSchema = new mongoose.Schema({
 
 var imageSchema = new mongoose.Schema({
     name: String,
-    tags: {},
+    tags: {
+        categorie: String,
+        sousCategorie: String,
+        position: Number
+    },
     img:
     {
         data: Buffer,

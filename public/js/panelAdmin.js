@@ -39,21 +39,30 @@ let listMailContainer = document.querySelector('#list-mail')
 
 displayAllMails()
 
-async function sendImageToDB(){
-	// for (let i = 0; i < array.length; i++) {
-	// 	const element = array[i];
-		
-	// }
-	// let params = {
-	// 	nameFile: ,
-	// 	tags: {
-
-	// 	}
-	// }
-	await fetch('/db/addImage', {
-		method: 'POST',
-		body: params
-	})
+async function sendImageToDB(categorie, sousCategorie){
+	let inputList = document.querySelectorAll(`#${categorie} #${sousCategorie} input`)
+	let labelList = document.querySelectorAll(`#${categorie} #${sousCategorie} label`)
+	let myForm = document.querySelector(`#${categorie} #${sousCategorie} form`)
+	for (let i = 0; i < inputList.length-1; i++) {
+		if (inputList[i].value != "") {	
+			let params = {
+				nameFile: labelList[i].innerHTML.replace(/\s/g, ""),
+				tags: {
+					categorie: categorie,
+					sousCategorie: sousCategorie,
+					position: i+1
+				}
+			}
+			const formData = new FormData()
+			formData.append("params", JSON.stringify(params))
+			formData.append("inputList[i]", inputList[i].files[0])
+			// await fetch('/db/addImage', {
+			// 	method: 'POST',
+			// 	body: formData
+			// })
+			inputList[i].value = ""
+		}
+	}
 }
 
 function deconnexionAdmin(){

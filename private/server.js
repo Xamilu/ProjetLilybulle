@@ -2,7 +2,6 @@ const { static } = require('express');
 const bodyParser = require('body-parser');
 const express = require('express');
 const database = require('./baseDeDonnee/connexion');
-const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const app = express()
@@ -18,24 +17,14 @@ app.use(express.text())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.set("view engine", "ejs");
-
-var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'private/Assets')
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-});
- 
-const assets = multer({ storage: storage });
-
 // Connexion à la base de données
 database.connect
 const Email = database.schemas.Email
 const AdminAccount = database.schemas.Account
 const imgModel = database.schemas.Image
+
+const multer = require("multer");
+const upload = multer({ dest: "private/uploads/" });
 
 // Récupérer les images de la bdd
 app.get('/db/getImages', (req, res) => {
@@ -51,12 +40,13 @@ app.get('/db/getImages', (req, res) => {
 });
 
 // Ajouter une images à la bdd
-app.post('/db/addImage', assets.single('image'), (req, res, next) => {
+app.post('/db/addImage',upload.any("image"), (req, res) => {
+    let body = JSON.parse(req.body.params)
     var obj = {
-        name: req.body.nameFile,
-        tags: req.body.tags,
+        name: body.nameFile,
+        tags: body.tags,
         img: {
-            data: fs.readFileSync(path.join(__dirname + '/Assets/' + req.file.filename)),
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename)),
             contentType: 'image/png'
         }
     }
