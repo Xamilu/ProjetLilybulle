@@ -34,10 +34,10 @@
             <div class="panel uploadImage">
                 <h2>Emplacement image</h2>
                 <div id="upload-image">
-                    <div class="categorie" id="boutique">
-                        <h3>Boutique :</h3>
-                        <div class="emplacementImage" id="meuble">
-                            <p>Page Meuble :</p>
+                    <div class="categorie" id="caravane">
+                        <h3> caravane :</h3>
+                        <div class="emplacementImage" id="caravaneFOOD">
+                            <p>Page caravaneFOOD :</p>
                             <form class="formUpload" enctype="multipart/form-data">
                                 <input type="file" name="image" id="imagemeuble1" class="inputfile"/>
                                 <label for="imagemeuble1"> Image 1 </label>
@@ -47,7 +47,7 @@
                                 <label for="imagemeuble3"> Image 3 </label>
                                 <input type="file" name="image" id="imagemeuble4" class="inputfile"/>
                                 <label for="imagemeuble4"> Image 4 </label>
-                                <input type="button" onclick="sendImageToDB('boutique','meuble')" value="Envoyer" class="submitImage">
+                                <input type="button" onclick="changeImageInDB('caravane','caravaneFOOD')" value="Envoyer" class="submitImage">
                             </form>
                         </div>
                     </div>

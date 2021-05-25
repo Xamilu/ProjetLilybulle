@@ -21,26 +21,65 @@ app.use(bodyParser.json())
 database.connect
 const Email = database.schemas.Email
 const AdminAccount = database.schemas.Account
-const imgModel = database.schemas.Image
+const boutiqueImgModel = database.schemas.BoutiqueImage
+const atelierImgModel = database.schemas.AtelierImage
+const agenceImgModel = database.schemas.AgenceImage
+const caravaneImgModel = database.schemas.CaravaneImage
 
 const multer = require("multer");
 const upload = multer({ dest: "private/uploads/" });
 
 // Récupérer les images de la bdd
-app.get('/db/getImages', (req, res) => {
-    imgModel.find({}, (err, items) => {
+app.get('/db/getboutiqueImages', (req, res) => {
+    boutiqueImgModel.find({}, (err, data) => {
         if (err) {
             console.log(err);
             res.status(500).send('An error occurred', err);
         }
         else {
-            res.render('imagesPage', { items: items });
+            res.send(data);
         }
     });
 });
 
-// Ajouter une images à la bdd
-app.post('/db/addImage',upload.any("image"), (req, res) => {
+app.get('/db/getatelierImages', (req, res) => {
+    atelierImgModel.find({}, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send('An error occurred', err);
+        }
+        else {
+            res.send(data);
+        }
+    });
+});
+
+app.get('/db/getagenceImages', (req, res) => {
+    agenceImgModel.find({}, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send('An error occurred', err);
+        }
+        else {
+            res.send(data);
+        }
+    });
+});
+
+app.get('/db/getcaravaneImages', (req, res) => {
+    caravaneImgModel.find({}, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send('An error occurred', err);
+        }
+        else {
+            res.send(data);
+        }
+    });
+});
+
+// Ajouter une image à la bdd
+app.post('/db/addboutiqueImage',upload.any("image"), (req, res) => {
     let body = JSON.parse(req.body.params)
     var obj = {
         name: body.nameFile,
@@ -50,7 +89,64 @@ app.post('/db/addImage',upload.any("image"), (req, res) => {
             contentType: 'image/png'
         }
     }
-    imgModel.create(obj, (err, item) => {
+    boutiqueImgModel.create(obj, (err, item) => {
+        if (err) {
+            console.log(err);
+        } else{
+            res.sendStatus(200)
+        }
+    });
+});
+
+app.post('/db/addatelierImage',upload.any("image"), (req, res) => {
+    let body = JSON.parse(req.body.params)
+    var obj = {
+        name: body.nameFile,
+        tags: body.tags,
+        img: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename)),
+            contentType: 'image/png'
+        }
+    }
+    atelierImgModel.create(obj, (err, item) => {
+        if (err) {
+            console.log(err);
+        } else{
+            res.sendStatus(200)
+        }
+    });
+});
+
+app.post('/db/addagenceImage',upload.any("image"), (req, res) => {
+    let body = JSON.parse(req.body.params)
+    var obj = {
+        name: body.nameFile,
+        tags: body.tags,
+        img: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename)),
+            contentType: 'image/png'
+        }
+    }
+    agenceImgModel.create(obj, (err, item) => {
+        if (err) {
+            console.log(err);
+        } else{
+            res.sendStatus(200)
+        }
+    });
+});
+
+app.post('/db/addcaravaneImage',upload.any("image"), (req, res) => {
+    let body = JSON.parse(req.body.params)
+    var obj = {
+        name: body.nameFile,
+        tags: body.tags,
+        img: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename)),
+            contentType: 'image/png'
+        }
+    }
+    caravaneImgModel.create(obj, (err, item) => {
         if (err) {
             console.log(err);
         } else{

@@ -17,6 +17,9 @@ module.exports = {
     schemas: {
         Email: schemas.Email,
         Account: schemas.Account,
-        Image: schemas.Image
+        BoutiqueImage: schemas.BoutiqueImage,
+        AtelierImage: schemas.AtelierImage,
+        AgenceImage: schemas.AgenceImage,
+        CaravaneImage: schemas.CaravaneImage
     }
 }

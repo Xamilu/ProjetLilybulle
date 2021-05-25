@@ -39,7 +39,9 @@ let listMailContainer = document.querySelector('#list-mail')
 
 displayAllMails()
 
-async function sendImageToDB(categorie, sousCategorie){
+// getAllImages("atelier")
+
+async function changeImageInDB(categorie, sousCategorie){
 	let inputList = document.querySelectorAll(`#${categorie} #${sousCategorie} input`)
 	let labelList = document.querySelectorAll(`#${categorie} #${sousCategorie} label`)
 	let myForm = document.querySelector(`#${categorie} #${sousCategorie} form`)
@@ -56,10 +58,10 @@ async function sendImageToDB(categorie, sousCategorie){
 			const formData = new FormData()
 			formData.append("params", JSON.stringify(params))
 			formData.append("inputList[i]", inputList[i].files[0])
-			// await fetch('/db/addImage', {
-			// 	method: 'POST',
-			// 	body: formData
-			// })
+			await fetch(`/db/add${categorie}Image`, {
+				method: 'POST',
+				body: formData
+			})
 			inputList[i].value = ""
 		}
 	}
@@ -86,4 +88,12 @@ async function getAllMails(){
 		.then((response) => response.json())
 		.then((data) => mails = data)
 	return mails
+}
+
+async function getAllImages(categorie){
+	let images 
+	await fetch(`/db/get${categorie}Images`)
+		.then((response) => response.json())
+		.then((data) => images = data)
+	console.log(images)
 }
