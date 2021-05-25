@@ -39,9 +39,8 @@ app.get('/db/getboutiqueImages', (req, res) => {
         else {
             res.send(data);
         }
-    });
+    }).sort({tags: 1});;
 });
-
 app.get('/db/getatelierImages', (req, res) => {
     atelierImgModel.find({}, (err, data) => {
         if (err) {
@@ -51,9 +50,8 @@ app.get('/db/getatelierImages', (req, res) => {
         else {
             res.send(data);
         }
-    });
+    }).sort({tags: 1});;
 });
-
 app.get('/db/getagenceImages', (req, res) => {
     agenceImgModel.find({}, (err, data) => {
         if (err) {
@@ -63,9 +61,8 @@ app.get('/db/getagenceImages', (req, res) => {
         else {
             res.send(data);
         }
-    });
+    }).sort({tags: 1});
 });
-
 app.get('/db/getcaravaneImages', (req, res) => {
     caravaneImgModel.find({}, (err, data) => {
         if (err) {
@@ -75,7 +72,7 @@ app.get('/db/getcaravaneImages', (req, res) => {
         else {
             res.send(data);
         }
-    });
+    }).sort({tags: 1});;
 });
 
 // Ajouter une image à la bdd
@@ -97,7 +94,6 @@ app.post('/db/addboutiqueImage',upload.any("image"), (req, res) => {
         }
     });
 });
-
 app.post('/db/addatelierImage',upload.any("image"), (req, res) => {
     let body = JSON.parse(req.body.params)
     var obj = {
@@ -116,7 +112,6 @@ app.post('/db/addatelierImage',upload.any("image"), (req, res) => {
         }
     });
 });
-
 app.post('/db/addagenceImage',upload.any("image"), (req, res) => {
     let body = JSON.parse(req.body.params)
     var obj = {
@@ -135,7 +130,6 @@ app.post('/db/addagenceImage',upload.any("image"), (req, res) => {
         }
     });
 });
-
 app.post('/db/addcaravaneImage',upload.any("image"), (req, res) => {
     let body = JSON.parse(req.body.params)
     var obj = {
@@ -154,6 +148,53 @@ app.post('/db/addcaravaneImage',upload.any("image"), (req, res) => {
         }
     });
 });
+
+// Supprimer une image
+app.post('/db/deleteboutiqueImage', async (req, res) => {
+    let body = JSON.parse(req.body)
+    let list = await caravaneImgModel.find()
+    for (let i = 0; i < list.length; i++) {
+        const image = list[i];
+        if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
+            image.remove()
+        }
+    }
+    res.sendStatus(200)
+})
+app.post('/db/deleteatelierImage', async (req, res) => {
+    let body = JSON.parse(req.body)
+    let list = await caravaneImgModel.find()
+    for (let i = 0; i < list.length; i++) {
+        const image = list[i];
+        if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
+            image.remove()
+        }
+    }
+    res.sendStatus(200)
+})
+app.post('/db/deleteagenceImage', async (req, res) => {
+    let body = JSON.parse(req.body)
+    let list = await caravaneImgModel.find()
+    for (let i = 0; i < list.length; i++) {
+        const image = list[i];
+        if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
+            image.remove()
+        }
+    }
+    res.sendStatus(200)
+})
+app.post('/db/deletecaravaneImage', async (req, res) => {
+    let body = JSON.parse(req.body)
+    let list = await caravaneImgModel.find()
+    for (let i = 0; i < list.length; i++) {
+        const image = list[i];
+        if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
+            image.remove()
+        }
+    }
+    res.sendStatus(200)
+})
+
 
 //Creation d'un nouvel email
 app.post('/db/createEmail', (req, res) => {
