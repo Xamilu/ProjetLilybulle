@@ -20,26 +20,6 @@ let boutiqueContainer = document.querySelector('#boutique')
 let atelierContainer = document.querySelector('#atelier')
 let agenceContainer = document.querySelector('#agence')
 let caravaneContainer = document.querySelector('#caravane')
-// var inputs = document.querySelectorAll( '.inputfile' );
-// Array.prototype.forEach.call( inputs, function( input )
-// {
-// 	var label	 = input.nextElementSibling,
-// 		labelVal = label.innerHTML;
-
-// 	input.addEventListener( 'change', function( e )
-// 	{
-// 		var fileName = '';
-// 		if( this.files && this.files.length > 1 )
-// 			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-// 		else
-// 			fileName = e.target.value.split('/').pop();
-
-// 		if( fileName )
-// 			label.querySelector( 'span' ).innerHTML = fileName;
-// 		else
-// 			label.innerHTML = labelVal;
-// 	});
-// });
 
 displayAllMails()
 
@@ -266,7 +246,7 @@ async function getAllImages(categorie){
 		.then((response) => response.json())
 		.then((data) => images = data)
 	return images
-}
+}	
 
 async function deleteImage(categorie, sousCategorie, position){
 	let params = {

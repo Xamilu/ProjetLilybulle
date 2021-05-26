@@ -19,7 +19,7 @@ var boutiqueImageSchema = new mongoose.Schema({
     },
     img:
     {
-        data: Buffer,
+        data: String,
         contentType: String
     }
 }, { timestamps: true });
@@ -33,7 +33,7 @@ var atelierImageSchema = new mongoose.Schema({
     },
     img:
     {
-        data: Buffer,
+        data: String,
         contentType: String
     }
 }, { timestamps: true });
@@ -47,7 +47,7 @@ var agenceImageSchema = new mongoose.Schema({
     },
     img:
     {
-        data: Buffer,
+        data: String,
         contentType: String
     }
 }, { timestamps: true });
@@ -61,7 +61,7 @@ var caravaneImageSchema = new mongoose.Schema({
     },
     img:
     {
-        data: Buffer,
+        data: String,
         contentType: String
     }
 }, { timestamps: true });

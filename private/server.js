@@ -78,11 +78,12 @@ app.get('/db/getcaravaneImages', (req, res) => {
 // Ajouter une image à la bdd
 app.post('/db/addboutiqueImage',upload.any("image"), (req, res) => {
     let body = JSON.parse(req.body.params)
+    let imgPath = fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename))
     var obj = {
         name: body.nameFile,
         tags: body.tags,
         img: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename)),
+            data: imgPath.toString('base64'),
             contentType: 'image/png'
         }
     }
@@ -96,11 +97,12 @@ app.post('/db/addboutiqueImage',upload.any("image"), (req, res) => {
 });
 app.post('/db/addatelierImage',upload.any("image"), (req, res) => {
     let body = JSON.parse(req.body.params)
+    let imgPath = fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename))
     var obj = {
         name: body.nameFile,
         tags: body.tags,
         img: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename)),
+            data: imgPath.toString('base64'),
             contentType: 'image/png'
         }
     }
@@ -114,11 +116,12 @@ app.post('/db/addatelierImage',upload.any("image"), (req, res) => {
 });
 app.post('/db/addagenceImage',upload.any("image"), (req, res) => {
     let body = JSON.parse(req.body.params)
+    let imgPath = fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename))
     var obj = {
         name: body.nameFile,
         tags: body.tags,
         img: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename)),
+            data: imgPath.toString('base64'),
             contentType: 'image/png'
         }
     }
@@ -132,11 +135,12 @@ app.post('/db/addagenceImage',upload.any("image"), (req, res) => {
 });
 app.post('/db/addcaravaneImage',upload.any("image"), (req, res) => {
     let body = JSON.parse(req.body.params)
+    let imgPath = fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename))
     var obj = {
         name: body.nameFile,
         tags: body.tags,
         img: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' +  req.files[0].filename)),
+            data: imgPath.toString('base64'),
             contentType: 'image/png'
         }
     }
@@ -152,7 +156,7 @@ app.post('/db/addcaravaneImage',upload.any("image"), (req, res) => {
 // Supprimer une image
 app.post('/db/deleteboutiqueImage', async (req, res) => {
     let body = JSON.parse(req.body)
-    let list = await caravaneImgModel.find()
+    let list = await boutiqueImgModel.find()
     for (let i = 0; i < list.length; i++) {
         const image = list[i];
         if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
@@ -163,7 +167,7 @@ app.post('/db/deleteboutiqueImage', async (req, res) => {
 })
 app.post('/db/deleteatelierImage', async (req, res) => {
     let body = JSON.parse(req.body)
-    let list = await caravaneImgModel.find()
+    let list = await atelierImgModel.find()
     for (let i = 0; i < list.length; i++) {
         const image = list[i];
         if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
@@ -174,7 +178,7 @@ app.post('/db/deleteatelierImage', async (req, res) => {
 })
 app.post('/db/deleteagenceImage', async (req, res) => {
     let body = JSON.parse(req.body)
-    let list = await caravaneImgModel.find()
+    let list = await agenceImgModel.find()
     for (let i = 0; i < list.length; i++) {
         const image = list[i];
         if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {

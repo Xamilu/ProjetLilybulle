@@ -4,9 +4,9 @@ let items = document.querySelectorAll(".container div");
 function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
   return (
-    rect.top >= -items[1].offsetHeight/2.5 &&
+    rect.top >= -items[1].offsetHeight/1.25 &&
     rect.left >= -100 &&
-    rect.bottom <= (window.innerHeight + items[1].offsetHeight/2.5) &&
+    rect.bottom <= (window.innerHeight + items[1].offsetHeight/1.25) &&
     rect.right <= (window.innerWidth +100 || document.documentElement.clientWidth +100 )
   );
 }
