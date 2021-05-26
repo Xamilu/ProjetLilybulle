@@ -102,10 +102,16 @@
     displayImages()
 
     async function displayImages(){
+        let imageContainerList = document.querySelectorAll(".divImgDesc img")
         let imagesList = await getAllImages("atelier")
-        let imageContainer = document.querySelector("#imgMeuble1 img")
-        imageContainer.setAttribute("src", `data:${imagesList[0].img.contentType};base64,
-        ${imagesList[0].img.data}`)
+        for (let i = 0; i < imageContainerList.length; i++) {
+            const image = imagesList[i];
+            const imageContainer = imageContainerList[i];
+            if (image.tags.sousCategorie == "decor" ) {
+                imageContainer.setAttribute("src", `data:${image.img.contentType};base64,
+        ${image.img.data}`)
+            }
+        }
     }
      
     async function getAllImages(categorie){
