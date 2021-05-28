@@ -99,6 +99,7 @@ select option {
     padding-left: 0.5em;
     font-size: 1.1em; 
     outline: none;
+    width: 99%;
 }
 
 #compteurMots {
