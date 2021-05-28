@@ -6,7 +6,7 @@ body.insertAdjacentHTML("afterbegin" , `<p id="contact">35 Grande rue & 22 av de
         <div class="socialIcons">
             <a target="blank" href="https://www.facebook.com/Boutique-Lilybulle-564883753528910/?ref=page_internal"><span class="iconify" data-icon="ant-design:facebook-filled" data-inline="false" style="color: black; margin-right: 1em;"></span></a>
             <a target="blank" href="https://www.instagram.com/lilybulle_/"><span class="iconify" data-icon="akar-icons:instagram-fill" data-inline="false" style="color: black;"></span></a>
-            <a href="#lieu"><span class="iconify" data-icon="zmdi:google-maps" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
+            <a href="../../index.html#lieu"><span class="iconify" data-icon="zmdi:google-maps" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
             <a href="../contact.html"><span class="iconify" data-icon="entypo:phone" data-inline="false" style="color: black; margin-left: 1em;"></span></a>
         </div>
 
