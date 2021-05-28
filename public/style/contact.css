@@ -107,9 +107,7 @@ select option {
     margin-top: 0.3%;
 }
 
-#compteur, #maxWord {
-    text-align: right;
-}
+
 
 #submit{
     width: 10%;
