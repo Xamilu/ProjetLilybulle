@@ -21,15 +21,21 @@ let atelierContainer = document.querySelector('#atelier')
 let agenceContainer = document.querySelector('#agence')
 let caravaneContainer = document.querySelector('#caravane')
 
-displayAllMails()
+// displayAllMails()
 
-displayAllContainer()
+// displayAllContainer()
+
+document.querySelector('.wrapper').style.opacity= "0"
+setTimeout(() => {
+	document.querySelector('.wrapper').style.visibility = "hidden"
+	document.querySelector("#upload-image").style.opacity = "1"
+}, 500);
 
 async function displayAllContainer(){
-	let boutiqueImageList =	await getAllImages("boutique")
-	let atelierImageList =	await getAllImages("atelier")
-	let agenceImageList =	await getAllImages("agence")
-	let caravaneImageList =	await getAllImages("caravane")
+	// let boutiqueImageList =	await getAllImages("boutique")
+	// let atelierImageList =	await getAllImages("atelier")
+	// let agenceImageList =	await getAllImages("agence")
+	// let caravaneImageList =	await getAllImages("caravane")
 	document.querySelector('.wrapper').style.opacity= "0"
 	setTimeout(() => {
 		document.querySelector('.wrapper').style.visibility = "hidden"
@@ -194,7 +200,7 @@ async function changeImageInDB(categorie, sousCategorie){
 	let inputList = document.querySelectorAll(`#${categorie} #${sousCategorie} input`)
 	let labelList = document.querySelectorAll(`#${categorie} #${sousCategorie} label`)
 	for (let i = 0; i < inputList.length-1; i++) {
-		if (inputList[i].value != "") {	
+		if (inputList[i].value != "") {
 			let params = {
 				nameFile: labelList[i].innerHTML.replace(/\s/g, ""),
 				tags: {
@@ -207,7 +213,7 @@ async function changeImageInDB(categorie, sousCategorie){
 			const formData = new FormData()
 			formData.append("params", JSON.stringify(params))
 			formData.append("inputList[i]", inputList[i].files[0])
-			await fetch(`/db/add${categorie}Image`, {
+			await fetch(`/db/addImage`, {
 				method: 'POST',
 				body: formData
 			})
@@ -250,10 +256,11 @@ async function getAllImages(categorie){
 
 async function deleteImage(categorie, sousCategorie, position){
 	let params = {
+		categorie: categorie,
 		sousCategorie: sousCategorie,
 		position: position,
 	}
-	await fetch(`/db/delete${categorie}Image`, {
+	await fetch(`/db/deleteImage`, {
 		method: 'POST',
 		body: JSON.stringify(params)
 	}).then()

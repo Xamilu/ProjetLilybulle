@@ -102,21 +102,21 @@
     displayImages()
 
     async function displayImages(){
+        let imagesList = await getAllImages()
         let imageContainerList = document.querySelectorAll(".divImgDesc img")
-        let imagesList = await getAllImages("atelier")
         for (let i = 0; i < imageContainerList.length; i++) {
             const image = imagesList[i];
+            const metadata = JSON.parse(image.metadata)
             const imageContainer = imageContainerList[i];
-            if (image.tags.sousCategorie == "decor" ) {
-                imageContainer.setAttribute("src", `data:${image.img.contentType};base64,
-        ${image.img.data}`)
+            if (metadata.tags.sousCategorie == "meuble" && metadata.tags.categorie == "boutique" ) {
+                imageContainer.setAttribute("src", `../../../image/${image.filename}`)
             }
         }
     }
      
-    async function getAllImages(categorie){
+    async function getAllImages(){ 
         let images 
-        await fetch(`/db/get${categorie}Images`)
+        await fetch(`/db/getImages`)
             .then((response) => response.json())
             .then((data) => images = data)
         return images

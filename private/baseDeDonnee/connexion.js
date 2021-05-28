@@ -3,10 +3,12 @@ const schemas = require('./schema')
 
 const DB_URI = 'mongodb+srv://AdminPourTous:JkSOQDG6Kl2nIARk@cluster0.slkaw.mongodb.net/LilybulleDatabase?retryWrites=true&w=majority'
 
-function connect(){
-    mongoose.connect(DB_URI, {
+async function connect(){
+    await mongoose.connect(DB_URI, {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+        useCreateIndex: true,
     })
     .then(() => { console.log('Connecté à la base de données') })
     .catch((error) => { console.log(error) })
