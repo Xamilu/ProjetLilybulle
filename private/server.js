@@ -36,6 +36,7 @@ const conn = mongoose.createConnection(DB_URI, {
 database.connect
 const Email = database.schemas.Email
 const AdminAccount = database.schemas.Account
+const Article = database.schemas.Article
 
 // Init gfs
 let gfs;
@@ -203,4 +204,20 @@ app.get('/db/getAdminAccount', (req,res) => {
     AdminAccount.find().then((data) => {
         res.send(data)
     })
+})
+
+// Récupérer l'article
+app.post('/db/createArticle', (req, res) => {
+  const body = JSON.parse(req.body);
+  const titreData = body.titre;
+  const contenuData = body.contenu;
+  console.log(titreData)
+  console.log(contenuData)
+  
+  const createArticle = new Article({
+      titre: titreData,
+      contenu: contenuData
+  })
+  createArticle.save()
+  res.sendStatus(200)
 })

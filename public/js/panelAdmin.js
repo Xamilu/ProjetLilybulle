@@ -265,3 +265,34 @@ async function deleteImage(categorie, sousCategorie, position){
 		body: JSON.stringify(params)
 	}).then()
 }
+
+
+
+// recupération articles
+async function sendArticle(){
+	event.preventDefault();
+
+	let titre = document.querySelector('#titreContent').value;
+	let contenu = document.querySelector('[contenteditable]').textContent;
+
+	let param = {
+		titre:titre,
+		contenu: contenu
+	}
+
+	console.log(titre)
+	console.log(contenu)
+    await fetch('/db/createArticle', {
+      method: 'POST',
+      body: JSON.stringify(param)
+    }).then()
+  }
+
+  async function getArticles(){
+    let articlesList
+    await fetch('/db/getArticles')
+    .then(response=> response.json())
+    .then(articles => articlesList = articles)
+  
+    return articlesList
+  }

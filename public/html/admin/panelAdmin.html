@@ -95,7 +95,7 @@
                             </div>
                             <div id="nameArticle">
                                 <label for="titreActu">Choisir le titre de l'article :</label>
-                                <input type="text">
+                                <input id="titreContent" type="text">
                             </div>
                         </div>
                         <div id="containerTextArea">
@@ -106,7 +106,7 @@
                             </div>
                             <div id="editeur" contenteditable></div>
                         </div>
-                        <input type="submit" value="Envoyer" id="submitActu">
+                        <input type="submit" onclick="sendArticle()" value="Envoyer" id="submitActu">
                     </form>
                 </div>
             </div>

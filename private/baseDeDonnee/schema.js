@@ -10,7 +10,13 @@ const adminAccountSchema = new mongoose.Schema({
     keyword: String,
 }, { timestamps: true })
 
+const articleSchema = new mongoose.Schema({
+    titre: String,
+    contenu: String,
+}, { timestamps: true })
+
 module.exports = {
     Email: mongoose.model('email', emailSchema),
-    Account: mongoose.model('adminAccount', adminAccountSchema)
+    Account: mongoose.model('adminAccount', adminAccountSchema),
+    Article: mongoose.model('article', articleSchema)
 }
