@@ -43,8 +43,9 @@ let gfs;
 
 conn.once('open', () => {
   // Init stream
-  gfs = Grid(conn.db, mongoose.mongo);
-  gfs.collection('uploads');
+  gfs = new mongoose.mongo.GridFSBucket(conn.db, {
+    bucketName: "uploads"
+  });
 });
 
 // Create storage engine
@@ -62,7 +63,6 @@ const storage = new GridFsStorage({
             metadata: req.body.params,
             bucketName: 'uploads'
           };
-          console.log(fileInfo);
           resolve(fileInfo);
         });
       });
@@ -73,7 +73,7 @@ const storage = new GridFsStorage({
 
 // Récupérer les images de la bdd
 app.get('/db/getImages', (req, res) => {
-  gfs.files.find().toArray((err, files) => {
+  gfs.find().toArray((err, files) => {
     // Check if files
     if (!files || files.length === 0) {
       return res.status(404).json({
@@ -87,25 +87,12 @@ app.get('/db/getImages', (req, res) => {
 });
 
 app.get('/image/:filename', (req, res) => {
-  gfs.files.findOne({ filename: req.params.filename }, (err, file) => {
-    // Check if file
-    if (!file || file.length === 0) {
-      return res.status(404).json({
-        err: 'No file exists'
-      });
-    }
-
-    // Check if image
-    if (file.contentType === 'image/jpeg' || file.contentType === 'image/png') {
-      // Read output to browser
-      const readstream = gfs.createReadStream(file.filename);
-      readstream.pipe(res);
-    } else {
-      res.status(404).json({
-        err: 'Not an image'
-      });
-    }
-  });
+  gfs.find({ filename: req.params.filename }, { sort: {'metadata.nameFile': -1}}).toArray((err, files) => {
+    if (files[0].contentType === 'image/png' || files[0].contentType === 'image/jpeg') {
+      gfs.openDownloadStreamByName(req.params.filename).pipe(res)
+    } 
+  })
+  
 });
 // Ajouter une image à la bdd
 app.post('/db/addImage',upload.any("file"), (req, res) => {
@@ -115,50 +102,16 @@ app.post('/db/addImage',upload.any("file"), (req, res) => {
 });
 
 // Supprimer une image
-app.post('/db/deleteboutiqueImage', async (req, res) => {
-    let body = JSON.parse(req.body)
-    let list = await boutiqueImgModel.find()
-    for (let i = 0; i < list.length; i++) {
-        const image = list[i];
-        if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
-            image.remove()
-        }
+app.delete('/db/deleteImage', async (req, res) => {
+  try{
+    const obj_id = new mongoose.Types.ObjectId(JSON.parse(req.body).id);
+      gfs.delete(obj_id);
+      res.sendStatus(200)
+    } catch (err) {
+      console.log(err.message);
+      res.status(500)
     }
-    res.sendStatus(200)
-})
-app.post('/db/deleteatelierImage', async (req, res) => {
-    let body = JSON.parse(req.body)
-    let list = await atelierImgModel.find()
-    for (let i = 0; i < list.length; i++) {
-        const image = list[i];
-        if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
-            image.remove()
-        }
-    }
-    res.sendStatus(200)
-})
-app.post('/db/deleteagenceImage', async (req, res) => {
-    let body = JSON.parse(req.body)
-    let list = await agenceImgModel.find()
-    for (let i = 0; i < list.length; i++) {
-        const image = list[i];
-        if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
-            image.remove()
-        }
-    }
-    res.sendStatus(200)
-})
-app.post('/db/deletecaravaneImage', async (req, res) => {
-    let body = JSON.parse(req.body)
-    let list = await caravaneImgModel.find()
-    for (let i = 0; i < list.length; i++) {
-        const image = list[i];
-        if (image.tags.sousCategorie == body.sousCategorie && image.tags.position == body.position) {
-            image.remove()
-        }
-    }
-    res.sendStatus(200)
-})
+});
 
 
 //Creation d'un nouvel email
@@ -189,8 +142,6 @@ app.post('/db/deleteEmail', async (req, res) => {
 app.post('/db/createAdminAccount', (req, res) => {   
     const NameUser = req.body.nameUser;
     const Keyword = req.body.keyword;
-console.log(req.body)
-console.log(Keyword)
     const createAdminAccount = new AdminAccount({
         nameUser : NameUser,
         keyword : Keyword

@@ -86,6 +86,9 @@ h2{
     padding: 1% 0%;
     margin: 0% 0% 5% 0%;
 }
+.categorie h3 {
+    margin-left: 2%;
+}
 .mailNewsletter{
     width: 17%;
 }
@@ -221,6 +224,9 @@ li{
     flex-direction: row;
     justify-content: space-between;
 }
+.formUpload label {
+    margin: 0;
+}
 #title-file{
     display: flex;
     flex-direction: row;
@@ -248,7 +254,7 @@ li{
 .emplacementImage .submitImage{
     background-color: rgb(24, 156, 243);
     color: white;
-    border: 2px solid rgb(207, 207, 207);
+    border: 2px solid rgb(24, 156, 243);
     border-radius: 5px;
     font-size: 1em;
     padding: 0 2% 0 2%;

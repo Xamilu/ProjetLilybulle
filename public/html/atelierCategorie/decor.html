@@ -105,12 +105,15 @@
         let imagesList = await getAllImages()
         let imageContainerList = document.querySelectorAll(".divImgDesc img")
         for (let i = 0; i < imageContainerList.length; i++) {
-            const image = imagesList[i];
-            const metadata = JSON.parse(image.metadata)
             const imageContainer = imageContainerList[i];
-            if (metadata.tags.sousCategorie == "meuble" && metadata.tags.categorie == "boutique" ) {
-                imageContainer.setAttribute("src", `../../../image/${image.filename}`)
+            for (let j = 0; j < imagesList.length; j++) {
+                const image = imagesList[j];
+                const metadata = JSON.parse(image.metadata)
+                if (metadata.tags.sousCategorie == "decor" && metadata.tags.categorie == "atelier" ) {
+                    imageContainer.setAttribute("src", `../../../image/${image.filename}`)
+                }
             }
+            
         }
     }
      
