@@ -108,8 +108,8 @@
             const imageContainer = imageContainerList[i];
             for (let j = 0; j < imagesList.length; j++) {
                 const image = imagesList[j];
-                const metadata = JSON.parse(image.metadata)
-                if (metadata.tags.sousCategorie == "decor" && metadata.tags.categorie == "atelier" ) {
+                const metadata = image.metadata
+                if (metadata.tags.sousCategorie == "decor" && metadata.tags.categorie == "atelier" && metadata.tags.position == i+1 ) {
                     imageContainer.setAttribute("src", `../../../image/${image.filename}`)
                 }
             }

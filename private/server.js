@@ -60,7 +60,7 @@ const storage = new GridFsStorage({
           const filename = buf.toString('hex') + path.extname(file.originalname);
           const fileInfo = {
             filename: filename,
-            metadata: req.body.params,
+            metadata: JSON.parse(req.body.params),
             bucketName: 'uploads'
           };
           resolve(fileInfo);
@@ -73,7 +73,7 @@ const storage = new GridFsStorage({
 
 // Récupérer les images de la bdd
 app.get('/db/getImages', (req, res) => {
-  gfs.find().toArray((err, files) => {
+  gfs.find().sort({ "metadata.tags.position": -1}).toArray((err, files) => {
     // Check if files
     if (!files || files.length === 0) {
       return res.status(404).json({
@@ -87,7 +87,7 @@ app.get('/db/getImages', (req, res) => {
 });
 
 app.get('/image/:filename', (req, res) => {
-  gfs.find({ filename: req.params.filename }, { sort: {'metadata.nameFile': -1}}).toArray((err, files) => {
+  gfs.find({ filename: req.params.filename }).toArray((err, files) => {
     if (files[0].contentType === 'image/png' || files[0].contentType === 'image/jpeg') {
       gfs.openDownloadStreamByName(req.params.filename).pipe(res)
     } 

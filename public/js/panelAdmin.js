@@ -28,10 +28,9 @@ async function displayAllContainer(){
 		document.querySelector('.wrapper').style.visibility = "hidden"
 		document.querySelector("#upload-image").style.opacity = "1"
 	}, 500);
-	
 	for (let i = 0; i < imageList.length; i++) {
 		const image = imageList[i];
-		const metadata = JSON.parse(image.metadata)
+		const metadata = image.metadata
 		if (imageList[i-1] == undefined) {
 			if (!document.querySelector(`#${metadata.tags.sousCategorie}`)) {
 				document.querySelector(`#${metadata.tags.categorie}`).insertAdjacentHTML('beforeend', `
@@ -43,7 +42,7 @@ async function displayAllContainer(){
 				</div>
 				`)
 			}
-		} else if (metadata.tags.sousCategorie != JSON.parse(imageList[i-1].metadata).tags.sousCategorie){
+		} else if (metadata.tags.sousCategorie != imageList[i-1].metadata.tags.sousCategorie){
 			if (!document.querySelector(`#${metadata.tags.sousCategorie}`)) {
 				document.querySelector(`#${metadata.tags.categorie}`).insertAdjacentHTML('beforeend', `
 				<div class="emplacementImage" id="${metadata.tags.sousCategorie}">
@@ -56,14 +55,14 @@ async function displayAllContainer(){
 			}
 		}
 	}
-	for (let j = imageList.length-1; j >= 0; j--) {
+	for (let j = 0; j < imageList.length; j++) {
 		const imageJ = imageList[j];
-		const metadataJ = JSON.parse(imageJ.metadata)
+		const metadataJ = imageJ.metadata
 		if (imageList[j-1] == undefined) {
 			document.querySelector(`#${metadataJ.tags.categorie} #${metadataJ.tags.sousCategorie} form`).insertAdjacentHTML('afterbegin' , `
 			<input type="file" name="image" id="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}" data-id="${imageJ._id}" class="inputfile"/>
 			<label for="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}"> Image ${metadataJ.tags.position} </label>`)
-		} else if(metadataJ.tags.position != JSON.parse(imageList[j-1].metadata).tags.position){
+		} else {
 			document.querySelector(`#${metadataJ.tags.categorie} #${metadataJ.tags.sousCategorie} form`).insertAdjacentHTML('afterbegin' , `
 			<input type="file" name="image" id="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}" data-id="${imageJ._id}" class="inputfile"/>
 			<label for="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}"> Image ${metadataJ.tags.position} </label>`)
@@ -75,13 +74,14 @@ async function changeImageInDB(categorie, sousCategorie){
 	let inputList = document.querySelectorAll(`#${categorie} #${sousCategorie} input`)
 	let labelList = document.querySelectorAll(`#${categorie} #${sousCategorie} label`)
 	for (let i = 0; i < inputList.length-1; i++) {
+		let label = labelList[i].innerHTML
 		if (inputList[i].value != "") {
 			let params = {
 				nameFile: labelList[i].innerHTML.replace(/\s/g, ""),
 				tags: {
 					categorie: categorie,
 					sousCategorie: sousCategorie,
-					position: i+1
+					position: parseInt(label[label.length-2])
 				}
 			}
 			await deleteImage(inputList[i].dataset.id)
