@@ -11,6 +11,7 @@ const adminAccountSchema = new mongoose.Schema({
 }, { timestamps: true })
 
 const articleSchema = new mongoose.Schema({
+    position: String,
     titre: String,
     contenu: String,
 }, { timestamps: true })

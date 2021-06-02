@@ -157,18 +157,28 @@ app.get('/db/getAdminAccount', (req,res) => {
     })
 })
 
-// Récupérer l'article
+// Envoyer l'article à la BDD
 app.post('/db/createArticle', (req, res) => {
   const body = JSON.parse(req.body);
+  const position = body.position;
   const titreData = body.titre;
   const contenuData = body.contenu;
+  console.log(position)
   console.log(titreData)
   console.log(contenuData)
   
   const createArticle = new Article({
+      position: position,
       titre: titreData,
       contenu: contenuData
   })
   createArticle.save()
   res.sendStatus(200)
+})
+
+// Récupérer l'article de la BDD
+app.get('/db/getArticle', (req,res) => {
+  Article.find().then((data) => {
+      res.send(data)
+  })
 })

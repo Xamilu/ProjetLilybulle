@@ -147,8 +147,12 @@ async function sendArticle(){
 
 	let titre = document.querySelector('#titreContent').value;
 	let contenu = document.querySelector('[contenteditable]').textContent;
+	let positionValue = document.querySelector('#actu-select').value;
+	let position = positionValue[positionValue.length-1];
+	console.log(position);
 
 	let param = {
+		position: position, 
 		titre:titre,
 		contenu: contenu
 	}
@@ -163,9 +167,12 @@ async function sendArticle(){
 
   async function getArticles(){
     let articlesList
-    await fetch('/db/getArticles')
+    await fetch('/db/getArticle')
     .then(response=> response.json())
     .then(articles => articlesList = articles)
-  
+
+	console.log(articlesList)
     return articlesList
   }
+
+  getArticles();

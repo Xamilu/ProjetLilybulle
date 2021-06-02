@@ -27,3 +27,25 @@ function callbackFunc() {
 
 window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
+
+async function getArticles(){
+  let articlesList
+  await fetch('/db/getArticle')
+  .then(response=> response.json())
+  .then(articles => articlesList = articles)
+
+  console.log(articlesList)
+  return articlesList
+}
+getArticles();
+
+function checkPositionArticle(){
+  let articlesList = getArticles();
+  console.log(articlesList);
+  let articlePosition = articlesList.then{position};
+  for(let i=0 ; i < articlesList.lenght; i++){
+    if(){
+
+    }
+  }
+}
