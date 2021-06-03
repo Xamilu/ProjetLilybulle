@@ -101,3 +101,30 @@
 <script src="../../js/carousel.js"></script>
 <script src="../../js/navHamburger.js"></script>
 <script src="../../js/modal.js"></script>
+<script>
+    displayImages()
+
+    async function displayImages(){
+        let imagesList = await getAllImages()
+        let imageContainerList = document.querySelectorAll(".divImgDesc img")
+        for (let i = 0; i < imageContainerList.length; i++) {
+            const imageContainer = imageContainerList[i];
+            for (let j = 0; j < imagesList.length; j++) {
+                const image = imagesList[j];
+                const metadata = image.metadata
+                if (metadata.tags.sousCategorie == "linge" && metadata.tags.categorie == "boutique" && metadata.tags.position == i+1 ) {
+                    imageContainer.setAttribute("src", `../../../image/${image.filename}`)
+                }
+            }
+            
+        }
+    }
+     
+    async function getAllImages(){ 
+        let images 
+        await fetch(`/db/getImages`)
+            .then((response) => response.json())
+            .then((data) => images = data)
+        return images
+    }
+</script>
