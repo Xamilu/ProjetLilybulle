@@ -146,20 +146,17 @@ async function sendArticle(){
 	event.preventDefault();
 
 	let titre = document.querySelector('#titreContent').value;
-	let contenu = document.querySelector('[contenteditable]').textContent;
+	let contenu = document.querySelector('[contenteditable]').innerHTML;
 	let positionValue = document.querySelector('#actu-select').value;
 	let position = positionValue[positionValue.length-1];
-	console.log(position);
-
+	
 	let param = {
 		position: position, 
-		titre:titre,
+		titre: titre,
 		contenu: contenu
 	}
-
-	console.log(titre)
-	console.log(contenu)
-    await fetch('/db/createArticle', {
+	
+	await fetch('/db/createArticle', {
       method: 'POST',
       body: JSON.stringify(param)
     }).then()
@@ -176,3 +173,6 @@ async function sendArticle(){
   }
 
   getArticles();
+
+
+

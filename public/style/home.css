@@ -276,6 +276,12 @@ body {
     font-weight: 700;
     color: white;
 }
+
+.carousel-item p {
+    font-size: 1.5em;
+    color: #fff;
+    width: 90%;
+}
 .nextContainer, .prevContainer{
     position: absolute;
     height: 100%;

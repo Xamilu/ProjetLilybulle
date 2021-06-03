@@ -37,15 +37,16 @@ async function getArticles(){
   console.log(articlesList)
   return articlesList
 }
-getArticles();
 
-function checkPositionArticle(){
-  let articlesList = getArticles();
-  console.log(articlesList);
-  let articlePosition = articlesList.then{position};
-  for(let i=0 ; i < articlesList.lenght; i++){
-    if(){
+displayArticles()
 
-    }
-  }
+async function displayArticles() {
+	let articlesList = await getArticles();
+	let articleContainers = document.querySelectorAll('.carousel-item');
+  for (let i = 0; i < articlesList.length; i++) {
+		  let position = parseInt(articlesList[i].position);
+      articleContainers[position-1].insertAdjacentHTML('afterbegin',
+      `<h3 id="art${articlesList[i].position}">${articlesList[i].titre}</h3>
+      <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>`)
+		}
 }
