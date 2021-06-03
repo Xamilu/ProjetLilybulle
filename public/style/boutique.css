@@ -257,16 +257,6 @@
     border: 1px solid black;
     padding: 5%;
 }
-.row{
-    display: flex;
-    flex-direction: row;
-    margin: 5% 0% 5% 0%;
-}
-.row div{
-    width: 40%;
-    height: 400px;
-    overflow: hidden;
-}
 .divImgDesc{
     margin: 0% 2% 0% 2%;
 }
