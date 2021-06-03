@@ -246,8 +246,15 @@
     display: flex;
     flex-direction: row;
     margin: 5% 0% 5% 0%;
-    justify-content: space-around;
     width: 90%;
+    justify-content: space-around;
+    align-items: center;
+}
+.row div{
+    position: relative;
+    width: 38%;
+    height: auto;
+    overflow: hidden;
 }
 .divImgDesc{
     margin: 0% 2% 0% 2%;
@@ -365,16 +372,6 @@ footer{
 }
 .divTextDesc {
     transform: translateY(150px);
-}
-.container .row div.in-view {
-    transform: none;
-    visibility: visible;
-    opacity: 1;
-}
-.container .row div{
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
 }
 .container .row div.in-view {
     transform: none;

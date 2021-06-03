@@ -22,6 +22,10 @@ displayAllMails()
 displayAllContainer()
 
 async function displayAllContainer(){
+	let emplacementImageInputContainer = document.querySelectorAll('.emplacementImage')
+	for (let i = 0; i < emplacementImageInputContainer.length; i++) {
+		emplacementImageInputContainer[i].remove()
+	}
 	let imageList =	await getAllImages()
 	document.querySelector('.wrapper').style.opacity= "0"
 	setTimeout(() => {
@@ -95,7 +99,7 @@ async function changeImageInDB(categorie, sousCategorie){
 			inputList[i].value = ""
 		}
 	}
-	
+	displayAllContainer()
 }
 
 function deconnexionAdmin(){
