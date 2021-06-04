@@ -176,7 +176,23 @@ async function sendArticle(){
     return articlesList
   }
 
-  getArticles();
+displayArticlesHistorique()
+
+async function displayArticlesHistorique() {
+	let articlesList = await getArticles();
+	let articleContainers = document.querySelectorAll('.articleHistorique');
+  	for (let i = 0; i < articlesList.length; i++) {
+		  let position = parseInt(articlesList[i].position);
+      articleContainers[position-1].insertAdjacentHTML('beforeend',
+      `<div>
+	  <h4 id="position">${articlesList[i].position}</h4>
+	  <h4 id="art${articlesList[i].position}">${articlesList[i].titre}</h4>
+      <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>
+	  </div>
+	  <span class="iconify" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
+	  `)
+		}
+}
 
 
 
