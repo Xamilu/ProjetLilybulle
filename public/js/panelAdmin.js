@@ -35,7 +35,8 @@ async function displayAllContainer(){
 	for (let i = 0; i < imageList.length; i++) {
 		const image = imageList[i];
 		const metadata = image.metadata
-		if (imageList[i-1] == undefined) {
+		if (metadata.tags.categorie == 'article') {
+		} else if (imageList[i-1] == undefined) {
 			if (!document.querySelector(`#${metadata.tags.sousCategorie}`)) {
 				document.querySelector(`#${metadata.tags.categorie}`).insertAdjacentHTML('beforeend', `
 				<div class="emplacementImage" id="${metadata.tags.sousCategorie}">
@@ -62,7 +63,8 @@ async function displayAllContainer(){
 	for (let j = 0; j < imageList.length; j++) {
 		const imageJ = imageList[j];
 		const metadataJ = imageJ.metadata
-		if (imageList[j-1] == undefined) {
+		if (metadataJ.tags.categorie == 'article') {
+		} else if (imageList[j-1] == undefined) {
 			document.querySelector(`#${metadataJ.tags.categorie} #${metadataJ.tags.sousCategorie} form`).insertAdjacentHTML('afterbegin' , `
 			<input type="file" name="image" id="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}" data-id="${imageJ._id}" class="inputfile"/>
 			<label for="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}"> Image ${metadataJ.tags.position} </label>`)
@@ -152,8 +154,24 @@ async function sendArticle(){
 	let titre = document.querySelector('#titreContent').value;
 	let contenu = document.querySelector('[contenteditable]').innerHTML;
 	let positionValue = document.querySelector('#actu-select').value;
+	let imageInput = document.querySelector('#file')
+	let imageLabel = document.querySelectorAll('#chooseImage label')[1]
 	let position = positionValue[positionValue.length-1];
-	
+	// let params = {
+	// 	nameFile: imageLabel.innerHTML.replace(/\s/g, ""),
+	// 	tags: {
+	// 		categorie: 'article',
+	// 		sousCategorie: " ",
+	// 		position: parseInt(position)
+	// 	}
+	// }
+	// const formData = new FormData()
+	// formData.append("params", JSON.stringify(params))
+	// formData.append("inputList[i]", imageInput.files[0])
+	// await fetch(`/db/addImage`, {
+	// 	method: 'POST',
+	// 	body: formData
+	// })
 	let param = {
 		position: position, 
 		titre: titre,
