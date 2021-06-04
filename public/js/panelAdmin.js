@@ -189,9 +189,7 @@ async function sendArticle(){
     await fetch('/db/getArticle')
     .then(response=> response.json())
     .then(articles => articlesList = articles)
-
-	console.log(articlesList)
-    return articlesList
+	return articlesList
   }
 
 displayArticlesHistorique()
@@ -202,14 +200,24 @@ async function displayArticlesHistorique() {
   	for (let i = 0; i < articlesList.length; i++) {
 		  let position = parseInt(articlesList[i].position);
       articleContainers[position-1].insertAdjacentHTML('beforeend',
-      `<div>
-	  <h4 id="position">${articlesList[i].position}</h4>
-	  <h4 id="art${articlesList[i].position}">${articlesList[i].titre}</h4>
+      `<div id="blur">
+	  <h4 id="position">Actualité : ${articlesList[i].position}</h4>
+	  <h4 id="art${articlesList[i].position}"><u>Titre</u> : ${articlesList[i].titre}</h4>
       <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>
 	  </div>
-	  <span class="iconify" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
+	  <span class="iconify" onclick="toggle()" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
 	  `)
 		}
+}
+
+function toggle() {
+	let popup = document.querySelector('.confirmeSuppression');
+	popup.classList.toggle('active');
+}
+
+
+window.onload = async () => {
+    await fetch('/db/deleteArticle', options).then()
 }
 
 
