@@ -108,6 +108,9 @@ h2{
     overflow-x: hidden;
     overflow-y: scroll;
 }
+#editActualite{
+    height: 120%;
+}
 
 #choixActu {
     margin: 2% 0 2% 0;
