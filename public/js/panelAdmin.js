@@ -35,44 +35,46 @@ async function displayAllContainer(){
 	for (let i = 0; i < imageList.length; i++) {
 		const image = imageList[i];
 		const metadata = image.metadata
-		if (metadata.tags.categorie == 'article') {
-		} else if (imageList[i-1] == undefined) {
-			if (!document.querySelector(`#${metadata.tags.sousCategorie}`)) {
-				document.querySelector(`#${metadata.tags.categorie}`).insertAdjacentHTML('beforeend', `
-				<div class="emplacementImage" id="${metadata.tags.sousCategorie}">
-					<p>Page ${metadata.tags.sousCategorie} :</p>
-					<form class="formUpload" enctype="multipart/form-data">
-						<input type="button" onclick="changeImageInDB('${metadata.tags.categorie}','${metadata.tags.sousCategorie}')" value="Envoyer" class="submitImage">
-					</form>
-				</div>
-				`)
+		try{
+			if (imageList[i-1] == undefined) {
+				if (!document.querySelector(`#${metadata.tags.sousCategorie}`)) {
+					document.querySelector(`#${metadata.tags.categorie}`).insertAdjacentHTML('beforeend', `
+					<div class="emplacementImage" id="${metadata.tags.sousCategorie}">
+						<p>Page ${metadata.tags.sousCategorie} :</p>
+						<form class="formUpload" enctype="multipart/form-data">
+							<input type="button" onclick="changeImageInDB('${metadata.tags.categorie}','${metadata.tags.sousCategorie}')" value="Envoyer" class="submitImage">
+						</form>
+					</div>
+					`)
+				}
+			} else if (metadata.tags.sousCategorie != imageList[i-1].metadata.tags.sousCategorie){
+				if (!document.querySelector(`#${metadata.tags.sousCategorie}`)) {
+					document.querySelector(`#${metadata.tags.categorie}`).insertAdjacentHTML('beforeend', `
+					<div class="emplacementImage" id="${metadata.tags.sousCategorie}">
+						<p>Page ${metadata.tags.sousCategorie} :</p>
+						<form class="formUpload" enctype="multipart/form-data">
+							<input type="button" onclick="changeImageInDB('${metadata.tags.categorie}','${metadata.tags.sousCategorie}')" value="Envoyer" class="submitImage">
+						</form>
+					</div>
+					`)
+				}
 			}
-		} else if (metadata.tags.sousCategorie != imageList[i-1].metadata.tags.sousCategorie){
-			if (!document.querySelector(`#${metadata.tags.sousCategorie}`)) {
-				document.querySelector(`#${metadata.tags.categorie}`).insertAdjacentHTML('beforeend', `
-				<div class="emplacementImage" id="${metadata.tags.sousCategorie}">
-					<p>Page ${metadata.tags.sousCategorie} :</p>
-					<form class="formUpload" enctype="multipart/form-data">
-						<input type="button" onclick="changeImageInDB('${metadata.tags.categorie}','${metadata.tags.sousCategorie}')" value="Envoyer" class="submitImage">
-					</form>
-				</div>
-				`)
-			}
-		}
+		}catch{} 
 	}
 	for (let j = 0; j < imageList.length; j++) {
 		const imageJ = imageList[j];
 		const metadataJ = imageJ.metadata
-		if (metadataJ.tags.categorie == 'article') {
-		} else if (imageList[j-1] == undefined) {
+		try{
+			if (imageList[j-1] == undefined) {
 			document.querySelector(`#${metadataJ.tags.categorie} #${metadataJ.tags.sousCategorie} form`).insertAdjacentHTML('afterbegin' , `
 			<input type="file" name="image" id="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}" data-id="${imageJ._id}" class="inputfile"/>
 			<label for="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}"> Image ${metadataJ.tags.position} </label>`)
-		} else {
-			document.querySelector(`#${metadataJ.tags.categorie} #${metadataJ.tags.sousCategorie} form`).insertAdjacentHTML('afterbegin' , `
-			<input type="file" name="image" id="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}" data-id="${imageJ._id}" class="inputfile"/>
-			<label for="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}"> Image ${metadataJ.tags.position} </label>`)
-		}
+			} else {
+				document.querySelector(`#${metadataJ.tags.categorie} #${metadataJ.tags.sousCategorie} form`).insertAdjacentHTML('afterbegin' , `
+				<input type="file" name="image" id="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}" data-id="${imageJ._id}" class="inputfile"/>
+				<label for="image${metadataJ.tags.sousCategorie}${metadataJ.tags.position}"> Image ${metadataJ.tags.position} </label>`)
+			}
+		} catch{}
 	}
 }
 
@@ -198,16 +200,16 @@ async function displayArticlesHistorique() {
 	let articlesList = await getArticles();
 	let articleContainers = document.querySelectorAll('.articleHistorique');
   	for (let i = 0; i < articlesList.length; i++) {
-		  let position = parseInt(articlesList[i].position);
-      articleContainers[position-1].insertAdjacentHTML('beforeend',
-      `<div id="blur">
-	  <h4 id="position">Actualité : ${articlesList[i].position}</h4>
-	  <h4 id="art${articlesList[i].position}"><u>Titre</u> : ${articlesList[i].titre}</h4>
-      <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>
-	  </div>
-	  <span class="iconify" onclick="toggle('${articlesList[i]._id}')" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
-	  `)
-		}
+		let position = parseInt(articlesList[i].position);
+		articleContainers[position-1].insertAdjacentHTML('beforeend',
+		`<div id="blur">
+		<h4 id="position">Actualité : ${articlesList[i].position}</h4>
+		<h4 id="art${articlesList[i].position}"><u>Titre</u> : ${articlesList[i].titre}</h4>
+		<p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>
+		</div>
+		<span class="iconify" onclick="toggle('${articlesList[i]._id}')" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
+		`)	
+	}
 }
 
 function toggle(articleId) {
