@@ -443,6 +443,7 @@ li{
     color: rgb(24, 156, 243);
     border: 2px solid rgb(24, 156, 243);
     border-radius: 5px;
+    outline: none;
 }
 
 /* AnimationAttente */

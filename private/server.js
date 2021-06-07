@@ -182,3 +182,9 @@ app.get('/db/getArticle', (req,res) => {
       res.send(data)
   })
 })
+
+// Supprimer un article
+app.post('/db/deleteArticle', async (req, res) => {
+  const articleToDelete = await Article.findById(req.body)
+  await articleToDelete.remove().then(() => res.sendStatus(200))
+})

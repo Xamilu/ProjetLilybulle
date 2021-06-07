@@ -205,20 +205,28 @@ async function displayArticlesHistorique() {
 	  <h4 id="art${articlesList[i].position}"><u>Titre</u> : ${articlesList[i].titre}</h4>
       <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>
 	  </div>
-	  <span class="iconify" onclick="toggle()" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
+	  <span class="iconify" onclick="toggle('${articlesList[i]._id}')" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
 	  `)
 		}
 }
 
-function toggle() {
+function toggle(articleId) {
 	let popup = document.querySelector('.confirmeSuppression');
 	popup.classList.toggle('active');
+	let yesButton = document.querySelectorAll(".confirm")[0];
+	yesButton.setAttribute('onclick' , `deleteArticles('${articleId}')`)
+}
+
+async function deleteArticles(articleId) {
+	await fetch('/db/deleteArticle', {
+		method : 'POST',
+		body : articleId
+	})
 }
 
 
-window.onload = async () => {
-    await fetch('/db/deleteArticle', options).then()
-}
+
+
 
 
 
