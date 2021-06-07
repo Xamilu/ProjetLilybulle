@@ -33,9 +33,15 @@ async function getArticles(){
   await fetch('/db/getArticle')
   .then(response=> response.json())
   .then(articles => articlesList = articles)
-
-  console.log(articlesList)
   return articlesList
+}
+
+async function getAllImages(){
+	let images 
+	await fetch(`/db/getImages`)
+		.then((response) => response.json())
+		.then((data) => images = data)
+	return images
 }
 
 displayArticles()
@@ -44,9 +50,17 @@ async function displayArticles() {
 	let articlesList = await getArticles();
 	let articleContainers = document.querySelectorAll('.carousel-item');
   for (let i = 0; i < articlesList.length; i++) {
-		  let position = parseInt(articlesList[i].position);
-      articleContainers[position-1].insertAdjacentHTML('afterbegin',
-      `<h3 id="art${articlesList[i].position}">${articlesList[i].titre}</h3>
-      <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>`)
-		}
+    let position = parseInt(articlesList[i].position);
+    articleContainers[position-1].insertAdjacentHTML('afterbegin',
+    `<h3 id="art${articlesList[i].position}">${articlesList[i].titre}</h3>
+    <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>`)
+  }
+  let imagesList = await getAllImages()
+  for (let i = 0; i < imagesList.length; i++) {
+    const image = imagesList[i];
+    if (image.metadata.tags.categorie == 'article') {
+      let position = image.metadata.tags.position
+      articleContainers[position-1].style.backgroundImage = `url('../../image/${image.filename}')`
+    }
+  }
 }
