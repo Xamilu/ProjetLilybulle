@@ -288,6 +288,7 @@ function toggleChange() {
 function toggleOk(){
 	let popup = document.querySelector('.confirmeFinis');
 	popup.classList.toggle('active');
+	window.location.reload();
 }
 
 async function deleteArticles(articleId, imageId) {
@@ -295,7 +296,7 @@ async function deleteArticles(articleId, imageId) {
 		method : 'POST',
 		body : articleId
 	})
-	window.location.reload();
+	await deleteImage(imageId)
 }
 
 
