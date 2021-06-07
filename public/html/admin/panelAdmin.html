@@ -93,7 +93,7 @@
                             <div id="editeur" contenteditable></div>
                         </div>
                         <div id="confirmActu">
-                            <input type="submit" onclick="sendArticle()" value="Envoyer" id="submitActu">
+                            <input type="submit" onclick="checkArticle()" value="Envoyer" id="submitActu">
                             <div id="msg">
                                 <p></p>
                             </div>
@@ -127,7 +127,7 @@
     <div class="confirmeFinis">
         <h5>L'article a bien été ajouté.</h5>
         <div>
-            <button onclick="toggleOk()" class="confirm">Ok</button>
+            <button onclick="window.location.reload()" class="confirm">Ok</button>
         </div>
     </div>
     </div>

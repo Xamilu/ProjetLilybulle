@@ -170,14 +170,30 @@ function updateImageDisplay() {
 // recupération articles
 async function checkArticle(){
 	event.preventDefault();
-	let popup = document.querySelectorAll('.confirmeSuppression')[0]
-	let titre = document.querySelector('#titreContent').value;
-	let contenu = document.querySelector('[contenteditable]').innerHTML;
-	let positionValue = document.querySelector('#actu-select').value;
-	let imageInput = document.querySelector('#file')
-	let position = positionValue[positionValue.length-1];
-	
-	popup.insertAdjacentHTML('afterend', `
+	if (numeroActu.value == 0 && !imageInput.value && !titre.value && !contenu.innerHTML) {
+		numeroActu.style.border = "2px solid #D93A3A"
+		imageInput.style.border = "2px solid #D93A3A"
+		titre.style.border = "2px solid #D93A3A"
+		divContenu.style.border = "2px solid #D93A3A"
+		errorMsg("Veuillez remplir les champs ci-dessus.")
+	} else if (numeroActu.value == 0) {
+		numeroActu.style.border = "2px solid #D93A3A"
+		errorMsg("Veuillez sélectionner un numéro d'articles.")
+	} else if (!imageInput.value) {
+		imageInput.style.border = "2px solid #D93A3A"
+		errorMsg("Choisissez une image.")
+	} else if (!titre.value) {
+		titre.style.border = "2px solid #D93A3A"
+		errorMsg("Choisissez un titre")
+	}  else if (!contenu.innerHTML) {
+		divContenu.style.border = "2px solid #D93A3A"
+		errorMsg("Rédigez votre article.")
+	}  else {
+		erreurMsgElement.style.opacity = '0'
+		let popup = document.querySelectorAll('.confirmeSuppression')[0]
+		let positionValue = document.querySelector('#actu-select').value;
+		let position = positionValue[positionValue.length-1];
+		popup.insertAdjacentHTML('afterend', `
 		<div class="confirmeChangement">
 			<h5>Remplacer l'Article${position} ?</h5>
 			<div>
@@ -187,6 +203,7 @@ async function checkArticle(){
 		</div>
 		`)
 	toggleChange()
+	}
 }
 
   async function sendArticle(){
@@ -290,7 +307,9 @@ function toggleChange() {
 function toggleOk(){
 	let popup = document.querySelector('.confirmeFinis');
 	popup.classList.toggle('active');
-	window.location.reload();
+	errorMsg("Votre article à bien été publié !")
+	erreurMessage.style.opacity = '1';
+	erreurMessage.style.color = '#5FC04C';
 }
 
 async function deleteArticles(articleId, imageId) {
@@ -305,36 +324,14 @@ let numeroActu = document.querySelector('#actu-select');
 let titre = document.querySelector('#titreContent');
 let contenu = document.querySelector('[contenteditable]');
 let divContenu = document.querySelector('#editeur');
-let imageLabel = document.querySelectorAll('#chooseImage label')[1];
+let imageInput = document.querySelector('#file')
 let erreurMsgElement = document.querySelector('#confirmActu #msg');
 let erreurMessage = document.querySelector('#confirmActu #msg p')
 
-document.getElementById("submitActu").addEventListener('click', (event) => {
-	
-	event.preventDefault()
-
-	if (numeroActu.value == 0) {
-		numeroActu.style.border = "2px solid #D93A3A"
-		errorMsg("Veuillez sélectionner un numéro d'articles.")
-	} else if (!imageLabel.value) {
-		imageLabel.style.border = "2px solid #D93A3A"
-		errorMsg("Choisissez une image.")
-	} else if (!titre.value) {
-		titre.style.border = "2px solid #D93A3A"
-		errorMsg("Choisissez un titre")
-	}  else if (!contenu.innerHTML) {
-		divContenu.style.border = "2px solid #D93A3A"
-		errorMsg("Rédigez votre article.")
-	}  else {
-		erreurMsgElement.style.color = 'green'
-	}
-	
-	
-})
-	
 function errorMsg(msg) {
 	erreurMessage.innerHTML = msg;
 	erreurMsgElement.style.visibility = 'visible';
 	erreurMsgElement.style.opacity = '1';
-	erreurMsgElement.style.color = 'red';
+	erreurMsgElement.style.color = '#D93A3A';
+	erreurMsgElement.style.fontSize = '1.2em';
 }
