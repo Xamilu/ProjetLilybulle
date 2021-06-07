@@ -163,9 +163,6 @@ app.post('/db/createArticle', (req, res) => {
   const position = body.position;
   const titreData = body.titre;
   const contenuData = body.contenu;
-  console.log(position)
-  console.log(titreData)
-  console.log(contenuData)
   
   const createArticle = new Article({
       position: position,

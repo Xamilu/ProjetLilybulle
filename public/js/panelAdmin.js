@@ -147,46 +147,100 @@ async function deleteImage(id){
 	}).then()
 }
 
+let inputImage = document.querySelector('#file')
+inputImage.addEventListener('change', updateImageDisplay);
 
+function updateImageDisplay() {
+	let para = document.querySelector('#titreActu')
+    var curFiles = inputImage.files;    
+    let nameFile ;
+    if(curFiles.length == 0) {
+      para.innerHTML = 'Pas de son importé';
+    } else {
+        if (curFiles[0].name.length > 15) {
+            nameFile = curFiles[0].name.slice(0,15) 
+        }
+        else{
+            nameFile = curFiles[0].name
+        }
+        para.value = nameFile ;
+    }
+}
 
 // recupération articles
-async function sendArticle(){
+async function checkArticle(){
 	event.preventDefault();
-
+	let popup = document.querySelectorAll('.confirmeSuppression')[0]
 	let titre = document.querySelector('#titreContent').value;
 	let contenu = document.querySelector('[contenteditable]').innerHTML;
 	let positionValue = document.querySelector('#actu-select').value;
 	let imageInput = document.querySelector('#file')
-	let imageLabel = document.querySelectorAll('#chooseImage label')[1]
 	let position = positionValue[positionValue.length-1];
-	// let params = {
-	// 	nameFile: imageLabel.innerHTML.replace(/\s/g, ""),
-	// 	tags: {
-	// 		categorie: 'article',
-	// 		sousCategorie: " ",
-	// 		position: parseInt(position)
-	// 	}
-	// }
-	// const formData = new FormData()
-	// formData.append("params", JSON.stringify(params))
-	// formData.append("inputList[i]", imageInput.files[0])
-	// await fetch(`/db/addImage`, {
-	// 	method: 'POST',
-	// 	body: formData
-	// })
+	
+	popup.insertAdjacentHTML('afterend', `
+		<div class="confirmeChangement">
+			<h5>Remplacer l'Article${position} ?</h5>
+			<div>
+				<button onclick="sendArticle()" class="confirm">Oui</button>
+				<button onclick="toggleChange()" class="confirm">Non</button>
+			</div>
+		</div>
+		`)
+	toggleChange()
+}
+
+  async function sendArticle(){
+	let titre = document.querySelector('#titreContent').value;
+	let contenu = document.querySelector('[contenteditable]').innerHTML;
+	let positionValue = document.querySelector('#actu-select').value;
+	let imageInput = document.querySelector('#file')
+	let position = positionValue[positionValue.length-1];
+	let imagesList = await getAllImages()
+	let articlesList = await getArticles()
+	for (let i = 0; i < articlesList.length; i++) {
+		let imageId;
+		const article = articlesList[i];
+		for (let j = 0; j < imagesList.length; j++) {
+			const image = imagesList[j];
+			if(image.metadata.tags.categorie == 'article' && image.metadata.tags.position == position){
+				imageId = image._id
+			}
+		}
+		if(article.position == position){
+			deleteArticles(article._id, imageId)
+			break
+		}
+	}
+	let params = {
+		nameFile: `Article${parseInt(position)}`,
+		tags: {
+			categorie: 'article',
+			sousCategorie: " ",
+			position: parseInt(position)
+		}
+	}
+	const formData = new FormData()
+	formData.append("params", JSON.stringify(params))
+	formData.append("inputList[i]", imageInput.files[0])
+	await fetch(`/db/addImage`, {
+		method: 'POST',
+		body: formData
+	})
 	let param = {
 		position: position, 
 		titre: titre,
 		contenu: contenu
 	}
-	/*
+	
 	await fetch('/db/createArticle', {
       method: 'POST',
       body: JSON.stringify(param)
     }).then()
-  */
-}
   
+	toggleChange()
+	toggleOk()
+  }
+
   async function getArticles(){
     let articlesList
     await fetch('/db/getArticle')
@@ -198,33 +252,53 @@ async function sendArticle(){
 displayArticlesHistorique()
 
 async function displayArticlesHistorique() {
+	let imagesList = await getAllImages()
 	let articlesList = await getArticles();
 	let articleContainers = document.querySelectorAll('.articleHistorique');
   	for (let i = 0; i < articlesList.length; i++) {
+		let imageId
 		let position = parseInt(articlesList[i].position);
+		for (let j = 0; j < imagesList.length; j++) {
+			const image = imagesList[j];
+			if(image.metadata.tags.categorie == 'article' && image.metadata.tags.position == position){
+				imageId = image._id
+			}
+		}
 		articleContainers[position-1].insertAdjacentHTML('beforeend',
 		`<div id="blur">
 		<h4 id="position">Actualité : ${articlesList[i].position}</h4>
 		<h4 id="art${articlesList[i].position}"><u>Titre</u> : ${articlesList[i].titre}</h4>
 		<p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>
 		</div>
-		<span class="iconify" onclick="toggle('${articlesList[i]._id}')" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
+		<span class="iconify" onclick="toggle('${articlesList[i]._id}', '${imageId}')" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
 		`)	
 	}
 }
 
-function toggle(articleId) {
-	let popup = document.querySelector('.confirmeSuppression');
+function toggle(articleId, imageId) {
+	let popup = document.querySelectorAll('.confirmeSuppression')[0];
 	popup.classList.toggle('active');
 	let yesButton = document.querySelectorAll(".confirm")[0];
-	yesButton.setAttribute('onclick' , `deleteArticles('${articleId}')`)
+	yesButton.setAttribute('onclick' , `deleteArticles('${articleId}', '${imageId}')`)
 }
 
-async function deleteArticles(articleId) {
+function toggleChange() {
+	let popup = document.querySelectorAll('.confirmeChangement')[0];
+	popup.classList.toggle('active');
+}
+
+function toggleOk(){
+	let popup = document.querySelector('.confirmeFinis');
+	popup.classList.toggle('active');
+	window.location.reload();
+}
+
+async function deleteArticles(articleId, imageId) {
 	await fetch('/db/deleteArticle', {
 		method : 'POST',
 		body : articleId
 	})
+	await deleteImage(imageId)
 }
 
 let numeroActu = document.querySelector('#actu-select');

@@ -4,7 +4,7 @@ const dots = document.querySelectorAll('.dots-container a')
 const nextSlideBtn = document.querySelector('.next-slide')
 const prevSlideBtn = document.querySelector('.prev-slide')
 
-// Each 5 seconds, go to the next slide
+// Each 8 seconds, go to the next slide
 setInterval(() => {
     let index = getActiveSlide() + 1
  
@@ -28,7 +28,7 @@ setInterval(() => {
         }
         catch{}
     }
-}, 5000)
+}, 8000)
 
 function getActiveSlide() {
     // Return the number of the slide on which the user is
