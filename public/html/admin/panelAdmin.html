@@ -92,7 +92,12 @@
                             </div>
                             <div id="editeur" contenteditable></div>
                         </div>
-                        <input type="submit" onclick="sendArticle()" value="Envoyer" id="submitActu">
+                        <div id="confirmActu">
+                            <input type="submit" onclick="sendArticle()" value="Envoyer" id="submitActu">
+                            <div id="msg">
+                                <p></p>
+                            </div>
+                        </div>
                     </form>
                     <h2>Historique</h2>
                     <div class="historique">

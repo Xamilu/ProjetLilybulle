@@ -375,6 +375,11 @@ li{
     color: rgb(24, 156, 243);
 }
 
+#confirmActu {
+    display: flex;
+    gap: 1em;
+}
+
 .historique {
     width: 100%;
     height: 40%;

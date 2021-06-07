@@ -179,13 +179,14 @@ async function sendArticle(){
 		titre: titre,
 		contenu: contenu
 	}
-	
+	/*
 	await fetch('/db/createArticle', {
       method: 'POST',
       body: JSON.stringify(param)
     }).then()
-  }
-
+  */
+}
+  
   async function getArticles(){
     let articlesList
     await fetch('/db/getArticle')
@@ -226,9 +227,40 @@ async function deleteArticles(articleId) {
 	})
 }
 
+let numeroActu = document.querySelector('#actu-select');
+let titre = document.querySelector('#titreContent');
+let contenu = document.querySelector('[contenteditable]');
+let divContenu = document.querySelector('#editeur');
+let imageLabel = document.querySelectorAll('#chooseImage label')[1];
+let erreurMsgElement = document.querySelector('#confirmActu #msg');
+let erreurMessage = document.querySelector('#confirmActu #msg p')
 
+document.getElementById("submitActu").addEventListener('click', (event) => {
+	
+	event.preventDefault()
 
-
-
-
-
+	if (numeroActu.value == 0) {
+		numeroActu.style.border = "2px solid #D93A3A"
+		errorMsg("Veuillez sélectionner un numéro d'articles.")
+	} else if (!imageLabel.value) {
+		imageLabel.style.border = "2px solid #D93A3A"
+		errorMsg("Choisissez une image.")
+	} else if (!titre.value) {
+		titre.style.border = "2px solid #D93A3A"
+		errorMsg("Choisissez un titre")
+	}  else if (!contenu.innerHTML) {
+		divContenu.style.border = "2px solid #D93A3A"
+		errorMsg("Rédigez votre article.")
+	}  else {
+		erreurMsgElement.style.color = 'green'
+	}
+	
+	
+})
+	
+function errorMsg(msg) {
+	erreurMessage.innerHTML = msg;
+	erreurMsgElement.style.visibility = 'visible';
+	erreurMsgElement.style.opacity = '1';
+	erreurMsgElement.style.color = 'red';
+}
