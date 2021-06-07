@@ -147,18 +147,70 @@ async function deleteImage(id){
 	}).then()
 }
 
+let inputImage = document.querySelector('#file')
+inputImage.addEventListener('change', updateImageDisplay);
 
+function updateImageDisplay() {
+	let para = document.querySelector('#titreActu')
+    var curFiles = inputImage.files;    
+    let nameFile ;
+    if(curFiles.length == 0) {
+      para.innerHTML = 'Pas de son importé';
+    } else {
+        if (curFiles[0].name.length > 15) {
+            nameFile = curFiles[0].name.slice(0,15) 
+        }
+        else{
+            nameFile = curFiles[0].name
+        }
+        para.value = nameFile ;
+    }
+}
 
 // recupération articles
-async function sendArticle(){
+async function checkArticle(){
 	event.preventDefault();
-
+	let popup = document.querySelectorAll('.confirmeSuppression')[0]
 	let titre = document.querySelector('#titreContent').value;
 	let contenu = document.querySelector('[contenteditable]').innerHTML;
 	let positionValue = document.querySelector('#actu-select').value;
 	let imageInput = document.querySelector('#file')
-	let imageLabel = document.querySelectorAll('#chooseImage label')[1]
 	let position = positionValue[positionValue.length-1];
+	
+	popup.insertAdjacentHTML('afterend', `
+		<div class="confirmeChangement">
+			<h5>Remplacer l'Article${position} ?</h5>
+			<div>
+				<button onclick="sendArticle()" class="confirm">Oui</button>
+				<button onclick="toggleChange()" class="confirm">Non</button>
+			</div>
+		</div>
+		`)
+	toggleChange()
+}
+
+  async function sendArticle(){
+	let titre = document.querySelector('#titreContent').value;
+	let contenu = document.querySelector('[contenteditable]').innerHTML;
+	let positionValue = document.querySelector('#actu-select').value;
+	let imageInput = document.querySelector('#file')
+	let position = positionValue[positionValue.length-1];
+	let imagesList = await getAllImages()
+	let articlesList = await getArticles()
+	for (let i = 0; i < articlesList.length; i++) {
+		let imageId;
+		const article = articlesList[i];
+		for (let j = 0; j < imagesList.length; j++) {
+			const image = imagesList[j];
+			if(image.metadata.tags.categorie == 'article' && image.metadata.tags.position == position){
+				imageId = image._id
+			}
+		}
+		if(article.position == position){
+			deleteArticles(article._id, imageId)
+			break
+		}
+	}
 	let params = {
 		nameFile: `Article${parseInt(position)}`,
 		tags: {
@@ -183,6 +235,8 @@ async function sendArticle(){
       method: 'POST',
       body: JSON.stringify(param)
     }).then()
+	toggleChange()
+	toggleOk()
   }
 
   async function getArticles(){
@@ -220,10 +274,20 @@ async function displayArticlesHistorique() {
 }
 
 function toggle(articleId, imageId) {
-	let popup = document.querySelector('.confirmeSuppression');
+	let popup = document.querySelectorAll('.confirmeSuppression')[0];
 	popup.classList.toggle('active');
 	let yesButton = document.querySelectorAll(".confirm")[0];
 	yesButton.setAttribute('onclick' , `deleteArticles('${articleId}', '${imageId}')`)
+}
+
+function toggleChange() {
+	let popup = document.querySelectorAll('.confirmeChangement')[0];
+	popup.classList.toggle('active');
+}
+
+function toggleOk(){
+	let popup = document.querySelector('.confirmeFinis');
+	popup.classList.toggle('active');
 }
 
 async function deleteArticles(articleId, imageId) {

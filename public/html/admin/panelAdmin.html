@@ -75,7 +75,7 @@
                         <div id="editArticle">
                             <div id="chooseImage">
                                 <label for="text">Image:</label>
-                                <input type="text" name="titreActu" id="titreActu">
+                                <input type="text" disabled="disabled" name="titreActu" id="titreActu" placeholder="Example.img">
                                 <input type="file" name="file" id="file" class ="inputfile"/>
                                 <label for="file"> Choisir une image </label> 
                             </div>
@@ -92,7 +92,7 @@
                             </div>
                             <div id="editeur" contenteditable></div>
                         </div>
-                        <input type="submit" onclick="sendArticle()" value="Envoyer" id="submitActu">
+                        <input type="submit" onclick="checkArticle()" value="Envoyer" id="submitActu">
                     </form>
                     <h2>Historique</h2>
                     <div class="historique">
@@ -117,6 +117,12 @@
         <div>
             <button onclick="deleteArticles()" class="confirm">Oui</button>
             <button onclick="toggle()" class="confirm">Non</button>
+        </div>
+    </div>
+    <div class="confirmeFinis">
+        <h5>L'article a bien été ajouté.</h5>
+        <div>
+            <button onclick="toggleOk()" class="confirm">Ok</button>
         </div>
     </div>
     </div>
