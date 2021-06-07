@@ -159,27 +159,26 @@ async function sendArticle(){
 	let imageInput = document.querySelector('#file')
 	let imageLabel = document.querySelectorAll('#chooseImage label')[1]
 	let position = positionValue[positionValue.length-1];
-	// let params = {
-	// 	nameFile: imageLabel.innerHTML.replace(/\s/g, ""),
-	// 	tags: {
-	// 		categorie: 'article',
-	// 		sousCategorie: " ",
-	// 		position: parseInt(position)
-	// 	}
-	// }
-	// const formData = new FormData()
-	// formData.append("params", JSON.stringify(params))
-	// formData.append("inputList[i]", imageInput.files[0])
-	// await fetch(`/db/addImage`, {
-	// 	method: 'POST',
-	// 	body: formData
-	// })
+	let params = {
+		nameFile: `Article${parseInt(position)}`,
+		tags: {
+			categorie: 'article',
+			sousCategorie: " ",
+			position: parseInt(position)
+		}
+	}
+	const formData = new FormData()
+	formData.append("params", JSON.stringify(params))
+	formData.append("inputList[i]", imageInput.files[0])
+	await fetch(`/db/addImage`, {
+		method: 'POST',
+		body: formData
+	})
 	let param = {
 		position: position, 
 		titre: titre,
 		contenu: contenu
 	}
-	
 	await fetch('/db/createArticle', {
       method: 'POST',
       body: JSON.stringify(param)
@@ -197,29 +196,37 @@ async function sendArticle(){
 displayArticlesHistorique()
 
 async function displayArticlesHistorique() {
+	let imagesList = await getAllImages()
 	let articlesList = await getArticles();
 	let articleContainers = document.querySelectorAll('.articleHistorique');
   	for (let i = 0; i < articlesList.length; i++) {
+		let imageId
 		let position = parseInt(articlesList[i].position);
+		for (let j = 0; j < imagesList.length; j++) {
+			const image = imagesList[j];
+			if(image.metadata.tags.categorie == 'article' && image.metadata.tags.position == position){
+				imageId = image._id
+			}
+		}
 		articleContainers[position-1].insertAdjacentHTML('beforeend',
 		`<div id="blur">
 		<h4 id="position">Actualité : ${articlesList[i].position}</h4>
 		<h4 id="art${articlesList[i].position}"><u>Titre</u> : ${articlesList[i].titre}</h4>
 		<p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>
 		</div>
-		<span class="iconify" onclick="toggle('${articlesList[i]._id}')" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
+		<span class="iconify" onclick="toggle('${articlesList[i]._id}', '${imageId}')" data-icon="ri:delete-bin-6-line" data-inline="false" style="color: black;" data-width="5%"></span>
 		`)	
 	}
 }
 
-function toggle(articleId) {
+function toggle(articleId, imageId) {
 	let popup = document.querySelector('.confirmeSuppression');
 	popup.classList.toggle('active');
 	let yesButton = document.querySelectorAll(".confirm")[0];
-	yesButton.setAttribute('onclick' , `deleteArticles('${articleId}')`)
+	yesButton.setAttribute('onclick' , `deleteArticles('${articleId}', '${imageId}')`)
 }
 
-async function deleteArticles(articleId) {
+async function deleteArticles(articleId, imageId) {
 	await fetch('/db/deleteArticle', {
 		method : 'POST',
 		body : articleId
