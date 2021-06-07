@@ -224,6 +224,7 @@ async function deleteArticles(articleId) {
 		method : 'POST',
 		body : articleId
 	})
+	window.location.reload();
 }
 
 
