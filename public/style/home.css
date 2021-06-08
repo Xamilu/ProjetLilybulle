@@ -278,13 +278,18 @@ body {
     transition: 0.5s;
 }
 
-.carousel-item p {
+.carousel-item div p{
     font-size: 1.5em;
     color: #fff;
     width: 90%;
     transition: 0.5s;
 }
-
+.carousel-item div div{
+    font-size: 1.5em;
+    color: #fff;
+    width: 90%;
+    margin: 0 0 1em 0;
+}
 .nextContainer, .prevContainer{
     position: absolute;
     height: 100%;

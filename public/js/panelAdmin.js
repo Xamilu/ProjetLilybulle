@@ -100,9 +100,9 @@ async function changeImageInDB(categorie, sousCategorie){
 				method: 'POST',
 				body: formData
 			})
-			inputList[i].value = ""
 		}
 	}
+	displayNotifAdd()
 	displayAllContainer()
 }
 
@@ -262,7 +262,7 @@ async function checkArticle(){
       method: 'POST',
       body: JSON.stringify(param)
     }).then()
-  
+
 	toggleChange()
 	toggleOk()
   }
@@ -327,6 +327,11 @@ async function deleteArticles(articleId, imageId) {
 		body : articleId
 	})
 	await deleteImage(imageId)
+	toggle()
+	displayNotifAdd()
+	setTimeout(() => {
+		window.location.reload()
+	}, 4000);
 }
 
 let numeroActu = document.querySelector('#actu-select');
@@ -343,4 +348,17 @@ function errorMsg(msg) {
 	erreurMsgElement.style.opacity = '1';
 	erreurMsgElement.style.color = '#D93A3A';
 	erreurMsgElement.style.fontSize = '1.2em';
+}
+
+// Display notification when adding image
+function displayNotifAdd(){
+	let notif = document.querySelector('.notifs')
+    // Display a message when you add aan image
+    notif.insertAdjacentHTML('afterbegin', `
+		<div class="alert" style="background-color: rgb(24, 156, 243);">
+			<span class="alertaddcart"></span>
+			Les modifications ont bien été réalisés.
+		</div>
+	`)
+    document.querySelector('.alert').classList.add('hide')
 }

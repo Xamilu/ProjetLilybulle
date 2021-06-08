@@ -51,9 +51,12 @@ async function displayArticles() {
 	let articleContainers = document.querySelectorAll('.carousel-item');
   for (let i = 0; i < articlesList.length; i++) {
     let position = parseInt(articlesList[i].position);
-    articleContainers[position-1].insertAdjacentHTML('afterbegin',
-    `<h3 id="art${articlesList[i].position}">${articlesList[i].titre}</h3>
-    <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>`)
+    articleContainers[position-1].insertAdjacentHTML('afterbegin',`
+      <h3 id="art${articlesList[i].position}">${articlesList[i].titre}</h3>
+      <div>
+        <p id="contenu${articlesList[i].position}">${articlesList[i].contenu}</p>
+      </div>
+    `)
   }
   let imagesList = await getAllImages()
   for (let i = 0; i < imagesList.length; i++) {
