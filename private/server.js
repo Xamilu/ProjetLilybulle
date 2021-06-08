@@ -15,7 +15,7 @@ const app = express()
 // Server initiation
 
 const port = 3000
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Server lancé sur le port ${port}`);
 })
 
