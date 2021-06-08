@@ -178,13 +178,22 @@ async function checkArticle(){
 		errorMsg("Veuillez remplir les champs ci-dessus.")
 	} else if (numeroActu.value == 0) {
 		numeroActu.style.border = "2px solid #D93A3A"
+		imageInput.style.border = "none"
+		titre.style.border = "none"
+		divContenu.style.border = "none"
 		errorMsg("Veuillez sélectionner un numéro d'articles.")
 	} else if (!imageInput.value) {
+		numeroActu.style.border = "none"
 		imageInput.style.border = "2px solid #D93A3A"
+		titre.style.border = "none"
+		divContenu.style.border = "none"
 		errorMsg("Choisissez une image.")
 	} else if (!titre.value) {
 		titre.style.border = "2px solid #D93A3A"
-		errorMsg("Choisissez un titre")
+		numeroActu.style.border = "none"
+		imageInput.style.border = "none"
+		divContenu.style.border = "none"
+		errorMsg("Choisissez un titre.")
 	}  else if (!contenu.innerHTML) {
 		divContenu.style.border = "2px solid #D93A3A"
 		errorMsg("Rédigez votre article.")
@@ -324,9 +333,9 @@ let numeroActu = document.querySelector('#actu-select');
 let titre = document.querySelector('#titreContent');
 let contenu = document.querySelector('[contenteditable]');
 let divContenu = document.querySelector('#editeur');
-let imageInput = document.querySelector('#file')
+let imageInput = document.querySelector('#file');
 let erreurMsgElement = document.querySelector('#confirmActu #msg');
-let erreurMessage = document.querySelector('#confirmActu #msg p')
+let erreurMessage = document.querySelector('#confirmActu #msg p');
 
 function errorMsg(msg) {
 	erreurMessage.innerHTML = msg;
