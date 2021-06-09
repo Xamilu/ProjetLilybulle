@@ -58,7 +58,7 @@ body.insertAdjacentHTML("afterbegin" , `<p id="contact">35 Grande rue & 22 av de
                 <a class="resplinkSN" target="blank" href="https://www.facebook.com/Boutique-Lilybulle-564883753528910/?ref=page_internal"><span class="iconify respIconSN" data-icon="ant-design:facebook-filled" data-inline="false" style="color: black;"></span></a>
                 <a class="resplinkSN" target="blank" href="https://www.instagram.com/lilybulle_/"><span class="iconify respIconSN" data-icon="akar-icons:instagram-fill" data-inline="false" style="color: black;"></span></a>
                 <a class="resplinkSN" href="index.html#lieu"><span class="iconify respIconSN" data-icon="zmdi:google-maps" data-inline="false" style="color: black; "></span></a>
-                <a class="resplinkSN" href="../html/contact.html"><span class="iconify respIconSN" data-icon="entypo:phone" data-inline="false" style="color: black; "></span></a>    
+                <a class="resplinkSN" href="./html/contact.html"><span class="iconify respIconSN" data-icon="entypo:phone" data-inline="false" style="color: black; "></span></a>    
             </div>
           </div>
         
