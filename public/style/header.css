@@ -530,15 +530,9 @@ li:hover {
     .sousCategoriesAgence, .sousCategoriesCaravane {
         font-size: 1.4em;
     }
-
-    li {
-        font-size: 1.2em;
-    }
-
     #contact {
         font-size: 1em;
     }
-
     #newsLetterEmail::placeholder {
         font-size: 1.1em;
     }
