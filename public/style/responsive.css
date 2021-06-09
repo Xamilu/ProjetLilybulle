@@ -170,7 +170,7 @@
 @media screen and (max-width: 500px){
     #btnModal{
         font-size: 0.8em;
-        margin: 0;
+        margin-right: 5%;
     }
     #btn-burger{
         width: 3em;
@@ -181,5 +181,28 @@
     }
     .supBoxHeader{
         width: 100%;
+    }
+}
+@media screen and (max-width: 650px){
+    #respTitleNewsLetter {
+        font-size: 1.5em;
+    }
+    .respMail {
+        font-size: 1.2em;
+        margin: 8%;
+    }
+    .respSubmit{
+        font-size: 1.5em;
+        width: 50%;
+    }
+    .close{
+        font-size: 3em;
+    }
+    .respIconSN{
+        width: 2em;
+        height: 2em;
+    }
+    .modal-content .erreurMsg{
+        top: 40%;
     }
 }

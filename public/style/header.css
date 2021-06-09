@@ -376,7 +376,7 @@ li:hover {
     transition-duration: 0.5s;
 }
 .modal-content .erreurMsg{
-    top: 50%;
+    top: 40%;
     left: 5%;
 }
 .erreurMsg {
