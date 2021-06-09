@@ -123,6 +123,7 @@ header {
     font-weight: 600;
     transition: 0.5s;
     cursor: pointer;
+    padding: 5px;
 }
 #newsLetterSubmit:hover {
     border: 2px solid black;

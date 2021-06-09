@@ -37,6 +37,11 @@ input {
     flex-direction: column;
 }
 
+.label {
+  font-size: 1.1em;
+  margin-left: 0.5%;
+}
+
 .rsgInput{
     margin: 1% 0% 2% 0%;
     width: 100%;
@@ -54,7 +59,7 @@ input {
 }
 
 #divMsg {
-  height: 34.5em;
+  height: 25em;
 }
 
 .col{
@@ -86,6 +91,7 @@ select option {
     border: 1px solid white;
     background-color: rgb(241, 241, 241);
     height: 2.5em;
+    width: 99.6%;
 }
 
 #msg{
@@ -93,13 +99,14 @@ select option {
     border: 1px solid white;
     background-color: rgb(241, 241, 241);
     min-width: 50%;
-    max-width: 100%;
+    max-width: 99.3%;
     min-height: 20em;
     max-height: 20em;
     padding-top: 0.5%;
     font-size: 1.1em; 
     outline: none;
     width: 99%;
+    text-indent: 0.5%;
 }
 
 #compteurMots {
