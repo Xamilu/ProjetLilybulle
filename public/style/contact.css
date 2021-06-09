@@ -357,6 +357,14 @@ select option {
     #submit{
       font-size: 1.2em;
     }
+
+    #banderoleFooter {
+      width: 60%;
+    }
+
+    .contactEtHoraires p {
+      font-size: 0.8em;
+    }
   }
   @media screen and (min-width:800px) and (max-width: 1200px){
     .errorMsg{
