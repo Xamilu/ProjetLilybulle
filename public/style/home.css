@@ -12,8 +12,6 @@ body {
 
 /* style display */
 
-
-
 .img-cat {
     margin: 2% 0 2% 0;
 }
@@ -422,6 +420,7 @@ body {
        height: 17em;
        margin: 0;
     }
+
 }
 @media screen and (max-width: 400px){
     #cacheBlank{

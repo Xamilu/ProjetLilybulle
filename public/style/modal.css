@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 .respNewsLetter{
-  font-size: 3em;
+  font-size: 2em;
   width: auto;
   margin: 3% 20% 3% 20%;
 }
@@ -49,7 +49,7 @@
 }
 #respTitleNewsLetter{
   margin: 2% 20% 5% 20%;
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
 }
 #btnModal{
