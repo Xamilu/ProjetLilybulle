@@ -63,7 +63,8 @@ async function displayArticles() {
     const image = imagesList[i];
     if (image.metadata.tags.categorie == 'article') {
       let position = image.metadata.tags.position
-      articleContainers[position-1].style.backgroundImage = `url('../../image/${image.filename}')`
+      articleContainers[position-1].style.background = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../image/${image.filename}')`
+      articleContainers[position-1].style.backgroundSize = 'cover'
     }
   }
 }

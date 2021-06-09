@@ -35,25 +35,25 @@
 }
 
 .carousel-item:nth-child(1) {
-    background-image:  url('../Assets/agenceCategorie/carouselAgence1.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('../Assets/agenceCategorie/carouselAgence1.jpg');
     background-size: cover;
     background-position-y: 12%;
     opacity: 1;
 }
 .carousel-item:nth-child(2) {
-    background-image: url('../Assets/agenceCategorie/carouselAgence2.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/agenceCategorie/carouselAgence2.jpg');
     background-size: cover;
     background-position-y: 50%;
     opacity: 0;
 }
 .carousel-item:nth-child(3) {
-    background-image: url('../Assets/agenceCategorie/carouselAgence3.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/agenceCategorie/carouselAgence3.jpg');
     background-size: cover;
     background-position-y: 30%;
     opacity: 0;
 }
 .carousel-item:nth-child(4) {
-    background-image: url('../Assets/agenceCategorie/carouselAgence4.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/agenceCategorie/carouselAgence4.jpg');
     background-size: cover;
     background-position-y: 30%;
     opacity: 0;

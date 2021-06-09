@@ -54,7 +54,7 @@
 }
 #btnModal{
   margin: 2% 5% 0 0;
-  width: 15%;
+  width: auto;
   height: 2.5em;
   font-size: 1.2em;
   font-weight: 600;
@@ -105,3 +105,4 @@
   margin: 3% 20% 3% 20%;
   justify-content: center;
 }
+

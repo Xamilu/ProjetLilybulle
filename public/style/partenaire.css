@@ -37,24 +37,24 @@
 }
 
 .carousel-item:nth-child(1) {
-    background-image:  url('../Assets/partenaires/carouselPartenaire1.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('../Assets/partenaires/carouselPartenaire1.jpg');
     background-size: cover;
     background-position-y: 40%;
     opacity: 1;
 }
 .carousel-item:nth-child(2) {
-    background-image: url('../Assets/partenaires/carouselPartenaire2.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/partenaires/carouselPartenaire2.jpg');
     background-size: cover;
     opacity: 0;
 }
 .carousel-item:nth-child(3) {
-    background-image: url('../Assets/partenaires/carouselPartenaire3.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/partenaires/carouselPartenaire3.jpg');
     background-size: cover;
     background-position-y: 40%;
     opacity: 0;
 }
 .carousel-item:nth-child(4) {
-    background-image: url('../Assets/partenaires/carouselPartenaire4.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/partenaires/carouselPartenaire4.PNG');
     background-size: cover;
     background-position-y: 55%;
     opacity: 0;

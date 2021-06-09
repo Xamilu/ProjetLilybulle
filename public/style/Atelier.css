@@ -35,25 +35,25 @@
 }
 
 .carousel-item:nth-child(1) {
-    background-image:  url('../Assets/AtelierCategorie/carouselAtelier1.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('../Assets/AtelierCategorie/carouselAtelier1.jpg');
     background-size: cover;
     background-position-y: 35%;
     opacity: 1;
 }
 .carousel-item:nth-child(2) {
-    background-image: url('../Assets/AtelierCategorie/carouselAtelier2.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/AtelierCategorie/carouselAtelier2.jpg');
     background-size: cover;
     background-position-y: 35%;
     opacity: 0;
 }
 .carousel-item:nth-child(3) {
-    background-image: url('../Assets/AtelierCategorie/carouselAtelier3.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/AtelierCategorie/carouselAtelier3.jpg');
     background-size: cover;
     background-position-y: 45%;
     opacity: 0;
 }
 .carousel-item:nth-child(4) {
-    background-image: url('../Assets/AtelierCategorie/carouselAtelier4.jpg');
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/AtelierCategorie/carouselAtelier4.jpg');
     background-size: cover;
     background-position-y: 80%;
     opacity: 0;

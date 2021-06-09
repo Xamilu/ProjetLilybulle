@@ -250,22 +250,18 @@ body {
 
 .carousel-item:nth-child(1) {
     background-image:  url('../Assets/carouselBg/carousel1.png');
-    background-size: cover;
     opacity: 1;
 }
 .carousel-item:nth-child(2) {
     background-image: url('../Assets/carouselBg/carousel2.png');
-    background-size: cover;
     opacity: 0;
 }
 .carousel-item:nth-child(3) {
     background-image: url('../Assets/carouselBg/carousel3.png');
-    background-size: cover;
     opacity: 0;
 }
 .carousel-item:nth-child(4) {
     background-image: url('../Assets/carouselBg/carousel4.jpg');
-    background-size: cover;
     opacity: 0;
 }
 .carousel-item h3 {
