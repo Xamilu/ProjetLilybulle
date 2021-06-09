@@ -308,10 +308,10 @@ body {
 }
 
 .next-slide {
-    left: 25%;
+    right: 12%;
 }
 .prev-slide {
-    right: 25%;
+    left: 12%;
 }
 .dots-container {
     position: absolute;
