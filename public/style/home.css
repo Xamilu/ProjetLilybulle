@@ -462,6 +462,13 @@ body {
     #lieu{
         font-size: 5em;
     }
+    .dots-container{
+        width: 20%;
+        left: 40%;
+    }
+    .dots-container a{
+        margin: 0 3% 0 3%;
+    }
 }
 @media screen and (max-width: 680px) {
     .img-cat{
