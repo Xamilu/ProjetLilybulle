@@ -52,11 +52,11 @@ async function sendEmail(email){
             }
           }
         }, 2000);
-        errorMsgNewsletter("Vous êtes désormais abonné à notre newsLetter. Et un mail vous à été envoyé")
+        errorMsgNewsletter("Vous êtes désormais abonné à notre newsLetter. Un mail vous à été envoyé")
         erreurMsgElementParent.style.color = 'green'
       }
     } else {
-      errorMsgNewsletter("Votre E-mail n'est pas valide")
+      errorMsgNewsletter("Votre E-mail n'est pas valide.")
     }
   }
 
@@ -67,7 +67,7 @@ async function sendEmail(email){
       for (let i = 0; i < emailList.length; i++) {
         const emailElement = emailList[i].email;
         if (emailElement == emailRes.value){
-          errorMsgNewsletterRes("Cet E-mail est déjà abonné à notre newsLetter, vérifier peut-être vos spams si vous ne recevez rien.")
+          errorMsgNewsletterRes("Cet E-mail est déjà abonné à notre newsLetter, vérifiez peut-être vos spams si vous ne recevez rien.")
           existEmail = false
           break
         }
@@ -88,11 +88,11 @@ async function sendEmail(email){
             }
           }
         }, 2000);
-        errorMsgNewsletterRes("Vous êtes désormais abonné à notre newsLetter. Et un mail vous à été envoyé")
+        errorMsgNewsletterRes("Vous êtes désormais abonné à notre newsLetter. Un mail vous à été envoyé !")
         erreurMsgElementParentRes.style.color = 'green'
       }
     } else {
-      errorMsgNewsletterRes("Votre E-mail n'est pas valide")
+      errorMsgNewsletterRes("Votre E-mail n'est pas valide.")
     }
   }
   
@@ -110,11 +110,15 @@ async function sendEmail(email){
     erreurMsgElementParent.style.visibility = 'visible'
     erreurMsgElementParent.style.opacity = '1'
     erreurMsgElementParent.style.color = 'red'
+    erreurMsgElementParent.style.marginTop = '2%'
+    erreurMsgElementParent.style.fontSize = '1.1em'
   }
   function errorMsgNewsletterRes(erreurMsg) {
     erreurMsgElementRes.innerHTML = erreurMsg
     erreurMsgElementParentRes.style.visibility = 'visible'
     erreurMsgElementParentRes.style.opacity = '1'
     erreurMsgElementParentRes.style.color = 'red'
+    erreurMsgElementParentRes.style.marginTop = '3%'
+    erreurMsgElementParentRes.style.fontSize = '1.5em'
   }
   
