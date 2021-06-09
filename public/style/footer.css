@@ -71,3 +71,9 @@ footer .socialIcons{
         text-align: center;
     }
 }
+@media screen and (min-width: 1200px){
+    #banderoleFooter{
+        width: 28%;
+    }
+    
+}
