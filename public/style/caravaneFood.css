@@ -107,12 +107,12 @@
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 .categorieCarte:hover{
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
+    transform: scale(1.07);
+    transform: scale(1.07);
 }
 .categorieBg{
     position: absolute;
@@ -146,6 +146,9 @@
     color: white;
     text-align: center;
     transition: all 0.6s ease-in-out;
+    border: 5px double #FFFCE6;
+    background-color: rgba(0,0,0,0.6);
+    padding: 2%;
 }
 .categorieImg {
     position: absolute;
@@ -160,6 +163,12 @@
    opacity: 1;
    transform: translateY(-13em);
 }
+
+.categorieCarte:hover .categorieTitle {
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
 #epicerie{
     background-image: url(../Assets/caravaneFoodCategorie/epicerie\ fine.jpg);
     background-position: left bottom;

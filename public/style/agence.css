@@ -147,6 +147,9 @@
     color: white;
     text-align: center;
     transition: all 0.6s ease-in-out;
+    border: 5px double #FFFCE6;
+    background-color: rgba(0,0,0,0.6);
+    padding: 2%;
 }
 .categorieImg {
     position: absolute;
@@ -161,6 +164,12 @@
    opacity: 1;
    transform: translateY(-13em);
 }
+
+.categorieCarte:hover .categorieTitle {
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
 #conseil{
     background-image: url(../Assets/agenceCategorie/conseil.jpg);
     background-position: left bottom;
