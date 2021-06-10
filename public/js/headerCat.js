@@ -43,8 +43,9 @@ body.insertAdjacentHTML("afterbegin" , `<p id="contact">35 Grande rue & 22 av de
         <a id="linkBanderole" href="../index.html"><img id="banderole" src="../Assets/banderoleLilybulle.png" alt="Lilybulle"></a>
 
         <!--Modal responsive newsletter-->
-        <button id="btnModal">Newsletter</button>
-        
+        <div id="btnNewsLetterResp">
+            <button id="btnModal">Newsletter</button>
+        </div>
         <div id="myModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
