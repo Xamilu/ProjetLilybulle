@@ -110,8 +110,7 @@
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 .categorieCarte {
     position: relative;
@@ -123,12 +122,10 @@
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 .categorieCarte:hover{
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
+    transform: scale(1.07);
 }
 .categorieBg{
     position: absolute;
@@ -324,7 +321,7 @@ h5{
 	}
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
 
     .divImgDesc {
         align-items: center;
@@ -343,7 +340,7 @@ h5{
     }
     .categorieCarte{
         width: 100%;
-        height: 15em;
+        height: 20em;
        
     }
     .categorieCarteDuo a{
@@ -358,6 +355,7 @@ h5{
         top: 0;
         font-size: 1em;
         padding: 2%;
+        border: 3.5px solid #fff;
     }
     .categorieDescription {
         display: none;

@@ -159,3 +159,20 @@ h5{
         margin-bottom: 0.5%;
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    
+    .divTextDesc h5{
+        font-size: 1.5em;
+    }
+
+    .divTextDesc p {
+        font-size: 0.9em;
+        
+    }
+
+    .divImgDesc img {
+        width: 100%;
+        height: 10em;
+    }
+}
