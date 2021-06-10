@@ -385,6 +385,10 @@ body {
     #presentation .img{
         height: 20em;
     }
+
+    #presse {
+        margin: 5% 0 5% 0;
+    }
 }
 
 @media screen and (min-width: 680px) and (max-width: 1020px) {
@@ -414,17 +418,20 @@ body {
         font-size: 1em;
     }
     #paragraphe p{
-        font-size: 0.5em;
+        font-size: 1.2em;
     }
     #presse{
         margin: 10% 0 10% 0;
     }
     #titlePresse{
-        font-size: 1em;
+        font-size: 2em;
         margin: 8% 0 8% 0;
     }
     #feedInsta{
         margin: 10% 0 10% 0;
+    }
+    #lieu {
+        font-size: 2em;
     }
     #googleMap{
         margin: 10% 0 10% 0;
@@ -442,22 +449,19 @@ body {
         height: 80em;
     }
     .nextContainer svg{
-        width: 0.5em;
+        width: 3em;
     }
     .prevContainer svg{
-        width: 0.5em;
+        width: 3em;
     }
     .carousel-item h3 {
         font-size: 5em;
     }
     .carousel-item p {
-        font-size: 1em;
+        font-size: 2em;
     }
     .img-home h2 a{
         font-size: 2em;
-    }
-    #lieu{
-        font-size: 1em;
     }
     .dots-container{
         width: 30%;
@@ -536,12 +540,6 @@ body {
     }
     #feedInsta{
         margin: 10% 0 10% 0;
-    }
-}
-@media screen and (max-width: 400px){
-    #cacheBlank{
-        width: 50%;
-        left: 43%;
     }
 }
 section{

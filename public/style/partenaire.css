@@ -120,4 +120,28 @@ h5{
     font-size: 1.1em;
 }
 
+@media screen and (max-width: 800px) {
+
+    .row1 {
+        display: grid;
+        place-items: center;
+    }
+    
+    .partenaire {
+        width: 100%;
+    }
+    
+    h5 {
+    font-size: 1.7em;
+    }
+
+    .divText {
+        width: 100%;
+    }
+    
+    .divText p {
+        text-align: justify;
+        font-size: 1.2em;
+    }
+}
 
