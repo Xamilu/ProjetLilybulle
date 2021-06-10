@@ -25,7 +25,7 @@
 #btn-resp{
     border: none;
     background-color: white;
-    margin: 0 0 0 2em;
+    margin: 0 0 0 1em;
     outline: none;
 }
 #btn-burger{
@@ -203,17 +203,53 @@
         font-size: 0.8em;
         margin-right: 5%;        
         width: auto;
-  
     }
     #btn-burger{
-        width: 3em;
-        height: 3em;
+        width: 5em;
+        height: 5em;
     }
     .btn-resp{
         margin: 0;
     }
     .supBoxHeader{
         width: 100%;
-        
+    }
+}
+@media screen and (min-width: 650px) and (max-width:950px){
+    #respTitleNewsLetter {
+        font-size: 2.3em;
+    }
+    .respMail {
+        font-size: 1.8em;
+        margin: 8%;
+    }
+    .respSubmit{
+        font-size: 1.5em;
+        width: 50%;
+    }
+    .close{
+        font-size: 3.5em;
+    }
+    .respIconSN{
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .modal-content .erreurMsg{
+        top: 40%;
+    }
+    #btnModal{
+        font-size:1.3em;
+        margin-right: 5%;        
+        width: auto;
+    }
+    #btn-burger{
+        width: 5em;
+        height: 5em;
+    }
+    .btn-resp{
+        margin: 0;
+    }
+    .supBoxHeader{
+        width: 100%;
     }
 }

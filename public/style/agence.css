@@ -220,7 +220,7 @@
     opacity: 1;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
 
     .divImgDesc {
         align-items: center;
@@ -232,10 +232,6 @@
 
     h5 {
         font-size: 1.8em;
-    }
-
-    .row {
-        margin-bottom: 0.5%;
     }
 
     .categorieCarte{
@@ -261,6 +257,64 @@
     }
     #carousel-section{
         height: 15em;
+    }
+    #carousel-section h3{
+        top: 25%;
+        font-size: 2em;
+    }
+    .categorieCarte:hover{
+        -webkit-transform: none;
+        -moz-transform: none;
+    }
+    .categorieCarte:hover .categorieTitle {
+        border: 5px double #ffffff;
+        background-color: rgba(0,0,0,0.6);
+        transform: none;
+    }
+    .categorieBg{
+        display: none;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1050px) {
+
+    .divImgDesc {
+        align-items: center;
+    }
+    
+    .img {
+        height: 70%;
+    }
+
+    h5 {
+        font-size: 1.8em;
+    }
+
+    .row {
+        margin-bottom: 0.5%;
+    }
+
+    .categorieCarte{
+        width: 100%;
+        height: 32em;
+    }
+    .categorieCarteDuo a{
+        width: 40%; 
+        margin: 5% 0 0 0;
+    }
+    .categorieCarteDuo a:nth-of-type(odd){
+        width: 40%; 
+        margin: 5% 0 0 0;
+    }
+    .categorieTitle{
+        top: 0;
+        font-size: 1.9em;
+        padding: 2%;
+    }
+    .categorieDescription {
+        display: none;
+    }
+    #carousel-section{
+        height: 20em;
     }
     #carousel-section h3{
         top: 25%;
