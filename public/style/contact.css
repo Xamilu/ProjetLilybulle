@@ -392,14 +392,4 @@ select option {
       font-size: 0.8em;
     }
   }
-@media screen and (max-width: 1100px) {
-  .full-screen ul li {
-      font-size: 1.2em;
-  }
-  .close{
-    font-size: 3em;
-  }
-  #btn-resp{
-    margin: 0 0 0 2em;
-  }
-}
+
