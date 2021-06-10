@@ -118,7 +118,7 @@ async function sendEmail(email){
     erreurMsgElementParentRes.style.visibility = 'visible'
     erreurMsgElementParentRes.style.opacity = '1'
     erreurMsgElementParentRes.style.color = 'red'
-    erreurMsgElementParentRes.style.marginTop = '3%'
-    erreurMsgElementParentRes.style.fontSize = '1.5em'
+    erreurMsgElementParentRes.style.marginTop = '0.5%'
+    erreurMsgElementParentRes.style.fontSize = '1em'
   }
   

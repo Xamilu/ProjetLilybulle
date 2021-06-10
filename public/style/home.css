@@ -547,12 +547,3 @@ body {
 section{
     position: relative;
 }
-#cacheBlank{
-    width: 20%;
-    height: 12%;
-    background-color: rgb(255, 255, 255);
-    z-index: 199999!important;
-    position: absolute;
-    left: 40%;
-    bottom: 0;
-}
