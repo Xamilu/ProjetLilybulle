@@ -1,4 +1,9 @@
 @media screen and (min-width: 100px) and (max-width: 1060px) {
+    
+    #banderole {
+        margin-right: 20%;
+    }
+
     #newsLetterClassic{
       display: none;
     }
@@ -254,7 +259,7 @@
     #btnModal{
         font-size:1.3em;
         margin-right: 5%;        
-
+        height: 3em;
     }
     #btn-burger{
         width: 5em;
@@ -265,5 +270,15 @@
     }
     .supBoxHeader{
         width: 100%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: 950px) {
+
+    #btnModal{
+        font-size:1.3em;
+        margin-right: 5%;        
+        height: 3em;
     }
 }
