@@ -506,7 +506,7 @@ body {
         justify-content: center;
     }
     #sizeMap{
-        width: 80%; 
+        width: 100%; 
         height: 400px;
     }
     .nextContainer svg{
@@ -530,6 +530,12 @@ body {
     }
     .dots-container a{
         gap: 1%;
+    }
+    #presse{
+        margin: 10% 0 10% 0;
+    }
+    #feedInsta{
+        margin: 10% 0 10% 0;
     }
 }
 @media screen and (max-width: 400px){

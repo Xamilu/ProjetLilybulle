@@ -55,6 +55,9 @@ footer .socialIcons{
 
 @media screen and (max-width: 950px) {
 
+    .contactEtHoraires{
+        font-size: 0.8em;
+    }
     footer {
         position: relative;
         bottom: 0%;
