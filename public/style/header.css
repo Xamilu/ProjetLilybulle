@@ -150,7 +150,7 @@ header {
     left: 15%;
     width: 70%;
     border: 0.5px rgb(207, 207, 207) solid;
-    margin: 0;
+    margin: 2% 0% 2% 0%;
 }
 nav {
     margin-left: -2.5em;
@@ -391,7 +391,6 @@ li:hover {
     top: 100%;
     text-align: center;
 }
-
 @media screen and (max-width:1100px) {
 
     #contact {
@@ -417,14 +416,10 @@ li:hover {
     }
     
     #newsLetterEmail {
-        height: 2em;
+        height: 1.5em;
         text-indent: 0.2em;
         font-size: 0.9em;
         font-weight: 600;
-    }
-
-    #newsLetterEmail::placeholder {
-        font-size: 0.8em;
     }
 
     #newsLetterSubmit {
@@ -532,13 +527,18 @@ li:hover {
     .sousCategoriesAgence, .sousCategoriesCaravane {
         font-size: 1.4em;
     }
+
+    li {
+        font-size: 1.2em;
+    }
+
     #contact {
         font-size: 1em;
     }
+
     #newsLetterEmail::placeholder {
         font-size: 1.1em;
     }
-   
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1150px) {

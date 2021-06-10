@@ -11,21 +11,24 @@
     #linkBanderole{
         display: flex;
         justify-content: center; 
-        width: auto
+        width: 50%;
     }
     .supBoxHeader{
-        margin-bottom: 2.5em;
+        margin-bottom: 0.5em;
         height: auto;
     }
 }
 .menu1{
-    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
     height: auto;
 }
 #btn-resp{
     border: none;
     background-color: white;
-    margin: 0 0 0 1em;
+    margin: 0;
     outline: none;
 }
 #btn-burger{
@@ -200,9 +203,14 @@
         top: 40%;
     }
     #btnModal{
-        font-size: 0.8em;
-        margin-right: 5%;        
-        width: auto;
+        font-size: 0.6em;
+    }
+    #btnNewsLetterResp{
+        width: 25%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     #btn-burger{
         width: 5em;
@@ -213,6 +221,12 @@
     }
     .supBoxHeader{
         width: 100%;
+    }
+    .line1{
+        display: none;
+        left: 0;
+        width: 100%;
+        margin: 5% 0 1% 0;
     }
 }
 @media screen and (min-width: 650px) and (max-width:950px){
@@ -240,7 +254,7 @@
     #btnModal{
         font-size:1.3em;
         margin-right: 5%;        
-        width: auto;
+
     }
     #btn-burger{
         width: 5em;

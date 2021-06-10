@@ -53,13 +53,12 @@
   text-align: center;
 }
 #btnModal{
-  margin: 0% 5% 0 0;
-  width: auto;
-  height: 3em;
-  font-size: 2em;
+  width: 6.7em;
+  height: 4em;
+  font-size: 0.8em;
   font-weight: 600;
   background-color: white;
-  border: 2px solid black;
+  border: 2px solid #6E6E6E;
   border-radius: 5px;
   padding: 0.3em;
   outline: none;
