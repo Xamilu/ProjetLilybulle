@@ -355,6 +355,7 @@ h5{
         top: 0;
         font-size: 1em;
         padding: 2%;
+        border: 5px double solid #fff;
     }
     .categorieDescription {
         display: none;
