@@ -367,4 +367,16 @@ h5{
         top: 25%;
         font-size: 2em;
     }
+    .categorieCarte:hover{
+        -webkit-transform: none;
+        -moz-transform: none;
+    }
+    .categorieCarte:hover .categorieTitle {
+        border: 3.5px solid #fff;
+        background-color: rgba(0,0,0,0.6);
+        transform: none;
+    }
+    .categorieBg{
+        display: none;
+    }
 }
