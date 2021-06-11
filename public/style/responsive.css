@@ -281,4 +281,11 @@
         margin-right: 5%;        
         height: 3em;
     }
+    #btnNewsLetterResp {
+        width: 25%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

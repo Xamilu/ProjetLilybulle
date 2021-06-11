@@ -7,7 +7,7 @@ const msgMail = document.querySelector("#msg")
 
 document.querySelector(".checkbox input").disabled = true;
 
-document.querySelector('#submit').addEventListener('click', (event) => {
+document.querySelector('#submit').addEventListener('click', async (event) => {
 
    event.preventDefault()
 
@@ -21,7 +21,10 @@ document.querySelector('#submit').addEventListener('click', (event) => {
    }
 
    if (checkInputs()) {
-      emailjs.send("service_4s4qmmf", "template_v42qoim", params, "user_lmDYGxw2cx0QPO420I7IY")
+      fetch('/sendContactMail', {
+         method: 'POST',
+         body: JSON.stringify(params)
+       })
 
       nameForm.value = ''
       nameForm.style.border = "none"

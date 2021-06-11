@@ -1,6 +1,10 @@
 #btnModal , #myModal, .menu1, .infBoxHeader, #newsLetterClassic, .socialIcons{
     display: none;
 }
+.supBoxHeader{
+    justify-content: center;
+    align-items: center;
+}
 header {
     margin-bottom: 3%;
 }

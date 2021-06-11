@@ -47,7 +47,10 @@ async function sendEmail(email){
                 email: email.value,
                 reset: `http://localhost:3000/html/resetNews.html?id=${emailList[i]._id}`,
             }
-            await emailjs.send("service_4s4qmmf", "template_7dxsjge", params, "user_lmDYGxw2cx0QPO420I7IY")
+            await fetch('/sendNewsLetterMail', {
+              method: 'POST',
+              body: JSON.stringify(params)
+            })
             break
             }
           }
@@ -83,7 +86,10 @@ async function sendEmail(email){
                 email: emailRes.value,
                 reset: `http://localhost:3000/html/resetNews.html?id=${emailElement.id}`,
             }
-            await emailjs.send("service_4s4qmmf", "template_7dxsjge", params, "user_lmDYGxw2cx0QPO420I7IY")
+            await fetch('/sendNewsLetterMail', {
+              method: 'POST',
+              body: JSON.stringify(params)
+            })
             break
             }
           }
