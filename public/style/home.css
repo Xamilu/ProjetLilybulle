@@ -414,6 +414,9 @@ body {
         width: 100%;
         margin: 1.5% 0 0 0;
     }
+    .img-col1 {
+        height: 400px;
+    }
     .img-col2{
         height: 400px;
     }

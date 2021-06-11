@@ -590,3 +590,11 @@ li:hover {
         width: 3%;
     }
 }
+
+@media screen and (max-width: 650px) {
+    
+    #banderole {
+        width: 100%;
+        margin-left: 20%;
+    }
+}
