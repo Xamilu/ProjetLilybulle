@@ -274,7 +274,7 @@
     }
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 650px) and (max-width: 950px) {
 
     #btnModal{
         font-size:1.3em;

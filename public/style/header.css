@@ -37,7 +37,8 @@ header {
 
 #banderole{
     width: 85%;
-    margin-left: 50%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .socialIcons {
@@ -168,6 +169,12 @@ nav {
 
 .libelluleNavBar {
     width: 2%;
+}
+
+#linkBanderole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
