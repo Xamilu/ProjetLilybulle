@@ -289,3 +289,28 @@
         justify-content: center;
     }
 }
+
+@media screen and (min-width: 1070px) and (max-width: 1330px) {
+
+    .socialIcons {
+        width: 20%;
+    }
+
+    .socialIcons a svg {
+        width: 15%;
+    }
+
+    .socialIconsFooter a svg {
+        width: 20%;
+        height: 20%;
+    }
+
+   #banderoleFooter {
+       width: 35%;
+   }
+
+   #boutonHautDePage a svg {
+       width: 4%;
+       height: 4%;
+   }
+}

@@ -17,11 +17,23 @@ footer{
     align-items: center;
     justify-content: center;
     padding-top: 25px;
+    margin-left: 5%;
 }
 #banderoleFooter{
     width: 40%;
     height: auto
 }
+
+.socialIconsFooter {
+    width: 14%;
+    align-self: center;
+}
+
+.socialIconsFooter a svg{
+    width: 15%;
+    height: 15%;
+}
+
 .contactEtHoraires{
     margin-top: 25px;
     padding-bottom: 20px;

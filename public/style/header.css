@@ -30,7 +30,7 @@ header {
 .supBoxHeader {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 1.1em;
     align-items: center;
 }
@@ -42,7 +42,7 @@ header {
 }
 
 .socialIcons {
-    width: 15%;
+    width: 25%;
     align-self: center;
 }
 .socialIcons a:nth-child(1){
@@ -58,8 +58,8 @@ header {
     animation: iconeHeader 0.5s 0.9s ease-in-out forwards;
 }
 .socialIcons a svg{
-    width: 13%;
-    height: 13%;
+    width: 8%;
+    height: 8%;
 }
 .socialIcons a{
     opacity: 0;
@@ -91,6 +91,7 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 20%;
 }
 
 .newsLetter{

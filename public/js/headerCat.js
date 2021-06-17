@@ -49,7 +49,7 @@ body.insertAdjacentHTML("afterbegin" , `<p id="contact">35 Grande rue & 22 av de
         <div id="myModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
-            <h3  id="respTitleNewsLetter">Abonnez-vous à notre Newsletter</h3>
+            <h3  id="respTitleNewsLetter">Abonnez-vous à notre Newsletter :</h3>
             <div class="erreurMsg">
                 <p></p>
             </div>

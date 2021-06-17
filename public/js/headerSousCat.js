@@ -69,7 +69,7 @@ body.insertAdjacentHTML("afterbegin" , `<p id="contact">35 Grande rue & 22 av de
 
         <div id="newsLetterClassic">
             <div class="newsLetter">
-                <h3 id="newsLetterTitle">Abonnez-vous à notre Newsletter:</h3>
+                <h3 id="newsLetterTitle">Abonnez-vous à notre Newsletter :</h3>
                 <input type="email" name="email" id="newsLetterEmail" size="25" minlength="10" maxlength="40" placeholder="Votre Email">
                 <input onclick="checkIfEmailExist()" type="submit" name="submit" id="newsLetterSubmit" value="S'abonner">
             </div>
