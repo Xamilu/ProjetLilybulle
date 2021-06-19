@@ -45,7 +45,7 @@ async function sendEmail(email){
             if (emailElement == email.value){
               let params = {
                 email: email.value,
-                reset: `http://localhost:3000/html/resetNews.html?id=${emailList[i]._id}`,
+                reset: `https://lilybulleconceptstore.herokuapp.com/html/resetNews.html?id=${emailList[i]._id}`,
             }
             await fetch('/sendNewsLetterMail', {
               method: 'POST',
@@ -84,7 +84,7 @@ async function sendEmail(email){
             if (emailElement == emailRes.value){
               let params = {
                 email: emailRes.value,
-                reset: `http://localhost:3000/html/resetNews.html?id=${emailElement.id}`,
+                reset: `https://lilybulleconceptstore.herokuapp.com/html/resetNews.html?id=${emailElement.id}`,
             }
             await fetch('/sendNewsLetterMail', {
               method: 'POST',
