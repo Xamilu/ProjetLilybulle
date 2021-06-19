@@ -60,6 +60,7 @@ input {
 
 #divMsg {
   height: 25em;
+  margin-bottom: 1%;
 }
 
 .col{
@@ -114,8 +115,6 @@ select option {
     font-size: 1.2em;
     margin-top: 0.3%;
 }
-
-
 
 #submit{
     width: 10%;

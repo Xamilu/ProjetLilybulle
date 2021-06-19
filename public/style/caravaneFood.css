@@ -170,26 +170,26 @@
 }
 
 #epicerie{
-    background-image: url(../Assets/caravaneFoodCategorie/epicerie\ fine.jpg);
+    background-image: url(../Assets/logoLilybulle.png);
     background-position: left bottom;
 }
 #terasse{
-    background-image: url(../Assets/caravaneFoodCategorie/terasse.jpg);
+    background-image: url(../Assets/logoLilybulle.png);
     background-position: left center;
 }
 #the{
-    background-image: url(../Assets/caravaneFoodCategorie/the.jpg);
+    background-image: url(../Assets/logoLilybulle.png);
     background-position: right center;
 }
 #chocolat{
-    background-image: url(../Assets/caravaneFoodCategorie/chocolats.jpg);
+    background-image: url(../Assets/logoLilybulle.png);
 }
 #spiritueux{
-    background-image: url(../Assets/caravaneFoodCategorie/spiritueux.jpg);
+    background-image: url(../Assets/logoLilybulle.png);
     background-position: left top;
 }
 #caravane{
-    background-image: url(../Assets/caravane.png);
+    background-image: url(../Assets/logoLilybulle.png);
 }
 /* Animation */
 .categorieCarteDuo a{

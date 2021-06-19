@@ -52,15 +52,20 @@ footer{
     color: white;
 }
 
+.contactEtHoraires a {
+    color: white;
+    text-decoration: none;
+}
+
+.contactEtHoraires a:hover {
+    text-decoration: underline;
+}
+
 #boutonHautDePage {
     text-align: right;
     margin: -2% 2% 0 0;
-}   
+}
 
-#boutonHautDePage { 
-    text-align: right;
-    margin: -2% 2% 0 0;
-}   
 footer .socialIcons{
     margin: 0 -3% 0 10%;
 }

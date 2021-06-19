@@ -1,0 +1,70 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Zilla Slab', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    margin: 2% 0 2% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 3%;
+}
+
+.title {
+    font-size: clamp(0.5em, 1.2em, 1.4em);
+    border: 4px solid #000;
+    margin: auto;
+    padding: 1% 2%;
+}
+
+.contentMentions {
+    width: 75%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin: 2% 0 2% 0;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    padding-left: 2%;
+}
+
+.contentPolitique {
+    width: 75%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2% 0 2% 0;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    padding-left: 2%;
+}
+
+#retourAccueil button {
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1%;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#retourAccueil button:hover {
+    background-color: #000;
+    color: #fff;
+}
