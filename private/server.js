@@ -200,7 +200,7 @@ var transporter = nodemailer.createTransport({
 app.post('/sendNewsLetterMail', (req, res) => {
   let body = JSON.parse(req.body)
   var mailNewsLetterOptions = {
-    from: 'leo.gregori@edu.itescia.fr',
+    from: 'lilybulle@orange.fr',
     to: body.email,
     subject: 'Abonnements à la newsletter de Lilybulle',
     html: `<p>&nbsp;</p>
@@ -504,8 +504,8 @@ app.post('/sendNewsLetterMail', (req, res) => {
 app.post('/sendContactMail', (req, res) => {
   let body = JSON.parse(req.body)
   var mailNewsLetterOptions = {
-    from: 'leo.gregori@edu.itescia.fr',
-    to: 'leo.gregori@edu.itescia.fr',
+    from: 'lilybulle@orange.fr',
+    to: 'lilybulle@orange.fr',
     subject: `${body.objectMail} de ${body.nameSend} ${body.firstName}`,
     html: `<p>Bonjour Lilybulle,</p>
     <p>Voici le message de ${body.nameSend} ${body.firstName}:</p>
