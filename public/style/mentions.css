@@ -54,6 +54,29 @@ body {
     padding-left: 2%;
 }
 
+.contentUtilisation {
+    width: 85%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2% 0 2% 0;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    padding-left: 2%;
+}
+
+.definition {
+    display: flex;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.definition p {
+    margin-top: 1.5%;
+}
+
+
 #retourAccueil button {
     border: 2px solid #000;
     border-radius: 5px;
