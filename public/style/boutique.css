@@ -183,29 +183,29 @@
 }
 
 #meuble{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/boutiqueCategorie/meubles.jpg);
 }
 #deco{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/boutiqueCategorie/deco.jpg);
 }
 #linge{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/boutiqueCategorie/linge.png);
 }
 #mode{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/boutiqueCategorie/mode.jpg);
 }
 #enfant{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/boutiqueCategorie/enfant.jpg);
 }
 #papeterie{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/boutiqueCategorie/papeterie.jpg);
     background-position: right;
 }
 #outdoor{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/boutiqueCategorie/outdoor.jpg);
 }
 #presse{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/boutiqueCategorie/presse.png);
     background-position: 4% center;
 }
 #tapis{

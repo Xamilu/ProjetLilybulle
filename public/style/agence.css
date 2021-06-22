@@ -169,25 +169,25 @@
 }
 
 #conseil{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/agenceCategorie/conseil.jpg);
     background-position: left bottom;
 }
 #architecte{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/agenceCategorie/architectDeco.jpg);
     background-position: left center;
 }
 #papierPeint{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/agenceCategorie/papierPeint.jpg);
 }
 #cuisine{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/agenceCategorie/cuisine.jpg);
     background-position: center center;
 }
 #canapé{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/agenceCategorie/canape.jpg);
 }
 #panorama{
-    background-image: url(../Assets/logoLilybulle.png);
+    background-image: url(../Assets/agenceCategorie/panorama.jpg);
 }
 /* Animation */
 .categorieCarteDuo a{
