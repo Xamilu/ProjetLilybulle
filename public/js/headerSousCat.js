@@ -21,8 +21,8 @@ body.insertAdjacentHTML("afterbegin" , `<p id="contact">35 Grande rue & 22 av de
                         <a href="../boutique.html"><li>La Boutique</li></a>
                     </div>
                     <div>
-                        <span class="iconify" data-icon="emojione-monotone:hammer" data-inline="false" style="margin-right: -1.2%;" data-width="2%"></span>
-                        <a href="../Atelier.html"><li>L'Atelier</li></a>
+                    <span class="iconify" data-icon="entypo:scissors" data-inline="false" style="margin-right: -1.2%;" data-width="2%"></span>
+                    <a href="../Atelier.html"><li>L'Atelier</li></a>
                     </div>
                     <div>
                         <span class="iconify" data-icon="map:real-estate-agency" data-inline="false" style="margin-right: -1.2%;" data-width="2%"></span>
@@ -102,7 +102,7 @@ body.insertAdjacentHTML("afterbegin" , `<p id="contact">35 Grande rue & 22 av de
                     </div>
                 </div>
             </div>    
-            <span class="iconify" data-icon="emojione-monotone:hammer" data-inline="false" style="margin-right: -1.2%;" data-width="2%"></span>
+            <span class="iconify" data-icon="entypo:scissors" data-inline="false" style="margin-right: -1.2%;" data-width="2%"></span>
             <div class="menu">
                 <a href="../Atelier.html"><li>L'Atelier</li></a>
                 <div class="menuDeroulantAtelier">
