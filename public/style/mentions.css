@@ -91,3 +91,30 @@ body {
     background-color: #000;
     color: #fff;
 }
+
+@media screen and (max-width: 320px) {
+
+    #logo {
+        width: 60%;
+    }
+
+    .title {
+        padding: 0.5% 1%;
+        font-size: 0.8em;
+        border: 2px solid #000;
+    }
+
+    .contentMentions, .contentPolitique, .contentUtilisation {
+        width: 100%;
+        padding: 1%;
+    }
+
+    .definition h3 {
+        font-size: 0.9em;
+    }
+    
+    .definition p {
+        font-size: 0.9em;
+    }
+    
+}

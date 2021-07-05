@@ -82,12 +82,22 @@ footer .socialIcons{
 }
 @media screen and (max-width: 800px) {
 
+    .socialIconsFooter a svg{
+        width: 30%;
+        height: 30%;
+    }
+    
+    
     #banderoleFooter {
-        width: 40%;
+        width: 60%;
     }
     
     .contactEtHoraires p:nth-child(1){
         margin: 0 5%;
+        text-align: center;
+    }
+
+    .contactEtHoraires p:last-child{
         text-align: center;
     }
 }
